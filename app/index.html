@@ -12,7 +12,7 @@
 
 	<link rel="icon" href="img/favicon.png">
 	<meta property="og:image" content="img/@1x/preview.jpg">
-	
+
 	<link rel="stylesheet" href="css/styles.min.css">
 
 </head>
@@ -22,12 +22,13 @@
 	<!-- HTML Start -->
 
 	<header class="header">
-		<div class="container h-100">
-			<div class="header__row row">
 
-				<div class="header__logo logo">
+		<div class="row header__row">
+
+			<div class="container d-f jc-sb ai-c">
+				<a href="#" class="header__logo logo">
 					<img src="img/_src/logo_white_green.svg" alt="" class="logo__img">
-				</div>
+				</a>
 
 				<nav class="menu">
 					<a href="#" class="menu__item">портфолио</a>
@@ -41,10 +42,14 @@
 				</button>
 
 				<div class="hamburger">
+					<img src="img/_src/hamburger.svg" alt="" class="hamburger-img">
 					Меню
 				</div>
-
 			</div>
+
+		</div>
+		<div class="container">
+
 
 			<div class="header-content">
 
@@ -61,12 +66,352 @@
 
 			</div>
 		</div>
-	
+
+		<!-- HEADER POP-UP MENU START -->
+
+		<div class="popup-menu" style="display: none;">
+
+			<div class="container popup-menu__container">
+				<div class="row header__row popup-menu__row ">
+
+					<a href="#" class="header__logo logo">
+						<img src="img/_src/logo_gray.svg" alt="" class="logo__img">
+					</a>
+
+					<div class="close">
+						<!-- <img src="img/_src/close.svg" alt=""> -->
+					</div>
+
+				</div>
+
+				<div class="popup-menu__content">
+
+					<nav class="menu popup-menu__menu">
+						<a href="#" class="menu__item">
+							<h1 class="h1 h1_white">портфолио</h1>
+						</a>
+						<a href="#" class="menu__item">
+							<h1 class="h1 h1_white">Услуги</h1>
+						</a>
+						<a href="#" class="menu__item">
+							<h1 class="h1 h1_white">Отрасли</h1>
+						</a>
+						<a href="#" class="menu__item">
+							<h1 class="h1 h1_white">Компания</h1>
+						</a>
+					</nav>
+
+					<div class="interactive popup-menu__interactive">
+
+						<button class="button button_more popup-menu__button">Бесплатный аудит</button>
+						<button class="button button_more popup-menu__button">Скачать презентацию</button>
+						<button class="button button_breaf popup-menu__button">Обратный звонок</button>
+
+						<div class="contacts popup-menu__contacts">
+							<p class="phone">
+								+ 7 495 147-73-00
+							</p>
+							<p class="e-mail popup-menu__e-mail">
+								hello@develio.ru
+							</p>
+							<div class="social popup-menu__social">
+								<a href="#" class="social-link"><img src="img/_src/inst.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="img/_src/vk.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="img/_src/behance.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="img/_src/facebook.svg" alt=""></a>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+
+
+			</div>
+
+
+		</div>
+
+		<!-- HEADER POP-UP MENU END -->
+
 	</header>
 
-	
+	<section class="portfolio">
+
+		<div class="portfolio__container">
+			<div class="section-heading portfolio__section-heading">
+				портфолио
+			</div>
+
+			<div class="portfolio__row portfolio__row_first">
+				<div class="portfolio__item">
+					<img class="portfolio__img" src="img/_src/bookli.png" alt="">
+					<div class="w-100">
+						<h2 class="h2 portfolio__h2 h2_white">Брендбук деятеля искусств Rami Meir</h2>
+					</div>
+				</div>
+				<div class="portfolio__item">
+					<img class="portfolio__img" src="img/_src/santimether.png" alt="">
+				</div>
+				<div class="portfolio__item">
+					<img class="portfolio__img" src="img/_src/graphic_design_studio.png" alt="">
+					<div class="w-100">
+						<h2 class="h2 portfolio__h2 h2_white">Брендбук деятеля искусств Rami Meir</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio__row">
+				<div class="portfolio__item">
+					<img class="portfolio__img" src="img/_src/golden_stroke.png" alt="">
+				</div>
+				<div class="portfolio__item">
+					<img class="portfolio__img" src="img/_src/techno_puppy.png" alt="">
+					<div class="w-100">
+						<h2 class="h2 portfolio__h2 h2_white">Брендбук деятеля искусств Rami Meir</h2>
+					</div>
+				</div>
+				<div class="portfolio__item">
+					<img class="portfolio__img" src="img/_src/bookli.png" alt="">
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="services">
+
+		<div class="section-heading portfolio__section-heading">
+			услуги
+		</div>
+
+		<div class="c-services-items services__c-services-items">
+			<div class="services__item">
+				<div class="container">
+
+					<div class="service-content">
+						<h1 class="h1 services__h1 j-slide">
+							Веб-разработка <img class="services__pixel-arrow-img" src="img/_src/pixel_arrow.svg" alt="">
+						</h1>
+
+						<div class="service-content__inner">
+							<div class="service-list services__service-list">
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Корпоративный сайт</p>
+								<p class="service-list__item">Интернет-магазин</p>
+								<p class="service-list__item">Промо-сайт</p>
+								<p class="service-list__item">Адаптивный сайт Верстка</p>
+								<p class="service-list__item">Программирование</p>
+								<p class="service-list__item">Интеграция с сервисами</p>
+							</div>
+
+							<button class="button button_more services__button">
+								подробнее
+							</button>
+
+						</div>
+
+
+
+					</div>
+
+				</div>
+			</div>
+			<div class="services__item">
+				<div class="container">
+
+					<div class="service-content">
+						<h1 class="h1 services__h1 j-slide">
+							Дизайн <img class="services__pixel-arrow-img" src="img/_src/pixel_arrow.svg" alt="">
+						</h1>
+
+						<div class="service-content__inner">
+							<div class="service-list services__service-list">
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+							</div>
+
+							<button class="button button_more services__button">
+								подробнее
+							</button>
+
+						</div>
+
+
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="services__item">
+				<div class="container">
+
+					<div class="service-content">
+						<h1 class="h1 services__h1 j-slide">
+							Реклама и продвижение <img class="services__pixel-arrow-img" src="img/_src/pixel_arrow.svg"
+								alt="">
+						</h1>
+
+						<div class="service-content__inner">
+							<div class="service-list services__service-list">
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+							</div>
+
+							<button class="button button_more services__button">
+								подробнее
+							</button>
+
+						</div>
+
+
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="services__item">
+				<div class="container">
+
+					<div class="service-content">
+						<h1 class="h1 services__h1 j-slide">
+							Аналитика <img class="services__pixel-arrow-img" src="img/_src/pixel_arrow.svg" alt="">
+						</h1>
+
+						<div class="service-content__inner">
+							<div class="service-list services__service-list">
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+								<p class="service-list__item">Landing page</p>
+							</div>
+
+							<button class="button button_more services__button">
+								подробнее
+							</button>
+
+						</div>
+
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="industries">
+
+		<div class="container">
+			<div class="section-heading industries__section-heading">
+				отрасли
+			</div>
+
+			<div class="container"></div>
+
+			<h1 class="h1 h1_white industries__h1">
+				Специализируемся на работе в отрасли услуг и e-commerce
+			</h1>
+
+			<div class="industries__container">
+				<div class="e-commerce industries__column">
+
+					<img src="img/_src/bread.png" alt="" class="e-commerce__img">
+
+					<div class="industries__text">
+
+						<h2 class="h2 h2_white industries__h2">
+							E-commerce
+						</h2>
+
+						<p class="main-text industries__main-text">
+							Юзабилити-анализ, SEO-продвижение, разработка UX/UI интерфейса и для увеличения прибыли
+							интернет-магазинов
+						</p>
+
+						<p class="main-text industries__main-text industries__online-store">
+							Интернет-магазин
+						</p>
+
+					</div>
+
+				</div>
+
+				<div class="sphere industries__sphere industries__column">
+					<img src="img/_src/lips.png" alt="" class="sphere__img">
+
+					<div class="industries__text">
+
+						<h2 class="h2 h2_white industries__h2">
+							Сфера обслуживания
+						</h2>
+
+						<p class="main-text industries__main-text">
+							Создание фирменного стиля, разработка стратегии продвижения, автоматизация бизнес-процессов
+							для маникюрных салонов, стоматологических клиник и др.
+						</p>
+
+						<div class="tag-container">
+							<div class="w-50">
+								<p class="main-text industries__main-text industries__online-store">
+									Интернет-магазин
+								</p>
+								<p class="main-text industries__main-text industries__online-store">
+									Интернет-магазин
+								</p>
+								<p class="main-text industries__main-text industries__online-store">
+									Интернет-магазин
+								</p>
+							</div>
+							<div class="w-50">
+								<p class="main-text industries__main-text industries__online-store">
+									Интернет-магазин
+								</p>
+								<p class="main-text industries__main-text industries__online-store">
+									Интернет-магазин
+								</p>
+								<p class="main-text industries__main-text industries__online-store">
+									Интернет-магазин
+								</p>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		</div>
+	</section>
+
+
 
 	<script src="js/scripts.min.js"></script>
 
 </body>
+
 </html>

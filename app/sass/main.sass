@@ -16,6 +16,50 @@
 // 	&:required:valid
 // 		border-color: green
 
+// Standart classes
+
+.d-f
+	display: flex
+.jc-c
+	justify-content: center
+.jc-sb
+	justify-content: space-between
+.jc-sa
+	justify-content: space-around
+.ai-c
+	align-items: center
+.ai-s
+	align-items: start
+.ai-e
+	align-items: end
+.fw-w
+	flex-wrap: wrap
+.fw-nw
+	flex-wrap: nowrap
+.fd-r
+	flex-direction: row
+.fd-c
+	flex-direction: column
+.d-none
+	display: none !important
+.w-50
+	width: 50%
+
+// End standart classes
+
+
+
+.container
+	width: 1110px !important
+
+.row
+	width: 100%
+
+html, body
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
 body
 	font-size: 16px
 	min-width: 320px
@@ -24,6 +68,10 @@ body
 	font-family: 'Montserrat', sans-serif
 	overflow-x: hidden
 	color: $text
+	background: $black
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
 
 a
 	text-decoration: none
@@ -39,36 +87,70 @@ p
 button
 	border: none
 	outline: none
+	cursor: pointer
+	background: none
+
+img
+	max-width: 100%
+
+h1,h2
+	padding: 0
+	margin: 0
+
+.main-text
+	font-size: 16px
+	line-height: 20px
+	font-weight: normal
+	color: $dark-gray
 
 .h1
 	font-size: 44px
 	line-height: 54px
 	text-transform: uppercase
+	font-weight: 900
 	&_white
 		color: #ffffff
+
+.h2
+	font-size: 24px
+	line-height: 29px
+	font-weight: bold
+	&_white
+		color: #fff
 
 		
 .h-100
 	height: 100%
+.w-100
+	width: 100%
 
 // Custom Sass / Remove before use
 
+
+
 .header
 	width: 100%
+	display: flex
+	justify-content: center
 	background-color: $black
-	height: 500px
+	flex-wrap: wrap
 	&__row
-		padding-top: 35px
+		margin-top: 35px
 		display: flex
 		align-content: space-between
-		justify-content: space-between
+		justify-content: center
 		align-items: center
+		background: $black
+		position: fixed
+		z-index: 2
 	&-content
 		display: flex
 		justify-content: space-between
-		margin-top: 126px
+		margin-top: 200px
+		height: 250px
 		&__h1
-			width: 60%
+			width: 70%
+			margin-top: 17px
 			
 .menu
 	&__item
@@ -79,27 +161,310 @@ button
 		line-height: 15px
 		&:last-child
 			margin-right: 0
+
+.logo
+	display: flex
+	align-items: center
+
 .logo__img
 	width: 111px
 
 .button
 	font-size: 16px
+	line-height: 20px
 	text-transform: uppercase
-	color: #fff
 	padding: 12px 28px
-	background: linear-gradient(90deg, #33AF33 0%, #46FA5A 100%)
 	font-weight: bold
+	font-family: 'Montserrat', sans-serif
+	&_breaf
+		background: linear-gradient(90deg, #33AF33 0%, #46FA5A 100%)
+		color: #fff
+	&_more
+		border: $green_3 2px solid
+		color: $green_3
+		&:active
+			background: $green_3
+			color: #ffffff
+
 
 .sign-items
-	transform: rotate(-90deg)
+	transform: rotate(180deg)
+	writing-mode: tb-rl
 	&__item
 		text-transform: uppercase
 		color: #fff
 		line-height: 20px
 		
-
-
 .hamburger
 	color: #fff
 	text-transform: uppercase
 	cursor: pointer
+	display: flex
+	align-items: center
+
+.hamburger-img
+	margin-right: 20px
+// HEADER POPUP MENU START
+
+.popup-menu
+	width: 100%
+	height: 100vh
+	position: fixed
+	left: 0
+	top: 0
+	background: linear-gradient(102.2deg, #232323 36.14%, #454545 101.46%)
+	display: flex
+	transition: display .5s ease
+	z-index: 5
+	// visibility: hidden
+	justify-content: center
+	&__container
+		position: relative
+	&__row
+		position: absolute
+		top: 0px
+		z-index: 10
+		justify-content: space-between
+		background: none
+		height: 44px
+	&__content
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: center
+		height: 100%
+	&__menu
+		animation: customSlideFromLeft 1s ease
+	&__button
+		margin-top: 30px
+		&:first-child
+			margin-top: 0
+	&__interactive
+		animation: customSlideFromRight 1s ease
+	&__contacts
+		padding: 50px 10px 0px
+		padding-top: 50px
+	&__e-mail
+		margin-top: 30px
+		margin-bottom: 110px
+	&__social
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+.close
+	position: relative
+	&::before
+		content: ''
+		background-color: #fff
+		display: block
+		position: absolute
+		width: 40px
+		height: 7px
+		left: -40px
+		transform: rotate(45deg)
+		animation: closeAnimation1 .5s
+	&::after
+		content: ''
+		background-color: #fff
+		display: block
+		position: absolute
+		width: 40px
+		height: 7px
+		left: -40px
+		animation: closeAnimation2 .5s
+		transform: rotate(-45deg)
+	
+
+@keyframes closeAnimation1
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(45deg)
+
+@keyframes closeAnimation2
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(-45deg)
+
+@keyframes customSlideFromLeft
+	0%
+		opacity: 0
+		margin-left: -30%
+	100%
+		opacity: 1
+		margin-left: 0
+
+@keyframes customSlideFromRight
+	0%
+		opacity: 0
+		margin-right: -30%
+	100%
+		opacity: 1
+		margin-right: 0
+		
+
+.contacts
+	font-size: 30px
+	color: #ffffff
+	line-height: 37px
+	font-weight: normal
+	text-align: center
+
+
+.interactive
+	display: flex
+	flex-direction: column
+
+// HEADER POPUP MENU END
+
+
+.portfolio
+	width: 100%
+	display: flex
+	justify-content: center
+	&__container
+		width: 1440px
+		padding: 0px 50px
+		margin-top: 30px
+	&__section-heading
+		z-index: -1
+		position: relative
+	&__row
+		display: flex
+		justify-content: space-between
+		width: 100%
+		margin-top: 120px
+		&_first
+			margin-top: 0px
+	&__item
+		width: 31%
+		max-height: 550px
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-content: flex-start
+		&:nth-child(3n+1)
+			margin-top: -100px
+		&:nth-child(3n+2)
+			margin-top: -50px
+	&__h2
+		margin-top: 30px
+		margin-left: 30px
+		width: 60%
+
+	&__img
+		// width: 100%
+		max-height: 100%
+		align-self: self-start
+			
+
+.portfolio-row
+
+.section-heading
+	font-size: 120px
+	text-transform: uppercase
+	color: #ffffff
+	opacity: 0.2
+	font-weight: 900
+	letter-spacing: 0.3em
+	width: 100%
+	text-align: center
+
+// SERVICES
+
+.services
+	width: 100%
+	&__item
+		width: 100%
+		display: flex
+		justify-content: center
+		// padding: 75px 0px 60px
+		&:nth-child(2n+1)
+			background-color: #fff
+		&:nth-child(2n+2)
+			background-color: $light-gray
+	&__h1
+		margin-bottom: 75px
+		transition: all .5s ease
+		cursor: pointer
+	&__pixel-arrow-img
+		margin-left: 45px
+		transition: all .2s ease
+	&__button
+		align-self: flex-end
+
+.service-content
+	display: flex
+	flex-direction: column
+	width: 100%
+	padding: 75px 0px 0px 0px
+	&__inner
+		display: none
+		width: 50%
+		justify-content: space-between
+		margin-top: 50px
+		margin-bottom: 60px
+
+.service-list
+	&__item
+		line-height: 25px
+		font-weight: normal
+			
+
+.services__c-services-items
+	margin-top: -60px
+	background-color: #fff
+	padding-bottom: 180px
+
+.rotate
+	transform: scale(-1)
+
+
+// Industries
+
+.industries
+	padding-bottom: 120px
+	&__section-heading
+		margin-top: -143px
+		color: $gray
+		position: relative
+		z-index: 1
+	&__container
+		display: flex
+		justify-content: space-between
+	&__column
+		width: 45%
+	&__h1
+		text-transform: none
+		width: 45%
+	&__h2
+		margin-bottom: 20px
+	&__main-text
+		margin-bottom: 30px
+	&__online-store
+		color: #ffffff
+		line-height: 25px
+		margin-bottom: 5px
+	&__text
+		margin-left: 50px
+		margin-right: 50px
+	&__sphere
+
+.e-commerce__img
+	margin-top: 70px
+	margin-bottom: 70px
+
+.e-commerce-text
+	margin-left: 50px
+	margin-right: 50px
+
+.sphere__img
+	margin-bottom: 70px
+
+.tag-container
+	display: flex
+	justify-content: center
+
