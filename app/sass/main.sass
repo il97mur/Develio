@@ -81,7 +81,7 @@ a
 	color: unset
 	&:hover
 		text-decoration: none
-		color: unset
+		color: #ffffff
 
 p
 	padding: 0
@@ -186,10 +186,10 @@ h1,h2
 	padding: 12px 28px
 	font-weight: bold
 	font-family: 'Montserrat', sans-serif
-	&_breaf
+	&_primary
 		background: linear-gradient(90deg, #33AF33 0%, #46FA5A 100%)
 		color: #fff
-	&_more
+	&_secondary
 		border: $green_3 2px solid
 		color: $green_3
 		&:active
@@ -218,8 +218,8 @@ h1,h2
 
 .popup-menu
 	width: 100%
-	min-height: 100vh
-	height: fit-content
+	// min-height: 100vh
+	height: 100%
 	position: fixed
 	left: 0
 	top: 0
@@ -231,7 +231,7 @@ h1,h2
 	&__container
 		position: relative
 	&__row
-		position: relative
+		position: absolute
 		top: 0px
 		z-index: 10
 		justify-content: space-between
@@ -245,18 +245,24 @@ h1,h2
 		height: 100%
 	&__menu
 		animation: customSlideFromLeft 1s ease
-	&__button
+	&__item
+		display: block
 		margin-top: 30px
+		&_active
+			color: $green_3
+		&:first-child
+			margin-top: 0
+	&__button
+		margin-top: 25px
 		&:first-child
 			margin-top: 0
 	&__interactive
 		animation: customSlideFromRight 1s ease
 	&__contacts
-		padding: 50px 10px 0px
-		padding-top: 50px
+		padding: 45px 10px 0px
 	&__e-mail
-		margin-top: 30px
-		margin-bottom: 110px
+		margin-top: 20px
+		margin-bottom: 45px
 	&__social
 		width: 100%
 		display: flex
