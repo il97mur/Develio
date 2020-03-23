@@ -6,17 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		console.log(e.target)
 	});
 
+	// Открытие и закрытие блоков в секции "Услуги"
+
 	$('.j-slide').on('click', function(){
-
-		// if ($(this).css('margin-bottom') == '0px') {
-		// 	$(this).css('margin-bottom', '75px');
-		// } else {
-		// 	$(this).css('margin-bottom', '0px');
-		// }
-
-		$(this).next().slideToggle();
+		
+		$(this).find('.service-content__inner').slideToggle();
+		$(this).find('.service-content__inner').css('display', 'flex');
 	
-		$(this).next().css('display', 'flex');
+		// $(this).next().css('display', 'flex');
 		$(this).find('img').toggleClass('rotate');
 	
 		
