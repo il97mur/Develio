@@ -127,6 +127,8 @@ h1,h2
 	font-weight: bold
 	&_white
 		color: #fff
+	&_green
+		color: $green_3
 
 		
 .h-100
@@ -609,6 +611,87 @@ h1,h2
 				border: $green_3 1px solid
 				margin-right: 18px
 
+// WORK STAGES
+
+.work-stages
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	justify-content: center
+	background: #ffffff
+	padding: 105px 0px 120px 0px
+	&__container
+		// &:last-child
+		// 	position: relative
+		// 	&::before
+		// 		content: ''
+		// 		display: block
+		// 		height: 1px
+		// 		background: $green_3
+		// 		width: 100vw !important
+		// 		position: absolute
+		// 		top: 0
+		// 		left: 0
+	&__row
+		display: flex
+		justify-content: space-between
+	&__column
+		flex-basis: 45%
+	&__main-text
+		padding-top: 50px
+	&__plus
+		font-size: 16px
+		line-height: 25px
+		display: block
+		font-weight: bold
+		margin-top: 10px
+		&:first-child
+			margin-top: 0
+		&_normal
+			font-weight: normal
+	&__subpoint
+		font-size: 16px
+		line-height: 25px
+		display: block
+	&__button
+		margin-top: 50px
+	&__main-content
+		margin-bottom: 160px
+	&__stages
+		justify-content: center
+		position: relative
+		&::before
+			content: ''
+			display: block
+			height: 1px
+			background: $green_3
+			width: 100%
+			position: absolute
+			top: 0
+			left: 0
+	&__h2
+		margin-top: 10px
+		padding-bottom: 10px
+	&__stage-item
+		&::before
+			content: ''
+			display: block
+			transform: translateY(-5px)
+			height: 10px
+			width: 10px
+			background: $green_3
+	&__number
+		color: $stage-numbers
+		position: absolute
+		top: -40px
+			
+
+
+.c-work-stages__pluses
+
+.c-work-stages__stages
+	display: flex
+	justify-content: space-between
 
 
 
