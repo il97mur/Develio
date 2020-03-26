@@ -108,6 +108,13 @@
             width: 80%
         &__main-text
             width: 100%
+    .work-stages
+        &__main-text
+            padding-top: 30px
+        &__subpoint
+            font-size: 12px
+            line-height: 20px
+            margin: 5px 0
 
 
 @media screen and ( max-width: 768px )
@@ -168,6 +175,8 @@
         line-height: 25px
     .popup-menu
         overflow-y: auto
+        &__content
+            height: 90%
         &__button
             margin-top: 20px
         &__contacts
@@ -195,7 +204,6 @@
             padding: 8px 5px
     .get-audit
         padding: 80px 0
-        text-align: center
         &__column
             width: 100%
             display: flex
@@ -207,17 +215,19 @@
         &__main-text
             width: 100%
             padding-top: 20px
-        &__h2
-            text-align: left
+            text-align: center
+        &__h1
+            text-align: center
     .get-audit-content
         padding-top: 0
         &__inner
             width: 90%
     .work-stages
         &__main-text
-            font-size: 14px
+            font-size: 12px
+            padding-top: 20px
         &__plus
-            font-size: 14px
+            font-size: 12px
             line-height: 19px
         &__main-content
             margin-bottom: 120px
@@ -226,16 +236,30 @@
             line-height: 22px
         &__subpoint
             font-size: 12px
-            line-height: 25px 
+            line-height: 20px
+        &__stage-item
+            &:first-child
+                flex-basis: 28%
+            &:nth-child(2)
+                 flex-basis: 29%
+            &:nth-child(4)
+                flex-basis: 13%
+                
     .consultation-action
         &__container
             width: 90% !important
             flex-wrap: wrap
-        &__columnn
-            // width: 100%
+        &__column
+            width: 100%
         &__button
             margin-top: 30px
             margin-bottom: 50px
+    .c-consultation-action__contacts
+        padding-top: 50px
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-around
 
 
 @media screen and ( max-width: 576px )
@@ -297,12 +321,18 @@
             height: 30px
         &__menu
             width: 100%
+            margin: 30px 0
+            text-align: center
+        &__item
+            // width: fit-content
+            margin-top: 10px
         &__interactive
             animation: customSlideFromLeft .5s
         &__content
             flex-wrap: wrap
             justify-content: center
             padding-bottom: 30px
+            height: fit-content
     .industries
         padding-bottom: 30px
         &__section-heading
@@ -342,6 +372,7 @@
         &__stage-item
             margin-top: 30px
             width: 100%
+            flex-basis: unset !important
             &:first-child
                 margin-top: 0
             &::before
@@ -351,14 +382,27 @@
         &__number
             position: relative
             top: 0
+            font-size: 26px
+        &__h2
+            font-size: 20px
+        &__subpoint
+            font-size: 16px
+            margin: 10px 0
     .consultation-action
         padding: 80px 0px 90px
         &__button
             margin-bottom: 50px
             margin-top: 30px
+    .c-consultation-action__contacts
+        padding-top: 0px
+        width: 100%
+        display: flex
+        flex-direction: column
     .look-portfolio
+        height: 100px
         &__main-text
             font-size: 12px
+            flex-basis: 30%
     .next-arrow
         &__img
             height: 50%
@@ -376,3 +420,8 @@
         &__main-text
             font-size: 12px
    
+
+@media screen and ( max-height: 500px )
+    .popup-menu__content
+        height: fit-content
+        padding: 30px 0px
