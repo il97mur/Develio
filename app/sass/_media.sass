@@ -103,6 +103,12 @@
     .sphere
         &__img
             margin-bottom: 50px
+    .get-audit
+        &__inner
+            width: 80%
+        &__main-text
+            width: 100%
+
 
 @media screen and ( max-width: 768px )
     .container
@@ -174,7 +180,7 @@
             height: 36px
         &__get-audit
             overflow-y: auto
-            height: 100vh
+            // height: 100vh
         &__audit-form
             width: 300px
             padding: 20px
@@ -183,6 +189,7 @@
             padding: 8px 5px
     .get-audit
         padding: 80px 0
+        text-align: center
         &__column
             width: 100%
             display: flex
@@ -194,10 +201,32 @@
         &__main-text
             width: 100%
             padding-top: 20px
+        &__h2
+            text-align: left
     .get-audit-content
         padding-top: 0
         &__inner
             width: 90%
+    .work-stages
+        &__main-text
+            font-size: 14px
+        &__plus
+            font-size: 14px
+            line-height: 19px
+        &__main-content
+            margin-bottom: 120px
+        &__h2
+            font-size: 14px
+            line-height: 22px
+        &__subpoint
+            font-size: 12px
+            line-height: 25px 
+    .consultation-action
+        &__container
+            width: 90% !important
+            flex-wrap: wrap
+        &__columnn
+            // width: 100%
 
 
 @media screen and ( max-width: 576px )
@@ -282,3 +311,57 @@
             margin-bottom: 30px
     .more-works
         min-height: 350px
+    .work-stages
+        // text-align: center
+        padding: 100px 0px
+        &__row
+            flex-wrap: wrap
+        &__column
+            flex-basis: 100%
+        &__main-text
+            padding-top: 10px
+            padding-bottom: 30px
+        &__button
+            margin-top: 30px
+        &__stages
+            &::before
+                display: none
+        &__container
+            flex-wrap: wrap
+        &__stage-item
+            margin-top: 30px
+            width: 100%
+            &:first-child
+                margin-top: 0
+            &::before
+                display: none
+                transform: none
+                margin-bottom: 10px
+        &__number
+            position: relative
+            top: 0
+    .consultation-action
+        padding: 80px 0px 90px
+        &__button
+            margin-bottom: 50px
+            margin-top: 30px
+    .look-portfolio
+        &__main-text
+            font-size: 12px
+    .next-arrow
+        &__img
+            height: 50%
+    .footer
+        padding-bottom: 30px
+        padding-top: 50px
+        &__container
+            flex-wrap: wrap
+        &__link
+            font-size: 12px
+            order: 3
+            width: 100%
+            text-align: center
+            margin-top: 50px
+        &__main-text
+            font-size: 12px
+   
