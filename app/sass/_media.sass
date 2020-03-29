@@ -16,10 +16,13 @@
             width: 85%
             margin-left: 25px
             margin-top: 25px
+            margin-bottom: 50px
         &__item:nth-child(3n+1)
             margin-top: -80px
         &__item:nth-child(3n+2)
             margin-top: -40px
+    .portfolio-item__pixel-arrow-img
+        margin-bottom: 100px
     .services
         position: relative
         &__section-heading
@@ -61,8 +64,8 @@
     .input-text
         font-size: 14px
         padding: 8px 12px
-    .hamburger-img
-        margin-right: 10px
+    .hamburger
+        margin-left: 10px
     .portfolio
         margin-top: 40px
         margin-bottom: 180px
@@ -76,6 +79,8 @@
             margin-top: -50px
         &__item:nth-child(3n+2)
             margin-top: -25px
+    .portfolio-item__wrap
+        display: none
     .services
         &__section-heading
             top: -140px
@@ -108,7 +113,7 @@
             width: 80%
         &__main-text
             width: 100%
-    .work-stages
+    .steps
         &__main-text
             padding-top: 30px
         &__subpoint
@@ -222,7 +227,7 @@
         padding-top: 0
         &__inner
             width: 90%
-    .work-stages
+    .steps
         &__main-text
             font-size: 12px
             padding-top: 20px
@@ -245,7 +250,7 @@
             &:nth-child(4)
                 flex-basis: 13%
                 
-    .consultation-action
+    .sub-footer
         &__container
             width: 90% !important
             flex-wrap: wrap
@@ -254,7 +259,7 @@
         &__button
             margin-top: 30px
             margin-bottom: 50px
-    .c-consultation-action__contacts
+    .c-sub-footer__contacts
         padding-top: 50px
         width: 100%
         display: flex
@@ -278,8 +283,8 @@
     .header__button
         padding: 5px 5px
         font-size: 12px
-    .hamburger-img
-        margin-right: 5px
+    .hamburger
+        margin-left: 5px
     .portfolio
         margin-top: 40px
         margin-bottom: 180px
@@ -350,7 +355,7 @@
             margin-bottom: 30px
     .more-works
         min-height: 350px
-    .work-stages
+    .steps
         // text-align: center
         padding: 100px 0px
         &__main-content
@@ -388,17 +393,17 @@
         &__subpoint
             font-size: 16px
             margin: 10px 0
-    .consultation-action
+    .sub-footer
         padding: 80px 0px 90px
         &__button
             margin-bottom: 50px
             margin-top: 30px
-    .c-consultation-action__contacts
+    .c-sub-footer__contacts
         padding-top: 0px
         width: 100%
         display: flex
         flex-direction: column
-    .look-portfolio
+    .more
         height: 100px
         &__main-text
             font-size: 12px

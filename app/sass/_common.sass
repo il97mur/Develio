@@ -1,0 +1,562 @@
+@import vars
+@import fonts
+@import libs
+
+// ::placeholder
+// 	color: #666
+
+// ::selection
+// 	background-color: $accent
+// 	color: #fff
+
+// input, textarea
+// 	outline: none
+// 	&:focus:required:invalid
+// 		border-color: red
+// 	&:required:valid
+// 		border-color: green
+
+// Standart classes
+
+.d-f
+    display: flex
+.jc-c
+    justify-content: center
+.jc-sb
+    justify-content: space-between
+.jc-sa
+    justify-content: space-around
+.ai-c
+    align-items: center
+.ai-s
+    align-items: start
+.ai-e
+    align-items: end
+.fw-w
+    flex-wrap: wrap
+.fw-nw
+    flex-wrap: nowrap
+.fd-r
+    flex-direction: row
+.fd-c
+    flex-direction: column
+.d-none
+    display: none !important
+.w-50
+    width: 50%
+
+// End standart classes
+
+
+
+.container
+    width: 1110px !important
+
+.row
+    width: 100%
+
+*
+    box-sizing: border-box
+
+html, body
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-size: 16px
+    min-width: 320px
+    position: relative
+    line-height: 1.65
+    font-family: 'Montserrat', sans-serif
+    overflow-x: hidden
+    color: $text
+    background: $black
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+
+a
+    text-decoration: none
+    color: unset
+    &:hover
+        text-decoration: none
+        color: #ffffff
+
+p
+    padding: 0
+    margin: 0
+
+button
+    border: none
+    outline: none
+    cursor: pointer
+    background: none
+
+input
+    background: none
+    border: none
+    outline: none !important
+    font: unset
+
+img
+    max-width: 100%
+
+
+h1,h2
+    padding: 0
+    margin: 0
+
+.main-text
+    font-size: 16px
+    line-height: 20px
+    font-weight: normal
+    color: $dark-gray
+    &_gray
+        color: $input-border
+
+.h1
+    font-size: 44px
+    line-height: 54px
+    text-transform: uppercase
+    font-weight: 900
+    &_white
+        color: #ffffff
+
+.h2
+    font-size: 24px
+    line-height: 29px
+    font-weight: bold
+    &_white
+        color: #fff
+    &_green
+        color: $green_3
+
+		
+.h-100
+    height: 100%
+.w-100
+    width: 100%
+
+// Custom Sass / Remove before use
+
+.header
+    width: 100%
+    display: flex
+    justify-content: center
+    background-color: $black
+    flex-wrap: wrap
+    &__row
+        margin-top: 35px
+        display: flex
+        align-content: space-between
+        justify-content: center
+        align-items: center
+        background: $black
+        position: fixed
+        z-index: 4
+    
+.menu
+    &__item
+        color: #ffffff
+        margin-right: 42px
+        text-transform: uppercase
+        font-size: 12px
+        line-height: 15px
+        transition: all .2s ease
+        &:last-child
+            margin-right: 0
+        &:hover
+            color: $green_3
+        &_active
+            font-weight: bold
+.logo
+    display: flex
+    align-items: center
+
+.logo__img
+    width: 111px
+
+.button
+    font-size: 16px
+    line-height: 20px
+    text-transform: uppercase
+    padding: 12px 28px
+    font-weight: bold
+    font-family: 'Montserrat', sans-serif
+    &_primary
+        color: #fff
+        transition: background .3s ease
+        background: linear-gradient(90deg, #33AF33 0%, #46FA5A 100%)
+        &:hover
+            background: linear-gradient(90deg, #46FA5A 0%, #33AF33 100%)
+    &_secondary
+        border: $green_3 2px solid
+        color: $green_3
+        &:active
+            background: $green_3
+            color: #ffffff
+    &_not-active
+        border-color: $dark-gray
+        color: $dark-gray
+        &:active
+            color: $dark-gray !important
+.c-hamburger
+    color: #fff
+    text-transform: uppercase
+    cursor: pointer
+    display: flex
+    align-items: center
+    transition: opacity .2s ease
+    &:hover
+        opacity: 0.7
+
+.hamburger
+    margin-left: 20px
+    z-index: 10000
+
+.common-link
+    text-decoration: underline
+    transition: all .3s ease
+    &:hover
+        text-decoration: underline
+    &_green
+        &:hover
+            color: $green_3
+
+// HEADER POPUP MENU START
+
+.popup-menu
+    width: 100%
+    height: 100%
+    position: fixed
+    left: 0
+    top: 0
+    background: linear-gradient(102.2deg, #232323 36.14%, #454545 101.46%)
+    display: flex
+    transition: display .5s ease
+    z-index: 100
+    justify-content: center
+    &__container
+        position: relative
+    &__row
+        position: absolute
+        top: 0px
+        z-index: 10
+        justify-content: space-between
+        background: none
+        height: 44px
+    &__content
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+        height: 100%
+    &__menu
+        animation: customSlideFromLeft 1s ease
+    &__item
+        display: block
+        margin-top: 30px
+        transition: opacity .2s ease
+        &:hover
+            opacity: 0.6
+        &_active
+            color: $green_3
+            &:hover
+                // opacity: 1
+        &:first-child
+            margin-top: 0
+    &__button
+        margin-top: 25px
+        &:first-child
+            margin-top: 0
+    &__interactive
+        animation: customSlideFromRight 1s ease
+    &__contacts
+        padding: 45px 10px 0px
+    &__e-mail
+        margin-top: 20px
+        margin-bottom: 45px
+    &__social
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__get-audit
+        display: none
+        position: fixed
+        z-index: 1000
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    &__audit-form
+        border: 2px $green_3 solid
+    &__get-callback
+        display: none
+        position: fixed
+        z-index: 1000
+        width: 100%
+        height: 100%
+    &__callback-form
+        border: 2px $green_3 solid
+
+.contacts__link
+    display: block
+    transition: all .3s ease
+    cursor: pointer
+    &:hover
+        color: $green_3
+
+.get-callback
+    &__name
+        margin-top: 40px !important
+        margin-bottom: 5px !important
+    &__phone
+        margin-bottom: 55px !important
+    &__personal-data-apply
+        margin-right: -20px
+    &__main-text
+        line-height: 25px
+        margin-top: 10px
+        padding-right: 10px
+    &__submit
+        padding: 12px 48px
+
+.callback-form
+    width: 360px
+    padding: 50px
+    background: $black
+
+
+
+
+.c-popup-menu__form
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    width: 100%
+    min-height: 100%
+    background: $black
+    background: rgba($black, .9)
+
+
+.close
+    cursor: pointer
+    height: 100%
+    display: flex	
+
+@keyframes closeAnimation1
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(45deg)
+
+@keyframes closeAnimation2
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(-45deg)
+
+@keyframes customSlideFromLeft
+    0%
+        opacity: 0
+        margin-left: -30%
+    100%
+        opacity: 1
+        margin-left: 0
+
+@keyframes customSlideFromRight
+    0%
+        opacity: 0
+        margin-right: -30%
+    100%
+        opacity: 1
+        margin-right: 0
+		
+
+.contacts
+    font-size: 30px
+    color: #ffffff
+    line-height: 37px
+    font-weight: normal
+    text-align: center
+
+
+.interactive
+    display: flex
+    flex-direction: column
+
+// HEADER POPUP MENU END
+
+.visible
+    opacity: 1 !important
+
+.section-heading
+    font-size: 120px
+    text-transform: uppercase
+    color: #ffffff
+    opacity: 0.2
+    font-weight: 900
+    letter-spacing: 0.3em
+    width: 100%
+    text-align: center
+
+.rotate
+    transform: scale(-1)
+
+.audit-form
+    padding: 50px
+    background: $black
+    width: 360px
+    &__input-checkbox
+        &:checked + .label__text::before
+            background: $green_3
+    &__label
+        color: #ffffff
+    &__h2
+        width: 70%
+    &__submit
+        width: 100%
+
+
+.personal-data-apply
+    color: $input-border
+    font-size: 10px
+    line-height: 12px
+    padding-top: 30px
+
+.input
+    margin: 20px 0px
+    width: 100%
+    &-text
+        padding: 12px 30px
+        background: $light-black
+        border: 2px $input-border solid
+        font-size: 16px
+        line-height: 20px
+        color: #ffffff
+        &:focus
+            border-color: $green_3
+
+.disabled
+    opacity: 0.5
+
+
+.label
+    margin: 20px 0px
+    margin-right: -10px
+    display: flex
+    align-items: center
+    cursor: pointer
+    &__text
+        display: flex
+        align-items: center
+        &::before
+            content: ''
+            display: inline-block
+            height: 10px
+            width: 10px
+            border: $green_3 1px solid
+            margin-right: 18px
+
+// GET CONSULTATION SECTION
+
+.sub-footer
+	width: 100%
+	display: flex
+	justify-content: center
+	padding: 110px 0px 120px
+	&__container
+		display: flex
+		justify-content: space-between
+	&__column
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	&__contact
+		margin: 15px 0px 50px
+		&_mb12
+			margin-bottom: 12px
+	&__button
+		width: fit-content
+
+
+// LOOK PORTFOLIO SECTION
+
+.more
+    width: 100%
+    background: #ffffff
+    height: 120px
+    display: flex
+    justify-content: center
+    transition: all .3s ease
+    &:hover
+        background: #efefef
+    &__link
+        width: 100%
+        display: flex
+        justify-content: center
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 100%
+    &__main-text
+        text-transform: uppercase
+        color: $black
+        font-weight: bold
+    &__section-heading
+        color: $gray
+        line-height: 120px
+        width: unset
+
+.next-arrow
+    &__img
+        height: 100%
+        transition: all .3s ease
+        &_hover
+            margin-right: -50px
+
+// FOOTER
+
+.footer
+    width: 100%
+    background: #000000
+    padding: 80px 0px
+    display: flex
+    justify-content: center
+    &__container
+        display: flex
+        justify-content: space-between
+    &__link
+        text-decoration: underline
+        color: #ffffff
+    &__main-text
+        color: #ffffff
+
+// Хлебные крошки
+
+.breadcrumps
+    margin-top: 120px
+    display: flex
+    justify-content: center
+    margin-bottom: 15px
+    &__container
+        display: flex
+        align-items: center
+    &__item
+        display: flex
+        align-items: center
+        &:first-child
+            text-decoration: underline
+    &__separator
+            content: ''
+            display: inline-block
+            height: 5px
+            width: 5px
+            background: $input-border
+            margin: 0px 15px
+
+    

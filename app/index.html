@@ -13,7 +13,7 @@
 	<link rel="icon" href="img/_src/pixel_arrow.svg">
 	<meta property="og:image" content="img/@1x/preview.jpg">
 
-	<link rel="stylesheet" href="css/styles.min.css">
+	<link rel="stylesheet" href="css/main.css">
 
 </head>
 
@@ -26,24 +26,29 @@
 		<div class="row header__row">
 
 			<div class="container d-f jc-sb ai-c">
-				<a href="#" class="header__logo logo">
+				<a href="index.html" class="header__logo logo">
 					<img src="img/_src/logo_white_green.svg" alt="" class="logo__img">
 				</a>
 
 				<nav class="menu">
-					<a href="#" class="menu__item">портфолио</a>
-					<a href="#" class="menu__item">Услуги</a>
-					<a href="#" class="menu__item">Отрасли</a>
-					<a href="#" class="menu__item">Компания</a>
+					<a href="#portfolio" class="menu__item">портфолио</a>
+					<a href="#services" class="menu__item">Услуги</a>
+					<a href="#industries" class="menu__item">Отрасли</a>
+					<a href="#company" class="menu__item">Компания</a>
 				</nav>
 
 				<button class="button button_primary button_active header__button">
 					Заполнить бриф
 				</button>
 
-				<div class="hamburger">
-					<img src="img/_src/hamburger.svg" alt="" class="hamburger-img">
+				<div class="c-hamburger">
+					<!-- <img src="img/_src/hamburger.svg" alt="" class="hamburger-img"> -->
 					Меню
+					<button class="hamburger hamburger--slider" type="button">
+						<span class="hamburger-box">
+						  <span class="hamburger-inner"></span>
+						</span>
+					  </button>
 				</div>
 			</div>
 
@@ -74,12 +79,16 @@
 			<div class="container popup-menu__container">
 				<div class="row header__row popup-menu__row ">
 
-					<a href="#" class="header__logo logo">
+					<a href="index.html" class="header__logo logo">
 						<img src="img/_src/logo_gray.svg" alt="" class="logo__img">
 					</a>
 
-					<div class="close">
-						<img src="img/_src/close.svg" alt="">
+					<div class="c-hamburger">
+						<button class="hamburger hamburger--slider" type="button">
+							<span class="hamburger-box">
+							  <span class="hamburger-inner"></span>
+							</span>
+						  </button>
 					</div>
 
 				</div>
@@ -87,7 +96,7 @@
 				<div class="popup-menu__content">
 
 					<nav class="popup-menu__menu">
-						<a href="#" class="popup-menu__item popup-menu__item_active h1 h1_white">
+						<a href="pages/portfolio.html" class="popup-menu__item h1 h1_white">
 							портфолио
 						</a>
 						<a href="#" class="popup-menu__item h1 h1_white">
@@ -108,12 +117,12 @@
 						<button class="button button_primary popup-menu__button j-popup-menu__get-callback-button">Обратный звонок</button>
 
 						<div class="contacts popup-menu__contacts">
-							<p class="phone">
+							<a href="#" class="phone contacts__link">
 								+ 7 495 147-73-00
-							</p>
-							<p class="e-mail popup-menu__e-mail">
+							</a>
+							<a href="#" class="e-mail popup-menu__e-mail contacts__link">
 								hello@develio.ru
-							</p>
+							</a>
 							<div class="social popup-menu__social">
 								<a href="#" class="social-link"><img src="img/_src/inst.svg" alt=""></a>
 								<a href="#" class="social-link"><img src="img/_src/vk.svg" alt=""></a>
@@ -139,18 +148,18 @@
 		<div class="popup-menu__get-audit">
 			<div class="c-popup-menu__get-audit c-popup-menu__form">
 				<form action="" class="form audit-form popup-menu__audit-form">
-					<h2 class="h2 h2_white get-audit__h2">
+					<h2 class="h2 h2_white audit-form__h2">
 						Выберите содержимое аудита
 					</h2>
 		
-					<label class="label get-audit__label"><input type="checkbox" hidden class="input input-checkbox get-audit__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
-					<label class="label get-audit__label"><input type="checkbox" hidden class="input input-checkbox get-audit__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
-					<label class="label get-audit__label"><input type="checkbox" hidden class="input input-checkbox get-audit__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
-					<label class="label get-audit__label"><input type="checkbox" hidden class="input input-checkbox get-audit__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
 		
-					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text get-audit__input-text">
-					<input type="submit" value="Отправить" class="button button_primary get-audit__submit disabled">
-					<p class="personal-data-apply get-audit__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
+					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text audit-form__input-text">
+					<input type="submit" value="Отправить" class="button button_primary audit-form__submit disabled">
+					<p class="personal-data-apply audit-form__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
 				</form>
 			</div>
 		</div>
@@ -182,7 +191,7 @@
 
 	</header>
 
-	<section class="portfolio">
+	<section class="portfolio" id="portfolio">
 
 		<div class="portfolio__container">
 			<div class="section-heading portfolio__section-heading">
@@ -190,187 +199,245 @@
 			</div>
 
 			<div class="portfolio__row portfolio__row_first">
-				<div class="portfolio__item portfolio__item_with-text">
+				<a href="#" class="portfolio__item portfolio__item_with-text portfolio-item">
 					<img class="portfolio__img" src="img/_src/bookli.png" alt="">
-					<div class="w-100">
+					<div class="w-100 c-portfolio__h2">
 						<h2 class="h2 portfolio__h2 h2_white">Брендбук деятеля искусств Rami Meir</h2>
 					</div>
-				</div>
-				<div class="portfolio__item portfolio__item_only-img">
+					<object class="j-portfolio-item__wrap">
+						<a href="#" class="portfolio-item__wrap">
+							<div class="row portfolio-item__row">
+								<p class="main-text portfolio-item__main-text">Дизайн</p>
+								<p class="main-text portfolio-item__main-text">2019</p>
+							</div>
+							<div class="row portfolio-item__row">
+								<img src="img/_src/pixel_arrow_white.svg" alt="" class="portfolio-item__pixel-arrow-img">
+							</div>
+						</a>
+					</object>
+				</a>
+				<a href="#" class="portfolio__item portfolio__item_only-img portfolio-item">
 					<img class="portfolio__img" src="img/_src/santimether.png" alt="">
-				</div>
-				<div class="portfolio__item portfolio__item_with-text">
+				</a>
+				<a href="#" class="portfolio__item portfolio__item_with-text portfolio-item">
 					<img class="portfolio__img" src="img/_src/graphic_design_studio.png" alt="">
-					<div class="w-100">
+					<div class="w-100 c-portfolio__h2">
 						<h2 class="h2 portfolio__h2 h2_white">Брендбук деятеля искусств Rami Meir</h2>
 					</div>
-				</div>
+					<object class="j-portfolio-item__wrap">
+						<a href="#" class="portfolio-item__wrap">
+							<div class="row portfolio-item__row">
+								<p class="main-text portfolio-item__main-text">Дизайн</p>
+								<p class="main-text portfolio-item__main-text">2019</p>
+							</div>
+							<div class="row portfolio-item__row">
+								<img src="img/_src/pixel_arrow_white.svg" alt="" class="portfolio-item__pixel-arrow-img">
+							</div>
+						</a>
+					</object>
+				</a>
 			</div>
 
 			<div class="portfolio__row">
-				<div class="portfolio__item portfolio__item_only-img">
+				<a href="#" class="portfolio__item portfolio__item_only-img portfolio-item">
 					<img class="portfolio__img" src="img/_src/golden_stroke.png" alt="">
-				</div>
-				<div class="portfolio__item portfolio__item_with-text">
+					
+				</a>
+				<a href="#" class="portfolio__item portfolio__item_with-text portfolio-item">
 					<img class="portfolio__img" src="img/_src/techno_puppy.png" alt="">
-					<div class="w-100">
+					<div class="w-100 c-portfolio__h2">
 						<h2 class="h2 portfolio__h2 h2_white">Брендбук деятеля искусств Rami Meir</h2>
 					</div>
-				</div>
-				<div class="portfolio__item portfolio__item_only-img">
+					<object class="j-portfolio-item__wrap">
+						<a href="#" class="portfolio-item__wrap">
+							<div class="row portfolio-item__row">
+								<p class="main-text portfolio-item__main-text">Дизайн</p>
+								<p class="main-text portfolio-item__main-text">2019</p>
+							</div>
+							<div class="row portfolio-item__row">
+								<img src="img/_src/pixel_arrow_white.svg" alt="" class="portfolio-item__pixel-arrow-img">
+							</div>
+						</a>
+					</object>
+				</a>
+				<a href="#" class="portfolio__item portfolio__item_only-img c-more-works">
 					<!-- <img class="portfolio__img" src="img/_src/bookli.png" alt=""> -->
 					<div class="more-works">
 						<button class="button button_secondary more-works__button">
 							больше работ
 						</button>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 
 	</section>
 
-	<section class="services">
+	<section class="services" id="services">
 
 		<div class="section-heading services__section-heading">
 			услуги
 		</div>
 
 		<div class="c-services-items services__c-services-items">
-			<div class="services__item j-slide">
-				<div class="container">
-
-					<div class="service-content">
+			<div class="services__item">
+				<div class="row services__row  j-slide">
+					<div class="container">
 						<div class="h1 services__h1">
 							Веб-разработка <img class="services__pixel-arrow-img rotate" src="img/_src/pixel_arrow.svg" alt="">
 						</div>
-
-						<div class="service-content__inner service-content__inner_opened">
-							<div class="service-list services__service-list">
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Корпоративный сайт</p>
-								<p class="service-list__item">Интернет-магазин</p>
-								<p class="service-list__item">Промо-сайт</p>
-								<p class="service-list__item">Адаптивный сайт Верстка</p>
-								<p class="service-list__item">Программирование</p>
-								<p class="service-list__item">Интеграция с сервисами</p>
-							</div>
-
-							<button class="button button_secondary services__button">
-								подробнее
-							</button>
-
-						</div>
-
-
-
 					</div>
-
+				</div>
+				<div class="row services__row">
+					<div class="container">
+	
+						<div class="service-content">
+							
+	
+							<div class="service-content__inner">
+								<div class="service-list services__service-list">
+									<p class="service-list__item"><a href="#" class="common-link common-link_green service-list__link">Landing page</a></p>
+									<p class="service-list__item">Корпоративный сайт</p>
+									<p class="service-list__item">Интернет-магазин</p>
+									<p class="service-list__item">Промо-сайт</p>
+									<p class="service-list__item">Адаптивный сайт Верстка</p>
+									<p class="service-list__item"><a href="#" class="common-link common-link_green service-list__link">Программирование</a></p>
+									<p class="service-list__item">Интеграция с сервисами</p>
+								</div>
+	
+								<button class="button button_secondary services__button">
+									подробнее
+								</button>
+	
+							</div>
+	
+	
+	
+						</div>
+	
+					</div>
 				</div>
 			</div>
-			<div class="services__item j-slide">
-				<div class="container">
-
-					<div class="service-content">
+			<div class="services__item">
+				<div class="row services__row  j-slide">
+					<div class="container">
 						<div class="h1 services__h1">
 							Дизайн <img class="services__pixel-arrow-img" src="img/_src/pixel_arrow.svg" alt="">
 						</div>
-
-						<div class="service-content__inner">
-							<div class="service-list services__service-list">
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-							</div>
-
-							<button class="button button_secondary services__button">
-								подробнее
-							</button>
-
-						</div>
-
-
-
 					</div>
-
+				</div>
+				<div class="row services__row c-service-content">
+					<div class="container">
+	
+						<div class="service-content">
+							
+	
+							<div class="service-content__inner">
+								<div class="service-list services__service-list">
+									<p class="service-list__item"><a href="#" class="common-link common-link_green service-list__link">Landing page</a></p>
+									<p class="service-list__item">Корпоративный сайт</p>
+									<p class="service-list__item">Интернет-магазин</p>
+									<p class="service-list__item">Промо-сайт</p>
+									<p class="service-list__item">Адаптивный сайт Верстка</p>
+									<p class="service-list__item"><a href="#" class="common-link common-link_green service-list__link">Программирование</a></p>
+									<p class="service-list__item">Интеграция с сервисами</p>
+								</div>
+	
+								<button class="button button_secondary services__button">
+									подробнее
+								</button>
+	
+							</div>
+	
+	
+	
+						</div>
+	
+					</div>
 				</div>
 			</div>
 
-			<div class="services__item j-slide">
-				<div class="container">
-
-					<div class="service-content">
+			<div class="services__item">
+				<div class="row services__row  j-slide">
+					<div class="container">
 						<div class="h1 services__h1">
-							Реклама и продвижение <img class="services__pixel-arrow-img services__pixel-arrow-img_ad " src="img/_src/pixel_arrow.svg"
-								alt="">
+							Реклама и продвижение <img class="services__pixel-arrow-img" src="img/_src/pixel_arrow.svg" alt="">
 						</div>
-
-						<div class="service-content__inner">
-							<div class="service-list services__service-list">
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-							</div>
-
-							<button class="button button_secondary services__button">
-								подробнее
-							</button>
-
-						</div>
-
-
-
 					</div>
-
+				</div>
+				<div class="row services__row c-service-content">
+					<div class="container">
+	
+						<div class="service-content">
+							
+	
+							<div class="service-content__inner">
+								<div class="service-list services__service-list">
+									<p class="service-list__item"><a href="#" class="common-link common-link_green service-list__link">Landing page</a></p>
+									<p class="service-list__item">Корпоративный сайт</p>
+									<p class="service-list__item">Интернет-магазин</p>
+									<p class="service-list__item">Промо-сайт</p>
+									<p class="service-list__item">Адаптивный сайт Верстка</p>
+									<p class="service-list__item"><a href="#" class="common-link common-link_green service-list__link">Программирование</a></p>
+									<p class="service-list__item">Интеграция с сервисами</p>
+								</div>
+	
+								<button class="button button_secondary services__button">
+									подробнее
+								</button>
+	
+							</div>
+	
+	
+	
+						</div>
+	
+					</div>
 				</div>
 			</div>
 
-			<div class="services__item j-slide">
-				<div class="container">
-
-					<div class="service-content">
+			<div class="services__item">
+				<div class="row services__row  j-slide">
+					<div class="container">
 						<div class="h1 services__h1">
 							Аналитика <img class="services__pixel-arrow-img" src="img/_src/pixel_arrow.svg" alt="">
 						</div>
-
-						<div class="service-content__inner">
-							<div class="service-list services__service-list">
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-								<p class="service-list__item">Landing page</p>
-							</div>
-
-							<button class="button button_secondary services__button">
-								подробнее
-							</button>
-
-						</div>
-
-
-
 					</div>
-
+				</div>
+				<div class="row services__row c-service-content">
+					<div class="container">
+	
+						<div class="service-content">
+							
+	
+							<div class="service-content__inner">
+								<div class="service-list services__service-list">
+									<p class="service-list__item"><a href="#" class="common-link common-link_green service-list__link">Landing page</a></p>
+									<p class="service-list__item">Корпоративный сайт</p>
+									<p class="service-list__item">Интернет-магазин</p>
+									<p class="service-list__item">Промо-сайт</p>
+									<p class="service-list__item">Адаптивный сайт Верстка</p>
+									<p class="service-list__item"><a href="#" class="common-link common-link_green service-list__link">Программирование</a></p>
+									<p class="service-list__item">Интеграция с сервисами</p>
+								</div>
+	
+								<button class="button button_secondary services__button">
+									подробнее
+								</button>
+	
+							</div>
+	
+	
+	
+						</div>
+	
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="industries">
+	<section class="industries" id="industries">
 
 		<div class="container">
 			<div class="section-heading industries__section-heading">
@@ -422,7 +489,7 @@
 						<div class="tag-container">
 							<div class="tag-container__column">
 								<p class="main-text industries__main-text industries__online-store">
-									Интернет-магазин
+									<a href="#" class="common-link common-link_green">Интернет-магазин</a>
 								</p>
 								<p class="main-text industries__main-text industries__online-store">
 									Интернет-магазин
@@ -455,7 +522,7 @@
 		</div>
 	</section>
 
-<section class="get-audit">
+<section class="get-audit" id="company">
 	<div class="container get-audit__container">
 		<div class="get-audit__column get-audit-content">
 
@@ -471,110 +538,110 @@
 		<div class="get-audit__column">
 
 			<form action="" class="form audit-form get-audit__audit-form">
-				<h2 class="h2 h2_white get-audit__h2">
+				<h2 class="h2 h2_white audit-form__h2">
 					Выберите содержимое аудита
 				</h2>
-
-				<label class="label get-audit__label"><input type="checkbox" hidden class="input input-checkbox get-audit__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
-				<label class="label get-audit__label"><input type="checkbox" hidden class="input input-checkbox get-audit__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
-				<label class="label get-audit__label"><input type="checkbox" hidden class="input input-checkbox get-audit__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
-				<label class="label get-audit__label"><input type="checkbox" hidden class="input input-checkbox get-audit__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
-
-				<input type="tel" name="phone" placeholder="Телефон" required class="input input-text get-audit__input-text">
-				<input type="submit" value="Отправить" class="button button_primary get-audit__submit disabled">
-				<p class="personal-data-apply get-audit__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
+	
+				<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
+				<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
+				<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
+				<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
+	
+				<input type="tel" name="phone" placeholder="Телефон" required class="input input-text audit-form__input-text">
+				<input type="submit" value="Отправить" class="button button_primary audit-form__submit disabled">
+				<p class="personal-data-apply audit-form__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
 			</form>
 
 		</div>
 	</div>
 </section>
 
-<section class="work-stages">
-	<div class="container work-stages__container">
-		<div class="row work-stages__row work-stages__main-content">
-			<div class="work-stages__column">
-				<div class="h1 work-stages__h1">
+<section class="steps">
+	<div class="container steps__container">
+		<div class="row steps__row steps__main-content">
+			<div class="steps__column">
+				<div class="h1 steps__h1">
 					Этапы работ
 				</div>
-				<div class="main-text work-stages__main-text">
+				<div class="main-text steps__main-text">
 					Глубоко анализируем каждый проект. На основании исследования рынка и бизнес-требований производится проектирование. Итог этапа разработки — полноценный продукт, отвечающий всем требованиям ТЗ.
 				</div>
 			</div>
-			<div class="work-stages__column">
-				<div class="c-work-stages__pluses">
-					<p class="work-stages__plus">Работа в срок – или дополнительная услуга в подарок</p>
-					<p class="work-stages__plus">Фиксированная цена проекта/специалиста</p>
-					<p class="work-stages__plus">Доведение проекта до 100% соответствия ТЗ</p>
-					<button class="button button_secondary work-stages__button">Подробнее</button>
+			<div class="steps__column">
+				<div class="c-steps__pluses">
+					<p class="steps__plus">Работа в срок – или дополнительная услуга в подарок</p>
+					<p class="steps__plus">Фиксированная цена проекта/специалиста</p>
+					<p class="steps__plus">Доведение проекта до 100% соответствия ТЗ</p>
+					<button class="button button_secondary steps__button">Подробнее</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	
-			<div class="row work-stages__row work-stages__stages">
-				<div class="container work-stages__container c-work-stages__stages">
-					<div class="work-stages__stage-item">
-						<div class="h2 work-stages__number">01</div>
-						<h2 class="h2 h2_green work-stages__h2">Исследование</h2>
-						<p class="work-stages__subpoint">Исследование бизнеса</p>
-						<p class="work-stages__subpoint">Исследование рынка и конкурентов</p>
-						<p class="work-stages__subpoint">Формализация бизнес требований</p>
+			<div class="row steps__row steps__stages">
+				<div class="container steps__container c-steps__stages">
+					<div class="steps__stage-item">
+						<div class="h2 steps__number">01</div>
+						<h2 class="h2 h2_green steps__h2">Исследование</h2>
+						<p class="steps__subpoint">Исследование бизнеса</p>
+						<p class="steps__subpoint">Исследование рынка и конкурентов</p>
+						<p class="steps__subpoint">Формализация бизнес требований</p>
 					</div>
-					<div class="work-stages__stage-item">
-						<div class="h2 work-stages__number">02</div>
-						<h2 class="h2 h2_green work-stages__h2">Проектирование</h2>
-						<p class="work-stages__subpoint">UX-проектирование</p>
-						<p class="work-stages__subpoint">Информационная архитектура</p>
-						<p class="work-stages__subpoint">Прототипирование</p>
+					<div class="steps__stage-item">
+						<div class="h2 steps__number">02</div>
+						<h2 class="h2 h2_green steps__h2">Проектирование</h2>
+						<p class="steps__subpoint">UX-проектирование</p>
+						<p class="steps__subpoint">Информационная архитектура</p>
+						<p class="steps__subpoint">Прототипирование</p>
 					</div>
-					<div class="work-stages__stage-item">
-						<div class="h2 work-stages__number">03</div>
-						<h2 class="h2 h2_green work-stages__h2">Разработка</h2>
-						<p class="work-stages__subpoint">Дизайн</p>
-						<p class="work-stages__subpoint">Верстка</p>
-						<p class="work-stages__subpoint">Программирование</p>
+					<div class="steps__stage-item">
+						<div class="h2 steps__number">03</div>
+						<h2 class="h2 h2_green steps__h2">Разработка</h2>
+						<p class="steps__subpoint">Дизайн</p>
+						<p class="steps__subpoint">Верстка</p>
+						<p class="steps__subpoint">Программирование</p>
 					</div>
-					<div class="work-stages__stage-item">
-						<div class="h2 work-stages__number">04</div>
-						<h2 class="h2 h2_green work-stages__h2">Развитие</h2>
-						<p class="work-stages__subpoint">Запуск</p>
-						<p class="work-stages__subpoint">Развитие</p>
+					<div class="steps__stage-item">
+						<div class="h2 steps__number">04</div>
+						<h2 class="h2 h2_green steps__h2">Развитие</h2>
+						<p class="steps__subpoint">Запуск</p>
+						<p class="steps__subpoint">Развитие</p>
 					</div>
 				</div>
 			</div>
 	
 </section>
 
-<section class="consultation-action">
-	<div class="container consultation-action__container">
-		<div class="consultation-action__column">
-			<div class="h1 h1_white consultation-action__h1">
+<section class="sub-footer">
+	<div class="container sub-footer__container">
+		<div class="sub-footer__column">
+			<div class="h1 h1_white sub-footer__h1">
 				Есть проект?
 				Проконсультируем!
 			</div>
-			<button class="button button_primary consultation-action__button">Заполнить бриф</button>
+			<button class="button button_primary sub-footer__button">Заполнить бриф</button>
 		</div>
-		<div class="consultation-action__column">
-			<div class="c-consultation-action__contacts">
+		<div class="sub-footer__column">
+			<div class="c-sub-footer__contacts">
 				<div>
-					<p class="main-text consultation-action__main-text">Пишите</p>
-					<div class="h2 h2_white consultation-action__contact">hello@develio.ru</div>
+					<p class="main-text sub-footer__main-text">Пишите</p>
+					<div class="h2 h2_white sub-footer__contact"><a href="#" class="contacts__link">hello@develio.ru</a></div>
 				</div>
 				<div>
-					<p class="main-text consultation-action__main-text">Звоните</p>
-					<div class="h2 h2_white consultation-action__contact consultation-action__contact_mb12">+7 495 147-73-00</div>
+					<p class="main-text sub-footer__main-text">Звоните</p>
+					<div class="h2 h2_white sub-footer__contact sub-footer__contact_mb12"><a href="#" class="contacts__link">+7 495 147-73-00</a></div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="look-portfolio">
-	<a href="#" class="look-portfolio__link">
-		<div class="container look-portfolio__container">
-			<div class="main-text look-portfolio__main-text">Посмотреть портфолио</div>
-			<div class="section-heading look-portfolio__section-heading">далее</div>
+<section class="more">
+	<a href="#" class="more__link">
+		<div class="container more__container">
+			<div class="main-text more__main-text">Посмотреть портфолио</div>
+			<div class="section-heading more__section-heading">далее</div>
 			<img src="img/_src/big-pixel-arrow_black.svg" alt="" class="next-arrow__img">
 		</div>
 	</a>

@@ -1,0 +1,96 @@
+@import common
+
+    
+.menu
+    flex-basis: 37%
+    display: flex
+    justify-content: center
+
+.portfolio-page-content
+    width: 100%
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    &__content-filter
+        padding-top: 60px
+        padding-bottom: 40px
+    &__filter
+        &:active
+            background: none !important
+            color: $green_3 
+    &__filter
+        margin: 0px 10px
+        transition: all .3s ease
+        &:first-child
+            margin-left: 0
+        &:last-child
+            margin-right: 0
+
+.portfolio-list
+    line-height: 0 !important
+    width: 100%
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    &__container
+        width: 1440px !important
+    &__row
+        display: flex
+        flex-direction: row
+    &__column
+        width: 50%
+    &__load-more
+        margin-top: 45px
+        margin-bottom: 220px
+
+.industries
+    width: 100%
+    display: flex
+    justify-content: center
+    padding-bottom: 120px
+    background: #ffffff
+    &__section-heading
+        margin-top: -143px
+        color: $gray
+        position: relative
+        z-index: 1
+    &__container
+        display: flex
+        justify-content: space-between
+    &__column
+        width: 45%
+    &__h1
+        text-transform: none
+        width: 45%
+    &__h2
+        margin-bottom: 20px
+    &__main-text
+        margin-bottom: 30px
+        color: $black
+    &__online-store
+        color: $black
+        line-height: 25px
+        margin-bottom: 5px
+    &__text
+        margin-left: 50px
+        margin-right: 50px
+    &__sphere
+
+.e-commerce__img
+    margin-top: 70px
+    margin-bottom: 70px
+
+.e-commerce-text
+    margin-left: 50px
+    margin-right: 50px
+
+.sphere__img
+    margin-bottom: 70px
+
+.tag-container
+    display: flex
+    justify-content: center
+    &__column
+        width: 50%
+
+@import media
