@@ -186,13 +186,53 @@ h1,h2
     font-family: 'Montserrat', sans-serif
     &_primary
         color: #fff
-        transition: background .3s ease
+        position: relative
         background: linear-gradient(90deg, #33AF33 0%, #46FA5A 100%)
-        &:hover
+        z-index: 1
+        &::before
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            content: ''
+            display: block
+            opacity: 0
             background: linear-gradient(90deg, #46FA5A 0%, #33AF33 100%)
+            z-index: -10
+            transition: opacity .3s ease
+        &:hover
+            &::before
+                opacity: 1
     &_secondary
-        border: $green_3 2px solid
+        // border: $green_3 2px solid
+        border-color: $green_3
         color: $green_3
+        position: relative
+        border-image-source: linear-gradient(90deg, #33AF33 0%, #46FA5A 100%)
+        border-image-width: 2px
+        border-image-slice: 2 2 2 2
+        border-style: solid
+        z-index: 1
+        &::before
+            position: absolute
+            top: -3px
+            left: -3px
+            width: 100%
+            height: 100%
+            content: ''
+            display: block
+            opacity: 0
+            border-image-width: 2px
+            border-image-slice: 2 2 2 2
+            border-style: solid
+            border-image-source: linear-gradient(90deg, #46FA5A 0%, #33AF33 100%)
+            z-index: -10
+            transition: opacity .3s ease
+        &:hover
+            &::before
+                opacity: 1
+
         &:active
             background: $green_3
             color: #ffffff
@@ -345,7 +385,7 @@ h1,h2
 .close
     cursor: pointer
     height: 100%
-    display: flex	
+    display: flex
 
 @keyframes closeAnimation1
     0%
@@ -464,23 +504,23 @@ h1,h2
 // GET CONSULTATION SECTION
 
 .sub-footer
-	width: 100%
-	display: flex
-	justify-content: center
-	padding: 110px 0px 120px
-	&__container
-		display: flex
-		justify-content: space-between
-	&__column
-		display: flex
-		flex-direction: column
-		justify-content: space-between
-	&__contact
-		margin: 15px 0px 50px
-		&_mb12
-			margin-bottom: 12px
-	&__button
-		width: fit-content
+    width: 100%
+    display: flex
+    justify-content: center
+    padding: 110px 0px 120px
+    &__container
+        display: flex
+        justify-content: space-between
+    &__column
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__contact
+        margin: 15px 0px 50px
+        &_mb12
+            margin-bottom: 12px
+    &__button
+        width: fit-content
 
 
 // LOOK PORTFOLIO SECTION
@@ -552,11 +592,10 @@ h1,h2
         &:first-child
             text-decoration: underline
     &__separator
-            content: ''
-            display: inline-block
-            height: 5px
-            width: 5px
-            background: $input-border
-            margin: 0px 15px
+        content: ''
+        display: inline-block
+        height: 5px
+        width: 5px
+        background: $input-border
+        margin: 0px 15px
 
-    
