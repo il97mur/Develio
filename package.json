@@ -23,5 +23,8 @@
 		"gulp-sass": "^4.0.2",
 		"gulp-uglify-es": "^1.0.4",
 		"jquery": "^3.4.1"
+	},
+	"dependencies": {
+		"masonry-layout": "^4.2.2"
 	}
 }
