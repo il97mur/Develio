@@ -18,6 +18,9 @@
 
 // Standart classes
 
+body, html
+	scroll-behavior: smooth
+
 .d-f
     display: flex
 .jc-c
@@ -114,6 +117,8 @@ h1,h2
     color: $dark-gray
     &_gray
         color: $input-border
+    &_white
+        color: #ffffff
 
 .h1
     font-size: 44px
@@ -122,6 +127,8 @@ h1,h2
     font-weight: 900
     &_white
         color: #ffffff
+    &_not-upper
+        text-transform: none
 
 .h2
     font-size: 24px
@@ -286,6 +293,7 @@ h1,h2
         justify-content: space-between
         background: none
         height: 44px
+        background-color: transparent !important
     &__content
         display: flex
         flex-wrap: wrap
@@ -504,6 +512,7 @@ h1,h2
 // GET CONSULTATION SECTION
 
 .sub-footer
+    background: $black
     width: 100%
     display: flex
     justify-content: center
@@ -587,15 +596,24 @@ h1,h2
         display: flex
         align-items: center
     &__item
+        color: #ffffff
+        opacity: 0.5
         display: flex
         align-items: center
-        &:first-child
+        text-decoration: underline
+        transition: all .3s ease
+        &:hover
+            color: $green_3
             text-decoration: underline
+            opacity: 1
+        &:last-child
+            text-decoration: none
     &__separator
         content: ''
         display: inline-block
         height: 5px
         width: 5px
-        background: $input-border
+        background: #fff
         margin: 0px 15px
+        opacity: 0.5
 

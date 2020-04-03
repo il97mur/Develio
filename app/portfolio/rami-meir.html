@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rami merh</title>
+
+    <link rel="stylesheet" href="../css/project-page.css">
+</head>
+<body>
+
+    <header class="header">
+
+		<div class="row header__row">
+
+			<div class="container d-f jc-sb ai-c">
+                <a href="../index.html" class="header__logo logo">
+                    <img src="../img/_src/logo_yellow.svg" alt="" class="logo__img">
+				</a>
+
+				<nav class="menu">
+					<a href="#task-and-works" class="menu__item">задача и работы</a>
+					<a href="#realization" class="menu__item">реализация</a>
+					<a href="#" class="menu__item">Заказать</a>
+				</nav>
+
+				<button class="button button_primary project__button_primary button_active header__button">
+					Заполнить бриф
+				</button>
+
+				<div class="c-hamburger">
+					<!-- <img src="img/_src/hamburger.svg" alt="" class="hamburger-img"> -->
+					Меню
+					<button class="hamburger hamburger--slider" type="button">
+						<span class="hamburger-box">
+						  <span class="hamburger-inner"></span>
+						</span>
+					  </button>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- HEADER POP-UP MENU START -->
+
+		<div class="popup-menu" style="display: none;">
+
+			<div class="container popup-menu__container">
+				<div class="row header__row popup-menu__row ">
+
+					<a href="../index.html" class="header__logo logo">
+						<img src="../img/_src/logo_gray.svg" alt="" class="logo__img">
+					</a>
+
+					<div class="c-hamburger">
+						<button class="hamburger hamburger--slider" type="button">
+							<span class="hamburger-box">
+							  <span class="hamburger-inner"></span>
+							</span>
+						  </button>
+					</div>
+
+				</div>
+
+				<div class="popup-menu__content">
+
+					<nav class="popup-menu__menu">
+						<a href="../portfolio.html" class="popup-menu__item popup-menu__item_active h1 h1_white">
+							портфолио
+						</a>
+						<a href="#" class="popup-menu__item h1 h1_white">
+							Услуги
+						</a>
+						<a href="#" class="popup-menu__item h1 h1_white">
+							Отрасли
+						</a>
+						<a href="#" class="popup-menu__item h1 h1_white">
+							Компания
+						</a>
+					</nav>
+
+					<div class="interactive popup-menu__interactive">
+
+						<button class="button button_secondary popup-menu__button j-popup-menu__get-audit-button">Бесплатный аудит</button>
+						<button class="button button_secondary popup-menu__button">Скачать презентацию</button>
+						<button class="button button_primary popup-menu__button j-popup-menu__get-callback-button">Обратный звонок</button>
+
+						<div class="contacts popup-menu__contacts">
+							<a href="#" class="phone contacts__link">
+								+ 7 495 147-73-00
+							</a>
+							<a href="#" class="e-mail popup-menu__e-mail contacts__link">
+								hello@develio.ru
+							</a>
+							<div class="social popup-menu__social">
+								<a href="#" class="social-link"><img src="../img/_src/inst.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="../img/_src/vk.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="../img/_src/behance.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="../img/_src/facebook.svg" alt=""></a>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+
+
+			</div>
+
+
+		</div>
+
+		<!-- GET AUDIT START -->
+
+		<div class="popup-menu__get-audit">
+			<div class="c-popup-menu__get-audit c-popup-menu__form">
+				<form action="" class="form audit-form popup-menu__audit-form">
+					<h2 class="h2 h2_white audit-form__h2">
+						Выберите содержимое аудита
+					</h2>
+		
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
+		
+					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text audit-form__input-text">
+					<button type="submit" class="button button_primary audit-form__submit disabled">Отправить</button> 
+					<p class="personal-data-apply audit-form__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
+				</form>
+			</div>
+		</div>
+
+		<!-- GET AUDIT END -->
+
+		<!-- GET CALLBACK START -->
+
+		<div class="popup-menu__get-callback">
+			<div class="c-popup-menu__get-callback c-popup-menu__form">
+				<form action="#" class="form callback-form popup-menu__callback-form">
+					<h2 class="h2 h2_white get-callback__h2">
+						Обратный звонок
+					</h2>
+					<p class="main-text get-callback__main-text">
+						Закажите обратный звонок, и наши специалисты позвонят Вам
+					</p>
+					<input type="text" name="name" placeholder="Имя" required class="input input-text get-callback__input-text get-callback__name">
+					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text get-callback__input-text get-callback__phone">
+					<button type="submit" class="button button_primary get-callback__submit disabled">Отправить</button>
+					<p class="personal-data-apply get-callback__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
+				</form>
+			</div>
+		</div>
+
+		<!-- GET CALLBACK END -->
+
+		<!-- HEADER POP-UP MENU END -->
+
+    </header>
+
+    <!-- BREADCRUMBS START -->
+
+    <div class="breadcrumps row">
+        <div class="container breadcrumps__container">
+            <a href="../index.html" class="breadcrumps__item main-text">Главная</a>
+            <span class="breadcrumps__separator"></span>
+            <a href="#" class="breadcrumps__item main-text">Портфолио</a>
+            <span class="breadcrumps__separator"></span>
+            <a href="#" class="breadcrumps__item main-text">Реализованные проекты</a>
+        </div>
+    </div>
+
+    <!-- BREADCRUMBS END -->
+
+    <main class="rami-mehr">
+        <section class="project">
+            <div class="container project__container">
+                <div class="row project__row">
+                    <div class="pager">
+                        <button class="prev-next">
+                            <img src="../img/_src/pixel_arrow_white.svg" class="pager__arrow pager__arrow_rotate" alt="">
+                        </button>
+
+                        <div class="pager__page-number h2 h2_white">4 / 20</div>
+
+                        <button class="prev-next">
+                            <img src="../img/_src/pixel_arrow_white.svg" class="pager__arrow" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="row project__row">
+                    <div class="project__column project__main">
+                        <div class="row tag-row project__tag-row">
+                            <p class="main-text main-text_white project__year">2020</p>
+                            <p class="main-text main-text_white project__category">Дизайн</p>
+                        </div>
+                        <h1 class="h1 h1_white h1_not-upper project__h1">Брендбук деятеля искусств Rami Meir</h1>
+                        <button class="button project__button">Смотреть подробнее</button>
+                    </div>
+                    
+                    <div class="project__column">
+                        <img src="../img/_src/rami-mehr-project.png" class="project__img" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="task-and-works" class="project-description">
+            <div class="container project-description__container">
+                <div class="project-description__column c-description">
+
+                        <div class="c-description__row project-info">
+                            <div class="c-description__column">
+                                <p class="main-text main-text_white project-description__tag">Клиент</p>
+                                <h2 class="h2 project-description__h2 project-name">Rami Meir</h2>
+                            </div>
+                            <div class="c-description__column">
+                                <p class="main-text main-text_white project-description__tag">Отрасль</p>
+                                <h2 class="h2 project-description__h2 project-industry">Сфера исскуств</h2>
+                            </div>
+                        </div>
+
+                        <h2 class="h2 h2_white c-description__h2 project-task">Задача</h2>
+
+                        <div class="project-task__list project-description__list">
+                            <p class="main-text main-text_white project-description__item">Разработать брендбук</p>
+                        </div>
+
+                        <h2 class="h2 h2_white c-description__h2 project-result">Результат</h2>
+
+                        <div class="project-result__list project-description__list">
+                            <p class="main-text main-text_white project-description__item">На 14 страницах брендбука указаны главные принципы и ограничения использования логотипа, а также отражены фирменные шрифты и цвета, использщуемые в типографике</p>
+
+                        </div>
+
+
+                        
+                </div>
+                <div class="project-description__column">
+
+                    <h2 class="h2 h2_white project-description__point">Работы</h2>
+                    <div class="project-description__tag-list">
+                        <div class="button button_secondary project-description__button_secondary">Графический дизайн</div>
+                        <div class="button button_secondary project-description__button_secondary">Логотип</div>
+                        <div class="button button_secondary project-description__button_secondary">Фирменный стиль</div>
+                    </div>
+
+                    <h2 class="h2 h2_white project-description__point project-description__technologies-heading">Технологии</h2>
+                    <div class="project-description__tag-list">
+                        <div class="button button_secondary project-description__button_secondary">adobe illustrator</div>
+                        <div class="button button_secondary project-description__button_secondary">adobe photoshop</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="realization" class="project-presentation">
+            <img class="project-presentation__img" src="../img/_src/Rami-Meir-project/1.png" alt="">
+            <img class="project-presentation__img" src="../img/_src/Rami-Meir-project/2.png" alt="">
+            <img class="project-presentation__img" src="../img/_src/Rami-Meir-project/3.png" alt="">
+            <img class="project-presentation__img" src="../img/_src/Rami-Meir-project/4.png" alt="">
+            <img class="project-presentation__img" src="../img/_src/Rami-Meir-project/5.png" alt="">
+            <img class="project-presentation__img" src="../img/_src/Rami-Meir-project/6.png" alt="">
+            <img class="project-presentation__img" src="../img/_src/Rami-Meir-project/7.png" alt="">
+            <img class="project-presentation__img" src="../img/_src/Rami-Meir-project/8.png" alt="">
+        </section>
+
+
+
+    </main>
+
+
+
+    <section class="sub-footer">
+        <div class="container sub-footer__container">
+            <div class="sub-footer__column">
+                <div class="h1 h1_white sub-footer__h1">
+                    Есть проект?
+                    Проконсультируем!
+                </div>
+                <button class="button button_primary sub-footer__button">Заполнить бриф</button>
+            </div>
+            <div class="sub-footer__column">
+                <div class="c-sub-footer__contacts">
+                    <div>
+                        <p class="main-text sub-footer__main-text">Пишите</p>
+                        <div class="h2 h2_white sub-footer__contact">hello@develio.ru</div>
+                    </div>
+                    <div>
+                        <p class="main-text sub-footer__main-text">Звоните</p>
+                        <div class="h2 h2_white sub-footer__contact sub-footer__contact_mb12">+7 495 147-73-00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="more">
+        <a href="coffee-talk.html" class="more__link">
+            <div class="container more__container">
+                <div class="main-text more__main-text">Следующий проект</div>
+                <div class="section-heading more__section-heading">далее</div>
+                <img src="../img/_src/big-pixel-arrow_black.svg" alt="" class="next-arrow__img">
+            </div>
+        </a>
+    </section>
+    
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="logo footer__logo">
+                <img src="../img/_src/logo_gray.svg" class="logo__img" alt="">
+            </div>
+            <a href="#" class="main-text footer__link">
+                Политика конфиденциальности
+            </a>
+            <p class="main-text footer__main-text">
+                © 2018-2020 Develio
+            </p>
+        </div>
+    </footer>
+
+
+<script src="../js/scripts.min.js"></script>
+<script>
+    changeColor('#E0AF40', '#CFC9C9');
+</script>
+    
+</body>
+</html>

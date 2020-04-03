@@ -1,0 +1,252 @@
+@import common
+
+
+body
+    background-color: #CFC9C9
+
+.header
+    &__row
+        background-color: #cfc9c9
+    &__logo
+
+.breadcrumps
+    &__item
+        &:hover
+            color: $yellow
+
+.project__button_primary
+    background: $yellow
+    transition: all .3s ease
+    &:hover
+        filter: brightness(90%)
+    &::before
+        display: none
+
+// .button
+//     &_primary
+//         &_yellow
+//             background: $yellow
+//             transition: all .3s ease
+//             &:hover
+//                 filter: brightness(90%)
+//             &::before
+//                 display: none
+
+.project-description
+    background: $yellow
+
+main
+    width: 100%
+
+.wrapper
+    width: 100%
+    background-image: url('../img/_src/Coffee-talk-project/project-bg.jpg')
+    background-repeat: no-repeat
+    background-position: bottom right
+    // background-size: cover
+    // background-position: 100px 0px
+
+.popup-menu__row
+    background-color: transparent
+
+.project
+    width: 100%
+    margin-top: 20px
+    display: flex
+    justify-content: center
+    &__container
+        display: flex
+        flex-direction: column
+    &__row
+        display: flex
+        justify-content: space-between
+    &__column
+        width: 50%
+    &__main
+        padding: 25px 0px 300px
+    &__img
+        height: 100%
+    &__year
+        margin-right: 45px
+    &__h1
+        margin-bottom: 35px
+    &__button
+        background: #fff
+        display: flex
+        align-items: center
+        &::after
+            content: ''
+            display: inline-block
+            background-image: url('../img/_src/pixel_arrow.svg')
+            background-size: 100% 100%
+            height: 6px
+            width: 10px
+            margin-left: 10px
+
+.tag-row
+    display: flex
+    margin-bottom: 15px
+
+
+.pager
+    display: flex
+    align-items: center
+    margin-bottom: 100px
+    &__page-number
+        margin: 0px 15px
+    &__arrow
+        height: 100%
+        &_rotate
+            transform: rotate(180deg)
+
+.project-info
+    margin-bottom: 50px
+
+.project-description
+    height: 600px
+    width: 100%
+    display: flex
+    justify-content: center
+    &__container
+        // width: 1200px !important
+        display: flex
+        height: 100%
+        align-items: center
+        justify-content: flex-start
+    &__column
+        width: 50%
+        &:first-child
+            margin-right: 120px
+    // padding: 130px 0 150px
+    &__tag
+        margin-bottom: 15px
+    &__item
+        line-height: 25px
+        display: flex
+        align-items: flex-start
+        &::before
+            content: ''
+            display: inline-block
+            width: 5px 
+            height: 5px
+            background: $black
+            margin-right: 10px
+            margin-top: 10px
+            flex: none
+    &__button
+        &_secondary
+            border: 2px #fff solid
+            color: #fff
+            margin: 10px 20px 10px 0
+            white-space: nowrap
+            &::before
+                display: none
+            &:hover
+                border: 2px #fff solid
+                color: #fff
+            &:active
+                background: none
+    &__tag-list
+        display: flex
+        flex-wrap: wrap
+        margin-top: 10px
+        margin-right: -100px
+    &__technologies-heading
+        margin-top: 40px
+            
+
+
+.c-description
+    &__row
+        display: flex
+        justify-content: space-between
+    &__h2
+        margin-bottom: 10px
+
+.project-task
+    &__list
+        margin-bottom: 30px
+
+.project-presentation
+    width: 100%
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    align-items: center
+    &__img
+        // width: 100%
+        // align-self: start
+
+@import media
+
+@media screen and ( max-width: 1400px )
+    .project-description
+        height: fit-content
+        padding: 50px 0px
+
+@media screen and ( max-width: 1200px )
+    .project-description
+        &__tag-list
+            margin-right: 0
+        
+@media screen and ( max-width: 996px )
+    .project
+        &__main
+            padding-bottom: 100px
+        &__img
+            height: auto
+        &__column
+            &:last-child
+                display: flex
+    .pager
+        &__page-number
+            display: flex
+            align-items: center
+    .prev-next
+        height: 20px
+
+
+
+@media screen and ( max-width: 768px )
+    .h1
+        font-size: 23px
+        line-height: 35px
+    .project
+        &__main
+            padding-bottom: 50px
+        &__img
+            height: auto
+            align-self: flex-end
+        &__column
+            &:last-child
+                display: flex
+    .pager
+        margin-bottom: 50px
+    .project-description
+        &__column
+            &:first-child
+                margin-right: 50px
+@media screen and ( max-width: 576px )
+        .breadcrumps
+            &__container
+                height: 120%
+                display: flex
+                flex-wrap: wrap
+        .project
+            flex-wrap: wrap
+            &__row
+                flex-wrap: wrap
+            &__column
+                width: 100%
+
+        .project-description
+            height: fit-content
+            &__container
+                flex-wrap: wrap
+                // margin: 30px 0px
+            &__column
+                width: 100%
+                &:first-child
+                    margin-right: 0px
+                    margin-bottom: 50px
+                
