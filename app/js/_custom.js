@@ -165,6 +165,9 @@ var form  = document.getElementsByTagName('form')[0];
 
 function scroll_active() {
 
+
+
+
 	/* вычисляем значения прокрутки страницы по вертикали */
 
 	var window_top = $(window).scrollTop();
