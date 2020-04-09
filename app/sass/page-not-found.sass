@@ -1,0 +1,57 @@
+@import common
+
+.header
+    &__row
+        height: 44px
+        @media screen and ( max-width: 992px )
+            height: 36px
+        @media screen and ( max-width: 576px )
+            height: 30px
+
+.not-found
+    height: 90vh
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 550px
+    &__h1
+        text-align: center
+        // width: 25%
+        position: relative
+        &::before
+            content: '404'
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            font-size: 600px
+            line-height: 713px
+            opacity: 0.1
+            transform: translate(-50%, -50%)
+
+@import media
+
+@media screen and ( max-width: 1440px )
+    .not-found
+        &__h1
+            &::before
+                font-size: 450px
+
+@media screen and ( max-width: 992px )
+    .not-found
+        &__h1
+            &::before
+                font-size: 300px
+
+@media screen and ( max-width: 768px )
+    .not-found
+        &__h1
+            &::before
+                font-size: 200px
+
+@media screen and ( max-width: 576px )
+    .not-found
+        &__h1
+            &::before
+                font-size: 150px

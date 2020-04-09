@@ -1,0 +1,107 @@
+@import common
+
+.company
+    width: 100%
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    &__container
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &__column
+        flex: 0 0 40%
+    &__pluses
+        flex: 0 0 45%
+        margin-top: 80px
+        background-image: url('../img/_src/medal.png')
+        background-repeat: no-repeat
+        background-position: bottom right
+        margin-bottom: 100px
+    &__h1
+        margin-bottom: 50px
+    &__arrow-img
+        margin-left: 10px
+    &__link
+        transition: all .3s ease
+        margin-bottom: 60px
+        width: fit-content
+        &:hover
+            color: $green_3
+            opacity: 0.6
+    &__tag-row
+        margin-bottom: 35px
+        &:last-child
+            margin-bottom: 0
+
+.technologies
+    width: 100%
+    display: flex
+    justify-content: center
+    background-color: #ffffff
+    padding: 50px 0px
+    &__container
+    &__heading
+        margin-bottom: 55px
+    &__row
+        display: flex
+        justify-content: space-between
+        margin-bottom: 30px
+        &:last-child
+            margin-bottom: 0
+    &__category
+        flex: 0 0 25%
+    &__item-list
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+    &__item
+        color: $black
+        border: 2px solid $black
+        margin-right: 20px
+        margin-bottom: 25px
+        &_accent
+            border-color: $green_3
+            color: $green_3
+
+@import media
+
+@media screen and ( max-width: 992px )
+    .menu__item
+        font-size: 11px
+        margin-right: 10px
+
+@media screen and ( max-width: 768px )
+    .company
+        &__pluses
+            margin-top: 50px
+            background-size: 50%
+            background-position: top right
+    .technologies
+        &__category
+            flex: 0 0 30%
+        &__item
+            margin-right: 10px
+            margin-bottom: 15px
+
+@media screen and ( max-width: 576px )
+    .company
+        &__h1
+            margin-bottom: 20px
+        &__link
+            margin-bottom: 30px
+        &__column
+            flex: 0 0 100%
+        &__pluses
+            flex: 0 0 100%
+            background-size: 30%
+
+    .technologies
+        &__row
+            flex-wrap: wrap
+        &__heading
+            margin-bottom: 35px
+        &__category
+            flex: 0 0 100%
+            margin-bottom: 20px
+

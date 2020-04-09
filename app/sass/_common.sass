@@ -16,6 +16,22 @@
 // 	&:required:valid
 // 		border-color: green
 
+// Убрать стрелки у input[type="number"]
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none
+    margin: 0
+
+input[type="number"] 
+    -moz-appearance: textfield
+
+
+
+
+
 // Standart classes
 
 body, html
@@ -102,6 +118,19 @@ input
     outline: none !important
     font: unset
 
+textarea
+    border: none
+    outline: none
+
+.textarea
+    font-family: "Montserrat"
+
+fieldset
+    border: none
+    outline: none
+    padding: 0
+    margin: 0
+
 img
     max-width: 100%
 
@@ -119,6 +148,10 @@ h1,h2
         color: $input-border
     &_white
         color: #ffffff
+    &_bold
+        font-weight: bold
+    &_black
+        color: $black
 
 .h1
     font-size: 44px
@@ -127,6 +160,8 @@ h1,h2
     font-weight: 900
     &_white
         color: #ffffff
+    &_green
+        color: $green_3
     &_not-upper
         text-transform: none
 
@@ -138,6 +173,8 @@ h1,h2
         color: #fff
     &_green
         color: $green_3
+    &_normal
+        font-weight: normal
 
 		
 .h-100
@@ -171,6 +208,8 @@ h1,h2
         font-size: 12px
         line-height: 15px
         transition: all .2s ease
+        &_now
+            color: $green_3
         &:last-child
             margin-right: 0
         &:hover
@@ -243,11 +282,20 @@ h1,h2
         &:active
             background: $green_3
             color: #ffffff
+    &_not-grad
+        border: 2px solid $green_3
+        &::before
+           display: none 
     &_not-active
+        border-image: none
+        border-width: 2px
         border-color: $dark-gray
         color: $dark-gray
+        &::before
+           visibility: hidden
         &:active
             color: $dark-gray !important
+
 .c-hamburger
     color: #fff
     text-transform: uppercase

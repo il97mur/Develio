@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Контакты</title>
+	<link rel="icon" href="img/favicon.png">
+
+    <link rel="stylesheet" href="css/contacts-page.css">
+</head>
+<body>
+
+    <header class="header">
+
+		<div class="row header__row">
+
+			<div class="container d-f jc-sb ai-c">
+				<a href="index.html" class="header__logo logo">
+					<img src="img/_src/logo_white_green.svg" alt="" class="logo__img">
+				</a>
+
+				<nav class="menu">
+					<a href="portfolio.html" class="menu__item">портфолио</a>
+					<a href="services.html" class="menu__item">услуги</a>
+					<a href="company.html" class="menu__item">Компания</a>
+					<a href="contacts.html" class="menu__item menu__item_now">контакты</a>
+				</nav>
+
+				<a href="brief.html" class="button button_primary button_active header__button">
+					Заполнить бриф
+                </a>
+
+				<div class="c-hamburger">
+					<!-- <img src="img/_src/hamburger.svg" alt="" class="hamburger-img"> -->
+					Меню
+					<button class="hamburger hamburger--slider" type="button">
+						<span class="hamburger-box">
+						  <span class="hamburger-inner"></span>
+						</span>
+					  </button>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- HEADER POP-UP MENU START -->
+
+		<div class="popup-menu" style="display: none;">
+
+			<div class="container popup-menu__container">
+				<div class="row header__row popup-menu__row ">
+
+					<a href="index.html" class="header__logo logo">
+						<img src="img/_src/logo_gray.svg" alt="" class="logo__img">
+					</a>
+
+					<div class="c-hamburger">
+						<button class="hamburger hamburger--slider" type="button">
+							<span class="hamburger-box">
+							  <span class="hamburger-inner"></span>
+							</span>
+						  </button>
+					</div>
+
+				</div>
+
+				<div class="popup-menu__content">
+
+					<nav class="popup-menu__menu">
+						<a href="portfolio.html" class="popup-menu__item h1 h1_white">
+							портфолио
+						</a>
+						<a href="services.html" class="popup-menu__item h1 h1_white">
+							Услуги
+						</a>
+						<a href="company.html" class="popup-menu__item h1 h1_white">
+							Компания
+						</a>
+						<a href="contacts.html" class="popup-menu__item popup-menu__item_active h1 h1_white">
+							Контакты
+						</a>
+					</nav>
+
+					<div class="interactive popup-menu__interactive">
+
+						<button class="button button_secondary popup-menu__button j-popup-menu__get-audit-button">Бесплатный аудит</button>
+						<button class="button button_secondary popup-menu__button">Скачать презентацию</button>
+						<button class="button button_primary popup-menu__button j-popup-menu__get-callback-button">Обратный звонок</button>
+
+						<div class="contacts popup-menu__contacts">
+							<a href="#" class="phone contacts__link">
+								+ 7 495 147-73-00
+							</a>
+							<a href="#" class="e-mail popup-menu__e-mail contacts__link">
+								hello@develio.ru
+							</a>
+							<div class="social popup-menu__social">
+								<a href="#" class="social-link"><img src="img/_src/inst.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="img/_src/vk.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="img/_src/behance.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="img/_src/facebook.svg" alt=""></a>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+
+
+			</div>
+
+
+		</div>
+
+		<!-- GET AUDIT START -->
+
+		<div class="popup-menu__get-audit">
+			<div class="c-popup-menu__get-audit c-popup-menu__form">
+				<form action="" class="form audit-form popup-menu__audit-form">
+					<h2 class="h2 h2_white audit-form__h2">
+						Выберите содержимое аудита
+					</h2>
+		
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
+		
+					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text audit-form__input-text">
+					<button type="submit" class="button button_primary audit-form__submit disabled">Отправить</button> 
+					<p class="personal-data-apply audit-form__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
+				</form>
+			</div>
+		</div>
+
+		<!-- GET AUDIT END -->
+
+		<!-- GET CALLBACK START -->
+
+		<div class="popup-menu__get-callback">
+			<div class="c-popup-menu__get-callback c-popup-menu__form">
+				<form action="#" class="form callback-form popup-menu__callback-form">
+					<h2 class="h2 h2_white get-callback__h2">
+						Обратный звонок
+					</h2>
+					<p class="main-text get-callback__main-text">
+						Закажите обратный звонок, и наши специалисты позвонят Вам
+					</p>
+					<input type="text" name="name" placeholder="Имя" required class="input input-text get-callback__input-text get-callback__name">
+					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text get-callback__input-text get-callback__phone">
+					<button type="submit" class="button button_primary get-callback__submit disabled">Отправить</button>
+					<p class="personal-data-apply get-callback__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
+				</form>
+			</div>
+		</div>
+
+		<!-- GET CALLBACK END -->
+
+		<!-- HEADER POP-UP MENU END -->
+
+    </header>
+
+    <!-- BREADCRUMBS START -->
+
+    <div class="breadcrumps row">
+        <div class="container breadcrumps__container">
+            <a href="index.html" class="breadcrumps__item main-text main-text_gray">Главная</a>
+            <span class="breadcrumps__separator"></span>
+            <a href="#" class="breadcrumps__item main-text main-text_gray">Контакты</a>
+        </div>
+    </div>
+
+    <!-- BREADCRUMBS END -->
+
+    <main class="contacts-page">
+        <div class="container contacts-page__container">
+            <div class="contacts-page__column">
+                <h1 class="h1 h1_white contacts-page__h1">Контакты</h1>
+                <p class="h2 contacts-page-text contacts-page__contacts-page-text">Мы будем рады видеть Вас в числе наших клиентов!</p>
+                <div class="c-contacts-page__contacts">
+                    <div class="contacts-content">
+                        <div>
+                            <p class="main-text sub-footer__main-text">Звоните</p>
+                            <div class="h2 h2_white contacts-page__contact"><a href="#" class="contacts-page__link">+7 495 147-73-00</a></div>
+                        </div>
+                        <div>
+                            <p class="main-text sub-footer__main-text">Пишите</p>
+                            <div class="h2 h2_white contacts-page__contact"><a href="#" class="contacts-page__link">hello@develio.ru</a></div>
+                        </div>
+
+                        <div class="social contacts-page__social">
+                            <a href="#" class="social-link"><img src="img/_src/inst.svg" alt=""></a>
+                            <a href="#" class="social-link"><img src="img/_src/vk.svg" alt=""></a>
+                            <a href="#" class="social-link"><img src="img/_src/behance.svg" alt=""></a>
+                            <a href="#" class="social-link"><img src="img/_src/facebook.svg" alt=""></a>
+                        </div>
+
+                    </div>
+                    <div class="work-time">
+                        <p class="main-text sub-footer__main-text">Время работы</p>
+                        <div class="h2 h2_white contacts-page__contact">ПН-ВС <br>  09:00 - 18:00</div>
+                    </div>
+                   
+                </div>
+
+
+
+            </div>
+            <div class="contacts-page__column">
+                <form action="#" class="form feedback-form">
+                    <div class="h2 h2_white feedback-form__h2">Форма обратной связи</div>
+                    <input placeholder="Имя" type="text" class="input input-text">
+                    <input placeholder="Почта" type="text" class="input input-text">
+                    <textarea class="feedback-form__textarea textarea input input-text" name="Message" placeholder="Сообщение"></textarea>
+                    <button type="submit" disabled class="button button_primary feedback-form__submit disabled">Отправить</button>
+                    <p class="personal-data-apply feedback-form__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="logo footer__logo">
+                <img src="img/_src/logo_gray.svg" class="logo__img" alt="">
+            </div>
+            <a href="#" class="main-text footer__link">
+                Политика конфиденциальности
+            </a>
+            <p class="main-text footer__main-text">
+                © 2018-2020 Develio
+            </p>
+        </div>
+    </footer>
+    
+
+
+    <script src="js/scripts.min.js"></script>
+</body>
+</html>

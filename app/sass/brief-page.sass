@@ -1,0 +1,160 @@
+@import common
+
+.button
+    white-space: nowrap
+    cursor: pointer
+
+.fieldsset
+    width: 100%
+
+
+.brief
+    width: 100%
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    &__row
+        display: flex
+        justify-content: space-between
+        margin-bottom: 80px
+    &__container
+        display: flex
+        flex-wrap: wrap
+    &__column
+    &__h1
+        margin-bottom: 30px
+    &__main-text
+        flex: 0 0 40%
+    &__h2
+        margin-bottom: 30px
+
+
+.brief-form
+    width: 52%
+    &__label
+    &__input-checkbox
+    &__type-of-project
+        margin-bottom: 65px
+    &__price
+        width: 45%
+    &__price-heading
+        margin-right: 20px
+    &__h2
+        margin-bottom: 30px
+    &__about-project
+        margin-bottom: 90px
+    &__contacts
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 80px
+        margin-right: -50px
+    &__contact-input
+        margin-right: 30px
+        margin-bottom: 25px
+    &__row
+        display: flex
+        align-items: center
+        &_submit
+            margin-bottom: 80px
+    &__submit
+        margin-right: 30px
+    &__personal-data-apply
+        padding: 0
+        margin-right: -120px
+
+
+.c-brief-form
+    &__hear-about-us
+        margin-right: -100px
+        margin-bottom: 90px
+
+
+
+.checkbox-container
+    width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+
+.about-project
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+.input
+    &__textarea
+        height: 200px
+        margin-bottom: 25px
+        resize: none
+        width: 100%
+        &:focus
+            border-color: $green_3
+
+.label
+    &__button
+        margin: 0 20px 25px 0
+
+
+
+
+@import media
+
+@media screen and ( max-width: 1200px )
+    .brief-form
+        width: 63%
+        &__price
+            width: 50%
+
+@media screen and ( max-width: 992px )
+    .brief
+        &__row
+
+
+            
+    .call-to-us
+        flex: 0 0 35%
+
+@media screen and ( max-width: 768px )
+    .brief
+        &__row
+            width: 80%
+            flex-direction: column
+            flex-wrap: nowrap
+    .c-brief-form
+        &__hear-about-us
+            margin-right: 0
+    .brief-form
+        &__contacts
+            margin-right: 0
+    .call-to-us
+        margin-top: 30px
+    .brief-form
+        width: 100%
+        &__personal-data-apply
+            margin-right: 0
+
+@media screen and ( max-width: 576px )
+    .c-brief-form
+        &__hear-about-us
+            margin-right: 0
+            margin-bottom: 50px
+    .brief-form
+        &__contacts
+            margin-right: 0
+        &__h2
+            margin-bottom: 20px
+        &__row
+            &_submit
+                flex-wrap: wrap
+                justify-content: center
+        &__submit
+            margin-bottom: 15px
+            margin-right: 0
+        &__personal-data-apply
+            text-align: center
+    .label__button
+        margin: 0px 15px 20px 0
+    .about-project
+        &__row
+            flex-wrap: wrap

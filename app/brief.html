@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запонить бриф</title>
+    <link rel="icon" href="img/favicon.png">
+
+    <link rel="stylesheet" href="css/brief-page.css">
+</head>
+<body>
+
+    <header class="header">
+
+		<div class="row header__row">
+
+			<div class="container d-f jc-sb ai-c">
+				<a href="index.html" class="header__logo logo">
+					<img src="img/_src/logo_white_green.svg" alt="" class="logo__img">
+				</a>
+
+				<nav class="menu">
+				</nav>
+
+				<button style="visibility: hidden;" class="button button_primary button_active header__button">
+					Заполнить бриф
+				</button>
+
+				<div class="c-hamburger">
+					<!-- <img src="img/_src/hamburger.svg" alt="" class="hamburger-img"> -->
+					Меню
+					<button class="hamburger hamburger--slider" type="button">
+						<span class="hamburger-box">
+						  <span class="hamburger-inner"></span>
+						</span>
+					  </button>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- HEADER POP-UP MENU START -->
+
+		<div class="popup-menu" style="display: none;">
+
+			<div class="container popup-menu__container">
+				<div class="row header__row popup-menu__row ">
+
+					<a href="index.html" class="header__logo logo">
+						<img src="img/_src/logo_gray.svg" alt="" class="logo__img">
+					</a>
+
+					<div class="c-hamburger">
+						<button class="hamburger hamburger--slider" type="button">
+							<span class="hamburger-box">
+							  <span class="hamburger-inner"></span>
+							</span>
+						  </button>
+					</div>
+
+				</div>
+
+				<div class="popup-menu__content">
+
+					<nav class="popup-menu__menu">
+						<a href="portfolio.html" class="popup-menu__item h1 h1_white">
+							портфолио
+						</a>
+						<a href="services.html" class="popup-menu__item h1 h1_white">
+							Услуги
+						</a>
+						<a href="company.html" class="popup-menu__item h1 h1_white">
+							Компания
+						</a>
+						<a href="contacts.html" class="popup-menu__item h1 h1_white">
+							Контакты
+						</a>
+					</nav>
+
+					<div class="interactive popup-menu__interactive">
+
+						<button class="button button_secondary popup-menu__button j-popup-menu__get-audit-button">Бесплатный аудит</button>
+						<button class="button button_secondary popup-menu__button">Скачать презентацию</button>
+						<button class="button button_primary popup-menu__button j-popup-menu__get-callback-button">Обратный звонок</button>
+
+						<div class="contacts popup-menu__contacts">
+							<a href="#" class="phone contacts__link">
+								+ 7 495 147-73-00
+							</a>
+							<a href="#" class="e-mail popup-menu__e-mail contacts__link">
+								hello@develio.ru
+							</a>
+							<div class="social popup-menu__social">
+								<a href="#" class="social-link"><img src="img/_src/inst.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="img/_src/vk.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="img/_src/behance.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="img/_src/facebook.svg" alt=""></a>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+
+
+			</div>
+
+
+		</div>
+
+		<!-- GET AUDIT START -->
+
+		<div class="popup-menu__get-audit">
+			<div class="c-popup-menu__get-audit c-popup-menu__form">
+				<form action="" class="form audit-form popup-menu__audit-form">
+					<h2 class="h2 h2_white audit-form__h2">
+						Выберите содержимое аудита
+					</h2>
+		
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
+		
+					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text audit-form__input-text">
+					<button type="submit" class="button button_primary audit-form__submit disabled">Отправить</button> 
+					<p class="personal-data-apply audit-form__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
+				</form>
+			</div>
+		</div>
+
+		<!-- GET AUDIT END -->
+
+		<!-- GET CALLBACK START -->
+
+		<div class="popup-menu__get-callback">
+			<div class="c-popup-menu__get-callback c-popup-menu__form">
+				<form action="#" class="form callback-form popup-menu__callback-form">
+					<h2 class="h2 h2_white get-callback__h2">
+						Обратный звонок
+					</h2>
+					<p class="main-text get-callback__main-text">
+						Закажите обратный звонок, и наши специалисты позвонят Вам
+					</p>
+					<input type="text" name="name" placeholder="Имя" required class="input input-text get-callback__input-text get-callback__name">
+					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text get-callback__input-text get-callback__phone">
+					<button type="submit" class="button button_primary get-callback__submit disabled">Отправить</button>
+					<p class="personal-data-apply get-callback__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
+				</form>
+			</div>
+		</div>
+
+		<!-- GET CALLBACK END -->
+
+		<!-- HEADER POP-UP MENU END -->
+
+    </header>
+
+    <!-- BREADCRUMBS START -->
+
+    <div class="breadcrumps row">
+        <div class="container breadcrumps__container">
+            <a href="index.html" class="breadcrumps__item main-text main-text_gray">Главная</a>
+            <span class="breadcrumps__separator"></span>
+            <a href="#" class="breadcrumps__item main-text main-text_gray">Бриф</a>
+        </div>
+    </div>
+
+    <!-- BREADCRUMBS END -->
+
+    <main class="brief">
+        <div class="container brief__container">
+            
+                <h1 class="h1 h1_white brief__h1">Заполните бриф</h1>
+                <div class="row brief__row">
+                    <p class="main-text main-text_white brief__main-text">Чтобы обсудить детали проекта и возможности развития вашего бизнеса</p>
+                    <div class="call-to-us">
+                        <a href="#" class="main-text main-text_white brief__main-text">Или наберите нам и мы пообщаемся лично</a>
+                        <p class="h2 h2_green">+7 495 147 73 00</p>
+                    </div>
+            </div>
+
+                <form action="#" class="brief-form">
+                    <div class="brief-form__type-of-project">
+                        <div class="h2 h2_white brief-form__h2">Выберите тип вашего проекта</div>
+                        <fieldset class="fieldset">
+                            <div class="checkbox-container">
+                                <label for="" class="brief-form__label">
+                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <div class="label__button button button_secondary button_not-grad button_not-active">Веб-разработка</div>
+                                </label>
+                                <label for="" class="brief-form__label">
+                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <div class="label__button button button_secondary button_not-grad button_not-active">Реклама и продвижение</div>
+                                </label>
+                                <label for="" class="brief-form__label">
+                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <div class="label__button button button_secondary button_not-grad button_not-active">Дизайн</div>
+                                </label>
+                                <label for="" class="brief-form__label">
+                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <div class="label__button button button_secondary button_not-grad button_not-active">Аналитика</div>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="brief-form__about-project">
+                        <div class="h2 h2_white brief-form__h2">Пару слов о Вашем проекте</div>
+                        <textarea type="textarea" class="textarea input-text input__textarea input__textarea_brief"></textarea>
+                        <div class="row about-project__row">
+                            <div class="d-f ai-c">
+                                <p class="main-text main-text_white brief-form__price-heading">Бюджет:</p>
+                                <input required placeholder="1 000 000р" class="input input-text brief-form__price">
+                            </div>
+                            <button class="button button_secondary">Прикрепить файл</button>
+                        </div>
+                    </div>
+
+                    <div class="c-brief-form__contacts">
+                        <div class="h2 h2_white brief-form__h2">Оставьте Ваши контакты</div>
+                        <fieldset class="fieldset">
+                            <div class="brief-form__contacts">
+                                <input required type="text" placeholder="Имя" class="input-text brief-form__contact-input">
+                                <input required type="text" placeholder="Компания" class="input-text brief-form__contact-input">
+                                <input required type="tel" placeholder="Телефон" class="input-text brief-form__contact-input">
+                                <input required type="email" placeholder="Почта" class="input-text brief-form__contact-input">
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="c-brief-form__hear-about-us">
+                        <div class="h2 h2_white brief-form__h2">Откуда о нас узнали?</div>
+                        <fieldset class="fieldset">
+                            <div class="checkbox-container">
+                                <label for="" class="brief-form__label">
+                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <div class="label__button button button_secondary button_not-grad button_not-active">Рекомендации</div>
+                                </label>
+                                <label for="" class="brief-form__label">
+                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <div class="label__button button button_secondary button_not-grad button_not-active">Работы</div>
+                                </label>
+                                <label for="" class="brief-form__label">
+                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <div class="label__button button button_secondary button_not-grad button_not-active">СМИ</div>
+                                </label>
+                                <label for="" class="brief-form__label">
+                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <div class="label__button button button_secondary button_not-grad button_not-active">Реклама</div>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="row brief-form__row brief-form__row_submit">
+                        <button type="submit" disabled class="button button_primary brief-form__submit disabled">Отправить заявку</button>
+                        <p class="personal-data-apply brief-form__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
+                    </div>
+
+                </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="logo footer__logo">
+                <img src="img/_src/logo_gray.svg" class="logo__img" alt="">
+            </div>
+            <a href="#" class="main-text footer__link">
+                Политика конфиденциальности
+            </a>
+            <p class="main-text footer__main-text">
+                © 2018-2020 Develio
+            </p>
+        </div>
+    </footer>
+
+    
+
+
+<script src="js/scripts.min.js"></script>
+
+<script>
+    $('.label__button').on('click', function(){
+        $(this).toggleClass('button_not-active');
+        if ($(this).prev().attr('checked')) {
+            $(this).prev().removeAttr('checked');
+        } else
+            $(this).prev().attr('checked', '');
+    });
+</script>
+</body>
+</html>

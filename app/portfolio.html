@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Develio - portfolio</title>
+    <title>Портфолио</title>
+    <link rel="icon" href="img/favicon.png">
 
-    <!-- <link rel="stylesheet" href="css/common.css"> -->
     <link rel="stylesheet" href="css/portfolio.css">
 </head>
 <body>
@@ -24,9 +24,9 @@
 					<a href="#industries" class="menu__item">Отрасли</a>
 				</nav>
 
-				<button class="button button_primary button_active header__button">
+				<a href="brief.html" class="button button_primary button_active header__button">
 					Заполнить бриф
-				</button>
+                </a>
 
 				<div class="c-hamburger">
 					<!-- <img src="img/_src/hamburger.svg" alt="" class="hamburger-img"> -->
@@ -68,14 +68,14 @@
 						<a href="portfolio.html" class="popup-menu__item popup-menu__item_active h1 h1_white">
 							портфолио
 						</a>
-						<a href="#" class="popup-menu__item h1 h1_white">
+						<a href="services.html" class="popup-menu__item h1 h1_white">
 							Услуги
 						</a>
-						<a href="#" class="popup-menu__item h1 h1_white">
-							Отрасли
-						</a>
-						<a href="#" class="popup-menu__item h1 h1_white">
+						<a href="company.html" class="popup-menu__item h1 h1_white">
 							Компания
+						</a>
+						<a href="contacts.html" class="popup-menu__item h1 h1_white">
+							Контакты
 						</a>
 					</nav>
 
@@ -178,11 +178,11 @@
             <div class="container portfolio-page-content__container">
                 <h1 class="h1 h1_white portfolio-page-content__h1">Портфолио</h1>
                 <div class="portfolio-page-content__content-filter content-filter">
-                    <button class="button button_secondary portfolio-page-content__filter j-content-filter__all">Все</button>
-                    <button class="button button_secondary button_not-active portfolio-page-content__filter j-content-filter__filter j-content-filter__design">Дизайн</button>
-                    <button class="button button_secondary button_not-active portfolio-page-content__filter j-content-filter__filter j-content-filter__analitics">Аналитика</button>
-                    <button class="button button_secondary portfolio-page-content__filter j-content-filter__filter j-content-filter__web-dev">Веб-разработка</button>
-                    <button class="button button_secondary button_not-active portfolio-page-content__filter j-content-filter__filter j-content-filter__adv">Реклама и продвижение</button>
+                    <button class="button button_secondary button_not-grad portfolio-page-content__filter j-content-filter__all">Все</button>
+                    <button class="button button_secondary button_not-grad button_not-active portfolio-page-content__filter j-content-filter__filter j-content-filter__design">Дизайн</button>
+                    <button class="button button_secondary button_not-grad button_not-active portfolio-page-content__filter j-content-filter__filter j-content-filter__analitics">Аналитика</button>
+                    <button class="button button_secondary button_not-grad portfolio-page-content__filter j-content-filter__filter j-content-filter__web-dev">Веб-разработка</button>
+                    <button class="button button_secondary button_not-grad button_not-active portfolio-page-content__filter j-content-filter__filter j-content-filter__adv">Реклама и продвижение</button>
                 </div>
             </div>
 
@@ -468,7 +468,7 @@
                     Есть проект?
                     Проконсультируем!
                 </div>
-                <button class="button button_primary sub-footer__button">Заполнить бриф</button>
+                <a href="brief.html" class="button button_primary sub-footer__button">Заполнить бриф</a>
             </div>
             <div class="sub-footer__column">
                 <div class="c-sub-footer__contacts">
@@ -486,7 +486,7 @@
     </section>
     
     <section class="more">
-        <a href="#" class="more__link">
+        <a href="services.html" class="more__link">
             <div class="container more__container">
                 <div class="main-text more__main-text">Посмотреть услуги</div>
                 <div class="section-heading more__section-heading">далее</div>
@@ -511,6 +511,46 @@
     <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
     
 <script src="js/scripts.min.js"></script>
+
+<script>
+    function scroll_active() {
+
+/* вычисляем значения прокрутки страницы по вертикали */
+
+var window_top = $(window).scrollTop();
+
+/* вычисляем положение якорей на странице от начала страницы  по вертикали*/
+
+var works = $('#works').offset().top -10;
+
+var industries = $('#industries').offset().top -10;
+
+
+/* Переключатель активного пункта меню в зависимости от положения на странице, условии написаны от последнего якоря на странице, до первого */
+
+/* если на экране отображаются раздел «Контакты»*/
+if (window_top > industries) {
+$(".menu__item").removeClass("menu__item_active");
+$('a[href="#industries"]').addClass("menu__item_active");
+    }
+
+/* если не отображается раздел «Контакты», но страницу прокрутили  ниже якоря третьего раздела*/
+else if (window_top > works) {
+$(".menu__item").removeClass("menu__item_active");
+$('a[href="#works"]').addClass("menu__item_active");
+    }
+
+else {
+    $(".menu__item").removeClass("menu__item_active");
+}
+
+}
+
+jQuery(function()
+{
+jQuery(window).scroll(scroll_active);
+});
+</script>
     
 </body>
 </html>

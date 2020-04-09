@@ -1,0 +1,112 @@
+@import common
+
+.contacts-page
+    display: flex
+    justify-content: center
+    width: 100%
+    margin-bottom: 100px
+    &__container
+        display: flex
+        justify-content: space-between
+    &__column
+        flex: 0 0 40%
+        &:last-child
+            flex: 0 0 50%
+            display: flex
+            justify-content: center
+    &__h1
+        margin-bottom: 50px
+    &__contacts-page-text
+        margin-bottom: 50px
+    &__contact
+        margin-top: 15px
+        margin-bottom: 30px
+    &__link
+        color: $green_3
+        transition: all .3s ease
+        &:hover
+            color: $green_3
+            opacity: 0.6
+    &__social
+        width: 100%
+        display: flex
+        justify-content: space-between
+        margin-top: 75px
+
+.c-contacts-page
+    &__contacts
+        display: flex
+        justify-content: space-between    
+
+.contacts-page-text
+    font-size: 24px
+    line-height: 29px
+    color: $dark-gray
+    font-weight: normal
+
+.feedback-form
+    padding: 50px
+    border: 2px solid $green_3
+    margin-top: 54px
+    width: 70%
+    &__h2
+        margin-bottom: 10px
+    &__textarea
+        resize: none
+        height: 130px
+        margin-bottom: 25px
+
+
+@import media
+
+@media screen and ( max-width: 1200px )
+    .contacts-page
+        &__column
+            flex: 0 0 45%
+
+@media screen and ( max-width: 996px )
+    .menu__item
+        font-size: 11px
+        margin-right: 10px
+    .work-time
+        order: 1
+        flex: 0 0 60%
+    .contacts-content
+        order: 2
+        flex: 0 0 60%
+    .c-contacts-page
+        &__contacts
+            flex-wrap: wrap
+    .feedback-form
+        width: 100%
+
+@media screen and ( max-width: 768px )
+    .contacts-page
+        &__container
+            flex-wrap: wrap
+        &__column
+            flex: 0 0 100%
+            &:last-child
+                flex: 0 0 100%
+    .feedback-form
+        width: 70%
+    .work-time
+        order: 2
+        flex: 0 0 40%
+    .contacts-content
+        order: 1
+        flex: 0 0 40%
+
+@media screen and ( max-width: 576px )
+    .contacts-page
+        &__social
+            margin-top: 45px
+    .feedback-form
+        width: 100%
+        padding: 30px
+    .work-time
+        order: 1
+        flex: 0 0 60%
+    .contacts-content
+        order: 2
+        flex: 0 0 80%

@@ -105,20 +105,20 @@ $('.input-checkbox').on('click', function(){
 	function validateForm(input) {
 		input.addEventListener("input", mask, false);
 		input.addEventListener("input", function(event) {
-			console.log($(input).val().length);
-			if ($(input).val().length == 18) {
-				$(input).addClass('input_valid');
-			} else {
-				$(input).removeClass('input_valid');
-			}
+			// console.log($(input).val().length);
+			// if ($(input).val().length == 18) {
+			// 	$(input).addClass('input_valid');
+			// } else {
+			// 	$(input).removeClass('input_valid');
+			// }
 
-				if ($(this).hasClass('input_valid')) {
-					$(this).parents('form').find('[type="submit"]').removeClass('disabled');
-					$(this).parents('form').find('[type="submit"]').removeAttr('disabled');
-				} else {
-					$(this).parents('form').find('[type="submit"]').addClass('disabled');
-					$(this).parents('form').find($('[type="submit"]')).attr('disabled', '');
-				}
+			// 	if ($(this).hasClass('input_valid')) {
+			// 		$(this).parents('form').find('[type="submit"]').removeClass('disabled');
+			// 		$(this).parents('form').find('[type="submit"]').removeAttr('disabled');
+			// 	} else {
+			// 		$(this).parents('form').find('[type="submit"]').addClass('disabled');
+			// 		$(this).parents('form').find($('[type="submit"]')).attr('disabled', '');
+			// 	}
 
 			// } else {
 
@@ -150,6 +150,7 @@ $('.input-checkbox').on('click', function(){
 
 	for (var i = 0; i < $('input[type="tel"]').length; i++) {
 		validateForm($('input[type="tel"]')[i]);
+		$($('input[type="tel"]')[i]).attr('maxlength', '18')
 	}
 
 	// for (var i = 0; i < $('.input-checkbox').length; i++) {
@@ -158,78 +159,12 @@ $('.input-checkbox').on('click', function(){
 
 
 
-var form  = document.getElementsByTagName('form')[0];
+// var form  = document.getElementsByTagName('form')[0];
 
 
 // Подсветка активной ссылки в верхнем меню
 
-function scroll_active() {
 
-
-
-
-	/* вычисляем значения прокрутки страницы по вертикали */
-
-	var window_top = $(window).scrollTop();
-
-	/* вычисляем положение якорей на странице от начала страницы  по вертикали*/
-
-	var portfolio = $('#portfolio').offset().top -10;
-
-	var services = $('#services').offset().top -10;
-
-	var industries = $('#industries').offset().top -100;
-
-	var company = $('#company').offset().top -10;
-
-	/* Переключатель активного пункта меню в зависимости от положения на странице, условии написаны от последнего якоря на странице, до первого */
-
-	/* если на экране отображаются раздел «Контакты»*/
-
-	if (window_top > company) {
-
-		$(".menu__item").removeClass("menu__item_active");
-
-		$('a[href="#company"]').addClass("menu__item_active");
-
-			}
-
-	/* если не отображается раздел «Контакты», но страницу прокрутили  ниже якоря третьего раздела*/
-
-	else if (window_top > industries) {
-
-		$(".menu__item").removeClass("menu__item_active");
-
-		$('a[href="#industries"]').addClass("menu__item_active");
-
-			}
-
-	/* если выше третьего, но ниже якоря второго раздела*/
-
-	else if (window_top > services) {
-
-		$(".menu__item").removeClass("menu__item_active");
-
-		$('a[href="#services"]').addClass("menu__item_active");
-
-			}
-
-	/* если не подходят условия предыдущие активируем первый пункт меню*/
-
-	else {
-
-		$(".menu__item").removeClass("menu__item_active");
-
-		$('a[href="#portfolio"]').addClass("menu__item_active");
-
-
-			}
-}
-
-jQuery(function()
-{
-	jQuery(window).scroll(scroll_active);
-});
 
 
 
@@ -272,7 +207,7 @@ $grid.masonry({
 });
 
 
-
+// Обработка клика по фильтру на странице "Портфолио"
 function filterClick(){
 
 	var counter = 0; // Счётчик активных фильтров
@@ -323,6 +258,8 @@ var $grid = $('.portfolio-list__container').imagesLoaded( function() {
 		percentPosition: true
     });
 });
+
+
 };
 
 $('.j-content-filter__all').on('click', function(){
@@ -344,6 +281,21 @@ $('.j-content-filter__filter').on('click', function(){
 
 });
 
+// PORTFOLIO PAGE END
+
+
+
+
+// Запуск проверки каждой формы на странице
+for (var i = 0; i < $('form').length; i++) {
+	validate($($('form')[i]));
+}
+
+// Подключение макси ввода для поля "Бюджет"
+
+// $('.brief-form__price')[0].addEventListener('input', moneyMask, false);
+// $('.brief-form__price')[0].addEventListener('blur', moneyMask, false);
+// $('.brief-form__price')[0].addEventListener('focus', moneyMask, false);
 
 });
 
@@ -374,3 +326,168 @@ function changeColor(mainColor, secondColor) {
 	$('.project__button_primary').css(bg, mainColor);
 	$('.project-description').css(bg, mainColor);
 };
+
+
+// Функция для проверки формы на валидность
+
+function validate(form) {
+
+// Переменные, отражающее валидность группы интутов. inputValid - для [type="text"]; telValid - для [type="tel"]
+	var inputValid = false;
+	var telValid = false;
+
+	var input = form.find("input:not([type=checkbox]):not([type=tel])");
+	var phone = form.find('input[type="tel"]');
+
+	var counter = 0; // Счетчик для определения валидности группы инпутов
+
+	// Добавление обработчика событий на текстовые инпуты
+	for (var i = 0; i < input.length; i++) {
+		input[i].addEventListener("input", function(){
+
+			// Фукнция, которую выполняет обработчик
+
+			// Проверка текстовых инпутов
+			for (var i = 0; i < input.length; i++) {
+				console.log($(input[i]).val());
+
+				if ($(input[i]).val().length > 0) {
+					$(input[i]).addClass('j-input_valid');
+					console.log("Текстовый инпут стал валидным")
+					counter++;
+				}
+				else {
+					$(input[i]).removeClass('j-input_valid');
+					counter--;
+				}
+			} 
+
+			if (counter == input.length) 
+				inputValid = true;
+			else 
+				inputValid = false;
+			
+			counter = 0;
+
+			// Проверка инпутов номера телефона
+			for (var i = 0; i < phone.length; i++) {
+				console.log($(phone[i]).val());
+
+				if ($(phone[i]).val().length == 18) {
+					$(phone[i]).addClass('j-input_valid');
+					console.log("Текстовый инпут стал валидным")
+					counter++;
+				}
+				else {
+					$(phone[i]).removeClass('j-input_valid');
+					counter--;
+				}
+			} 
+
+			if (counter == phone.length) 
+				telValid = true;
+			else
+				telValid = false;
+
+			counter = 0;
+
+			// Условия для активации submit-кнопки
+			if (inputValid == true && telValid == true) {
+				form.find('[type="submit"]').removeClass('disabled');
+				form.find('[type="submit"]').removeAttr('disabled');
+			} else {
+				form.find('[type="submit"]').addClass('disabled');
+				form.find('[type="submit"]').attr('disabled', '');
+			}	
+		}, false);
+	}
+
+	// Добавление обработчика события на инпуты с номером телефона
+	for (var i = 0; i < phone.length; i++) {
+		phone[i].addEventListener("input", function(){
+
+			// Функция, которую выполняет обработчик
+
+			// Проверка инпутов номера телефона
+			for (var i = 0; i < phone.length; i++) {
+				console.log($(phone[i]).val());
+
+				if ($(phone[i]).val().length == 18) {
+					$(phone[i]).addClass('j-input_valid');
+					console.log("Текстовый инпут стал валидным")
+					counter++;
+				}
+				else {
+					$(phone[i]).removeClass('j-input_valid');
+					counter--;
+				}
+			} 
+
+			if (counter == phone.length) 
+				telValid = true;
+			else
+				telValid = false;
+
+			counter = 0;
+
+		// Проверка текстовых инпутов
+			for (var i = 0; i < input.length; i++) {
+				console.log($(input[i]).val());
+
+				if ($(input[i]).val().length > 0) {
+					$(input[i]).addClass('j-input_valid');
+					console.log("Текстовый инпут стал валидным")
+					counter++;
+				}
+				else {
+					$(input[i]).removeClass('j-input_valid');
+					counter--;
+				}
+			} 
+
+			if (counter == input.length) 
+				inputValid = true;
+			else 
+				inputValid = false;
+			
+			counter = 0;
+
+
+			// Условия активации submit-кнопки
+			if (inputValid == true && telValid == true) {
+				form.find('[type="submit"]').removeClass('disabled');
+				form.find('[type="submit"]').removeAttr('disabled');
+			} else {
+				form.find('[type="submit"]').addClass('disabled');
+				form.find('[type="submit"]').attr('disabled', '');
+			}
+
+
+		}, false);
+
+	}
+
+// Условия для активации submit-кнопки
+	if (inputValid == true && telValid == true) {
+		form.find('[type="submit"]').removeClass('disabled');
+		form.find('[type="submit"]').removeAttr('disabled');
+	} else {
+		form.find('[type="submit"]').addClass('disabled');
+		form.find('[type="submit"]').attr('disabled', '');
+	}
+	
+}
+
+// Функция маски для поля "Бюджет"
+
+// function moneyMask(event) {
+// 	var matrix = "_ ___ ___ ___",
+// 		i = 0,
+// 		def = matrix.replace(/\D/g, ""),
+// 		val = this.value.replace(/\D/g, "");
+// 	if (def.length >= val.length) val = def;
+// 	this.value = matrix.replace(/./g, function(a) {
+// 		return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+// 	});
+// };
+

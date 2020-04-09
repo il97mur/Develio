@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+	<link rel="icon" href="img/favicon.png">
+
+    <link rel="stylesheet" href="css/services-page.css">
+
+</head>
+<body>
+
+    <header class="header">
+
+		<div class="row header__row">
+
+			<div class="container d-f jc-sb ai-c">
+				<a href="index.html" class="header__logo logo">
+					<img src="img/_src/logo_white_green.svg" alt="" class="logo__img">
+				</a>
+
+				<nav class="menu">
+					<a href="#web-dev" class="menu__item">веб-разработка</a>
+					<a href="#design" class="menu__item">дизайн</a>
+					<a href="#adv" class="menu__item">реклама</a>
+					<a href="#analytics" class="menu__item">аналитика</a>
+				</nav>
+
+				<a href="brief.html" class="button button_primary button_active header__button">
+					Заполнить бриф
+                </a>
+
+				<div class="c-hamburger">
+					<!-- <img src="img/_src/hamburger.svg" alt="" class="hamburger-img"> -->
+					Меню
+					<button class="hamburger hamburger--slider" type="button">
+						<span class="hamburger-box">
+						  <span class="hamburger-inner"></span>
+						</span>
+					  </button>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- HEADER POP-UP MENU START -->
+
+		<div class="popup-menu" style="display: none;">
+
+			<div class="container popup-menu__container">
+				<div class="row header__row popup-menu__row ">
+
+					<a href="index.html" class="header__logo logo">
+						<img src="img/_src/logo_gray.svg" alt="" class="logo__img">
+					</a>
+
+					<div class="c-hamburger">
+						<button class="hamburger hamburger--slider" type="button">
+							<span class="hamburger-box">
+							  <span class="hamburger-inner"></span>
+							</span>
+						  </button>
+					</div>
+
+				</div>
+
+				<div class="popup-menu__content">
+
+					<nav class="popup-menu__menu">
+						<a href="portfolio.html" class="popup-menu__item h1 h1_white">
+							портфолио
+						</a>
+						<a href="services.html" class="popup-menu__item popup-menu__item_active h1 h1_white">
+							Услуги
+						</a>
+						<a href="company.html" class="popup-menu__item h1 h1_white">
+							Компания
+						</a>
+						<a href="contacts.html" class="popup-menu__item h1 h1_white">
+							Контакты
+						</a>
+					</nav>
+
+					<div class="interactive popup-menu__interactive">
+
+						<button class="button button_secondary popup-menu__button j-popup-menu__get-audit-button">Бесплатный аудит</button>
+						<button class="button button_secondary popup-menu__button">Скачать презентацию</button>
+						<button class="button button_primary popup-menu__button j-popup-menu__get-callback-button">Обратный звонок</button>
+
+						<div class="contacts popup-menu__contacts">
+							<a href="#" class="phone contacts__link">
+								+ 7 495 147-73-00
+							</a>
+							<a href="#" class="e-mail popup-menu__e-mail contacts__link">
+								hello@develio.ru
+							</a>
+							<div class="social popup-menu__social">
+								<a href="#" class="social-link"><img src="img/_src/inst.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="img/_src/vk.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="img/_src/behance.svg" alt=""></a>
+								<a href="#" class="social-link"><img src="img/_src/facebook.svg" alt=""></a>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+
+
+			</div>
+
+
+		</div>
+
+		<!-- GET AUDIT START -->
+
+		<div class="popup-menu__get-audit">
+			<div class="c-popup-menu__get-audit c-popup-menu__form">
+				<form action="" class="form audit-form popup-menu__audit-form">
+					<h2 class="h2 h2_white audit-form__h2">
+						Выберите содержимое аудита
+					</h2>
+		
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
+		
+					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text audit-form__input-text">
+					<button type="submit" class="button button_primary audit-form__submit disabled">Отправить</button> 
+					<p class="personal-data-apply audit-form__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
+				</form>
+			</div>
+		</div>
+
+		<!-- GET AUDIT END -->
+
+		<!-- GET CALLBACK START -->
+
+		<div class="popup-menu__get-callback">
+			<div class="c-popup-menu__get-callback c-popup-menu__form">
+				<form action="#" class="form callback-form popup-menu__callback-form">
+					<h2 class="h2 h2_white get-callback__h2">
+						Обратный звонок
+					</h2>
+					<p class="main-text get-callback__main-text">
+						Закажите обратный звонок, и наши специалисты позвонят Вам
+					</p>
+					<input type="text" name="name" placeholder="Имя" required class="input input-text get-callback__input-text get-callback__name">
+					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text get-callback__input-text get-callback__phone">
+					<button type="submit" class="button button_primary get-callback__submit disabled">Отправить</button>
+					<p class="personal-data-apply get-callback__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
+				</form>
+			</div>
+		</div>
+
+		<!-- GET CALLBACK END -->
+
+		<!-- HEADER POP-UP MENU END -->
+
+    </header>
+
+    <!-- BREADCRUMBS START -->
+
+    <div class="breadcrumps row">
+        <div class="container breadcrumps__container">
+            <a href="index.html" class="breadcrumps__item main-text main-text_gray">Главная</a>
+            <span class="breadcrumps__separator"></span>
+            <a href="#" class="breadcrumps__item main-text main-text_gray">Услуги</a>
+        </div>
+    </div>
+
+    <!-- BREADCRUMBS END -->
+
+    <main class="services-page">
+        <section class="services-preview">
+            <div class="container services-preview__container">
+                <h1 class="h1 h1_white services-page__h1">Услуги</h1>
+
+                <div class="c-services-preview-items">
+                    <a href="#web-dev" class="services-preview__item">
+                        <div class="main-text main-text_bold main-text_black">Веб-разработка</div>
+                        <img src="img/_src/pixel-arrow_green.svg" alt="" class="services-preview__pixel-arrow">
+                    </a>
+                    <a href="#design" class="services-preview__item">
+                         <div class="main-text main-text_bold main-text_black">Дизайн</div>
+                        <img src="img/_src/pixel-arrow_green.svg" alt="" class="services-preview__pixel-arrow">
+                    </a>
+                    <a href="#adv" class="services-preview__item">
+                         <div class="main-text main-text_bold main-text_black">Реклама и продвижение</div>
+                        <img src="img/_src/pixel-arrow_green.svg" alt="" class="services-preview__pixel-arrow">
+                    </a>
+                    <a href="analytics" class="services-preview__item">
+                         <div class="main-text main-text_bold main-text_black">Аналитика</div>
+                        <img src="img/_src/pixel-arrow_green.svg" alt="" class="services-preview__pixel-arrow">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="web-dev" class="service web-dev">
+            <div class="container service__container">
+                <div class="service__column">
+                    <div class="h1 h1_white service__h1">веб-разработка</div>
+                    <p class="main-text main-text_white service__main-text">Разрабатываем сайты, решающие поставленные бизнес-задачи</p>
+                    <button class="button button_secondary service__button">Подробнее</button>
+                </div>
+
+                <div class="service__column">
+                    <h2 class="h2 h2_white service__h2">Что делаем?</h2>
+                    <div class="what-we-do">
+                        <div class="what-we-do__column">
+                            <p class="what-we-do__item main-text main-text_white">Landing Page</p>
+                            <p class="what-we-do__item main-text main-text_white">Корпоративный сайт</p>
+                            <p class="what-we-do__item main-text main-text_white">Интернет-магазин</p>
+                            <p class="what-we-do__item main-text main-text_white">Промо-сайт</p>
+                        </div>
+                        <div class="what-we-do__column">
+                            <p class="what-we-do__item main-text main-text_white">Адаптивный сайт</p>
+                            <p class="what-we-do__item main-text main-text_white">Верстка</p>
+                            <p class="what-we-do__item main-text main-text_white">Программирование</p>
+                            <p class="what-we-do__item main-text main-text_white">Интеграция с сервисами</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-image">
+                <img src="img/_src/web-dev-service_img.png" alt="" class="service__img">
+                <a href="#" class="service-hover-link">
+                    <div class="container service-hover-link__container">
+                        <div class="service-hover-link__column">
+                            <div class="row service-hover-link__row">
+                                <p class="h2 h2_white h2_normal service-hover-link__h2">Дизайн</p>
+                                <p class="h2 h2_white h2_normal service-hover-link__h2">Фирменный стиль</p>
+                            </div>
+                            <div class="h1 h1_white service-hover-link__h1">Права №1</div>
+                            <p class="h2 h2_white h2_normal service-hover-link__h2">2019</p>
+                        </div>
+                        <div class="service-hover-link__column">
+                            <img src="img/_src/pixel_arrow_white.svg" alt="" class="service-hover-link__pixel-arrow-img">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="design" class="service design">
+            <div class="container service__container">
+                <div class="service__column">
+                    <div class="h1 h1_white service__h1">Дизайн</div>
+                    <p class="main-text main-text_white service__main-text">Создаем запоминающийся фирменный стиль, который выделит вас среди конкурентов</p>
+                    <button class="button button_secondary service__button">Подробнее</button>
+                </div>
+
+                <div class="service__column">
+                    <h2 class="h2 h2_white service__h2">Что делаем?</h2>
+                    <div class="what-we-do">
+                        <div class="what-we-do__column">
+                            <p class="what-we-do__item main-text main-text_white">Веб-дизайн</p>
+                            <p class="what-we-do__item main-text main-text_white">Графический дизайн</p>
+                            <p class="what-we-do__item main-text main-text_white">Логотип</p>
+                            <p class="what-we-do__item main-text main-text_white">Фирменный стиль</p>
+                        </div>
+                        <div class="what-we-do__column">
+                            <p class="what-we-do__item main-text main-text_white">Печатная продукция</p>
+                            <p class="what-we-do__item main-text main-text_white">Социальные сети</p>
+                            <p class="what-we-do__item main-text main-text_white">Упаковка</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-image">
+                <img src="img/_src/design-service_img.png" alt="" class="service__img">
+                <a href="#" class="service-hover-link">
+                    <div class="container service-hover-link__container">
+                        <div class="service-hover-link__column">
+                            <div class="row service-hover-link__row">
+                                <p class="h2 h2_white h2_normal service-hover-link__h2">Дизайн</p>
+                                <p class="h2 h2_white h2_normal service-hover-link__h2">Фирменный стиль</p>
+                            </div>
+                            <div class="h1 h1_white service-hover-link__h1">Права №1</div>
+                            <p class="h2 h2_white h2_normal service-hover-link__h2">2019</p>
+                        </div>
+                        <div class="service-hover-link__column">
+                            <img src="img/_src/pixel_arrow_white.svg" alt="" class="service-hover-link__pixel-arrow-img">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+
+        <section id="adv" class="service advertisment">
+            <div class="container service__container">
+                <div class="service__column">
+                    <div class="h1 h1_white service__h1">Реклама и продвижение</div>
+                    <p class="main-text main-text_white service__main-text">Продаем при помощи эффективной таргетированной рекламы и SEO-продвижения и SMM</p>
+                    <button class="button button_secondary service__button">Подробнее</button>
+                </div>
+
+                <div class="service__column">
+                    <h2 class="h2 h2_white service__h2">Что делаем?</h2>
+                    <div class="what-we-do">
+                        <div class="what-we-do__column">
+                            <p class="what-we-do__item main-text main-text_white">Стратегия продвижения</p>
+                            <p class="what-we-do__item main-text main-text_white">Таргетированная реклама</p>
+                            <p class="what-we-do__item main-text main-text_white">SMM</p>
+                            <p class="what-we-do__item main-text main-text_white">SEO-продвижение</p>
+                        </div>
+                        <div class="what-we-do__column">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-image">
+                <img src="img/_src/advertisment-service_img.png" alt="" class="service__img">
+                <a href="#" class="service-hover-link">
+                    <div class="container service-hover-link__container">
+                        <div class="service-hover-link__column">
+                            <div class="row service-hover-link__row">
+                                <p class="h2 h2_white h2_normal service-hover-link__h2">Дизайн</p>
+                                <p class="h2 h2_white h2_normal service-hover-link__h2">Фирменный стиль</p>
+                            </div>
+                            <div class="h1 h1_white service-hover-link__h1">Права №1</div>
+                            <p class="h2 h2_white h2_normal service-hover-link__h2">2019</p>
+                        </div>
+                        <div class="service-hover-link__column">
+                            <img src="img/_src/pixel_arrow_white.svg" alt="" class="service-hover-link__pixel-arrow-img">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+
+        <section id="analytics" class="service analytics">
+            <div class="container service__container">
+                <div class="service__column">
+                    <div class="h1 h1_white service__h1">Аналитика</div>
+                    <p class="main-text main-text_white service__main-text">Анализируем бизнес-процессы, интерфейсы и конкурентов</p>
+                    <button class="button button_secondary service__button">Подробнее</button>
+                </div>
+
+                <div class="service__column">
+                    <h2 class="h2 h2_white service__h2">Что делаем?</h2>
+                    <div class="what-we-do">
+                        <div class="what-we-do__column">
+                            <p class="what-we-do__item main-text main-text_white">Исследование рынка</p>
+                            <p class="what-we-do__item main-text main-text_white">Веб-аналитика</p>
+                            <p class="what-we-do__item main-text main-text_white">Юзабилити-анализ</p>
+                        </div>
+                        <div class="what-we-do__column">
+                            <p class="what-we-do__item main-text main-text_white">SEO-аудит</p>
+                            <p class="what-we-do__item main-text main-text_white">Проектирование</p>
+                        </div>
+                        <div class="what-we-do__column">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-image">
+                <img src="img/_src/analytics-service_img.png" alt="" class="service__img">
+                <a href="#" class="service-hover-link">
+                    <div class="container service-hover-link__container">
+                        <div class="service-hover-link__column">
+                            <div class="row service-hover-link__row">
+                                <p class="h2 h2_white h2_normal service-hover-link__h2">Дизайн</p>
+                                <p class="h2 h2_white h2_normal service-hover-link__h2">Фирменный стиль</p>
+                            </div>
+                            <div class="h1 h1_white service-hover-link__h1">Права №1</div>
+                            <p class="h2 h2_white h2_normal service-hover-link__h2">2019</p>
+                        </div>
+                        <div class="service-hover-link__column">
+                            <img src="img/_src/pixel_arrow_white.svg" alt="" class="service-hover-link__pixel-arrow-img">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+
+        <section class="sub-footer">
+            <div class="container sub-footer__container">
+                <div class="sub-footer__column">
+                    <div class="h1 h1_white sub-footer__h1">
+                        Есть проект?
+                        Проконсультируем!
+                    </div>
+                    <a href="brief.html" class="button button_primary sub-footer__button">Заполнить бриф</a>
+                </div>
+                <div class="sub-footer__column">
+                    <div class="c-sub-footer__contacts">
+                        <div>
+                            <p class="main-text sub-footer__main-text">Пишите</p>
+                            <div class="h2 h2_white sub-footer__contact"><a href="#" class="contacts__link">hello@develio.ru</a></div>
+                        </div>
+                        <div>
+                            <p class="main-text sub-footer__main-text">Звоните</p>
+                            <div class="h2 h2_white sub-footer__contact sub-footer__contact_mb12"><a href="#" class="contacts__link">+7 495 147-73-00</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container footer__container">
+                <div class="logo footer__logo">
+                    <img src="../img/_src/logo_gray.svg" class="logo__img" alt="">
+                </div>
+                <a href="#" class="main-text footer__link">
+                    Политика конфиденциальности
+                </a>
+                <p class="main-text footer__main-text">
+                    © 2018-2020 Develio
+                </p>
+            </div>
+        </footer>
+    </main>
+
+
+    <script src="js/scripts.min.js"></script>
+
+    <script>
+        function scroll_active() {
+
+/* вычисляем значения прокрутки страницы по вертикали */
+
+var window_top = $(window).scrollTop();
+
+/* вычисляем положение якорей на странице от начала страницы  по вертикали*/
+
+var webDev = $('#web-dev').offset().top -10;
+
+var design = $('#design').offset().top -10;
+
+var adv = $('#adv').offset().top -10;
+
+var analytics = $('#analytics').offset().top -10;
+
+/* Переключатель активного пункта меню в зависимости от положения на странице, условии написаны от последнего якоря на странице, до первого */
+
+/* если на экране отображаются раздел «Контакты»*/
+if (window_top > analytics) {
+    $(".menu__item").removeClass("menu__item_active");
+    $('a[href="#analytics"]').addClass("menu__item_active");
+        }
+
+/* если не отображается раздел «Контакты», но страницу прокрутили  ниже якоря третьего раздела*/
+else if (window_top > adv) {
+    $(".menu__item").removeClass("menu__item_active");
+    $('a[href="#adv"]').addClass("menu__item_active");
+        }
+
+/* если выше третьего, но ниже якоря второго раздела*/
+else if (window_top > design) {
+    $(".menu__item").removeClass("menu__item_active");
+    $('a[href="#design"]').addClass("menu__item_active");
+        }
+
+/* если не подходят условия предыдущие активируем первый пункт меню*/
+else if (window_top > webDev) {
+    $(".menu__item").removeClass("menu__item_active");
+    $('a[href="#web-dev"]').addClass("menu__item_active");
+        }
+
+else {
+    $(".menu__item").removeClass("menu__item_active");
+}
+}
+
+jQuery(function()
+{
+jQuery(window).scroll(scroll_active);
+});
+    </script>
+    
+</body>
+</html>
