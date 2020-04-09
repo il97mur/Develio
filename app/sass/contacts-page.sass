@@ -98,11 +98,18 @@
         flex: 0 0 40%
 
 @media screen and ( max-width: 576px )
+    .c-contacts-page
+        &__contacts
+            position: relative
     .contacts-page
         &__social
+            position: absolute
             margin-top: 45px
+            bottom: -50px
+            padding: 0px 20%
     .feedback-form
         width: 100%
+        margin-top: 110px
         padding: 30px
     .work-time
         order: 1
