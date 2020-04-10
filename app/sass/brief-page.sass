@@ -3,6 +3,11 @@
 .button
     white-space: nowrap
     cursor: pointer
+    &_secondary
+        transition: all .3s ease
+        &:active
+            background: none
+            color: $green_3
 
 .fieldsset
     width: 100%
@@ -153,6 +158,9 @@
             margin-right: 0
         &__personal-data-apply
             text-align: center
+        &__contact-input
+            margin-right: 0
+            width: 100%
     .label__button
         margin: 0px 15px 20px 0
     .about-project

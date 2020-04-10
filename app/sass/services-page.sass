@@ -11,6 +11,7 @@
 .services-preview
     display: flex
     justify-content: center
+    width: 100%
     &__item
         display: flex
         justify-content: space-between
@@ -53,6 +54,7 @@
     &__container
         display: flex
         margin-bottom: 40px
+        justify-content: space-between
     &__column
         flex: 0 0 45%
     &__h1
@@ -70,6 +72,7 @@
 .service-image
     position: relative
     width: 1440px
+    line-height: 0
 
 .service-hover-link
     position: absolute
@@ -102,7 +105,8 @@
         &:first-child
             margin-right: 50px
     &__pixel-arrow-img
-        height: 100%
+        height: 100% 
+        align-self: center
         margin-left: 80px
 
 
@@ -115,7 +119,7 @@
         &:last-child
             margin-left: 30px
     &__item
-        text-decoration: underline
+        // text-decoration: underline
         line-height: 25px
         display: flex
         align-items: center
@@ -126,6 +130,12 @@
             height: 5px
             background: $green_3
             margin-right: 10px
+    &__link
+        text-decoration: underline
+        transition: all .3s ease
+        &:hover
+            color: $green_3
+            text-decoration: underline
 
 
 
@@ -140,10 +150,12 @@
     .service
         &__column
             flex: 0 0 50%
+            &:first-child
+                flex: 0 0 48%
     .menu__item
         margin-right: 30px
 
-@media screen and ( max-width: 996px )
+@media screen and ( max-width: 992px )
     .hamburger
         margin-left: 0px
     .menu__item
@@ -166,13 +178,14 @@
         margin-top: 130px
     .what-we-do
         &__column
+            flex: 0 0 100%
             &:last-child
                 margin-left: 0
     .service-hover-link
         &__h1
             margin-bottom: 20px
         &__pixel-arrow-img
-            height: 80%
+            height: 80% 
 
 @media screen and ( max-width: 768px )
     .service
@@ -183,14 +196,23 @@
             margin-bottom: 30px
 
 @media screen and ( max-width: 576px )
+    .services-page
+        &__h1
+            margin-bottom: 30px
     .services-preview
         &__item
-            flex: 0 0 100%
-            margin: 30px 0px
+            flex: 0 0 48%
+            margin: 15px 0px
+            padding: 20px 7px 120px 7px
+            background-position: center 70px
             &:first-child
-                margin-top: 0
+                // margin-top: 0
             &:last-child
-                margin-bottom: 0
+                // margin-bottom: 0
+            &:hover
+                outline-offset: 5px
+        &__main-text
+            font-size: 12px
     .service
         margin-top: 60px
         &__container
@@ -198,7 +220,15 @@
         &__column
             flex: 0 0 100%
             &:first-child
+                flex: 0 0 100%
                 padding-bottom: 20px
 
     .service-hover-link
         opacity: 0 !important
+        &__pixel-arrow-img
+            height: 20%
+
+@media screen and ( max-width: 380px )
+    .services-preview
+        &__item
+            background-position: center 85px

@@ -23,6 +23,8 @@
             margin-top: -40px
     .portfolio-item__pixel-arrow-img
         margin-bottom: 100px
+        &_mb-0
+            margin-bottom: 0
     .services
         position: relative
         &__section-heading
@@ -70,8 +72,10 @@
         padding: 8px 12px
     .hamburger
         margin-left: 10px
+    .header-content
+            margin-top: 150px
     .portfolio
-        margin-top: 40px
+        margin-top: 0px
         margin-bottom: 180px
         &__row
             margin-top: 60px
@@ -101,6 +105,8 @@
     .industries
         &__section-heading
             margin-top: -77px
+        &__text
+            margin: 0
     .tag-container
         flex-wrap: wrap
         &__column
@@ -124,6 +130,8 @@
             font-size: 12px
             line-height: 20px
             margin: 5px 0
+    .portfolio-item-only-img__name
+        display: block
 
 
 @media screen and ( max-width: 768px )
@@ -155,7 +163,6 @@
             padding-bottom: 30px
         &__h1
             display: flex
-            font-size: 20px
             padding: 50px 0px 20px 0px
         &__pixel-arrow-img
             width: 25px
@@ -172,8 +179,6 @@
         &__h1
             font-size: 20px
             line-height: 30px
-        &__text
-            margin: 0px 25px
     .e-commerce
         &__img
             margin: 40px 0
@@ -265,10 +270,10 @@
             margin-top: 30px
             margin-bottom: 50px
     .c-sub-footer__contacts
-        padding-top: 50px
+        padding-top: 20px
         width: 100%
         display: flex
-        flex-direction: row
+        flex-direction: column
         justify-content: space-around
 
 
@@ -290,8 +295,10 @@
         font-size: 12px
     .hamburger
         margin-left: 5px
+    .header-content
+        margin-top: 120px
     .portfolio
-        margin-top: 40px
+        margin-top: 0px
         margin-bottom: 180px
         &__container
             padding: 0px 10px
@@ -353,8 +360,6 @@
             font-size: 20px
             line-height: 30px
             width: 100%
-        &__text
-            margin: 0px 25px
         &__container
             flex-wrap: wrap
         &__column

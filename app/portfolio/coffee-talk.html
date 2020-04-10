@@ -119,20 +119,20 @@
     
     		<div class="popup-menu__get-audit">
     			<div class="c-popup-menu__get-audit c-popup-menu__form">
-    				<form action="" class="form audit-form popup-menu__audit-form">
-    					<h2 class="h2 h2_white audit-form__h2">
-    						Выберите содержимое аудита
-    					</h2>
-    		
-    					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
-    					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
-    					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
-    					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
-    		
-    					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text audit-form__input-text">
-    					<button type="submit" class="button button_primary audit-form__submit disabled">Отправить</button> 
-    					<p class="personal-data-apply audit-form__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
-    				</form>
+    				<form action="../php/audit.php" method="POST" class="form audit-form popup-menu__audit-form">
+                        <h2 class="h2 h2_white audit-form__h2">
+                            Выберите содержимое аудита
+                        </h2>
+            
+                        <label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит юзабилити сайта" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
+                        <label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит соц.сетей" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
+                        <label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="SEO-аудит" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
+                        <label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит рекламных кампаний" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
+            
+                        <input type="tel" name="phone" placeholder="Телефон" required class="input input-text audit-form__input-text">
+                        <button type="submit" class="button button_primary audit-form__submit disabled">Отправить</button>
+                        <p class="personal-data-apply audit-form__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
+                    </form>
     			</div>
     		</div>
     
@@ -142,7 +142,7 @@
     
     		<div class="popup-menu__get-callback">
     			<div class="c-popup-menu__get-callback c-popup-menu__form">
-    				<form action="#" class="form callback-form popup-menu__callback-form">
+    				<form action="../php/callback.php" method="POST" class="form callback-form popup-menu__callback-form">
     					<h2 class="h2 h2_white get-callback__h2">
     						Обратный звонок
     					</h2>
@@ -200,7 +200,7 @@
                                 <p class="main-text main-text_white project__category">Веб-разразработка</p>
                             </div>
                             <h1 class="h1 h1_white h1_not-upper project__h1">Сайт кофейни Coffee & Talk</h1>
-                            <button class="button project__button">Смотреть подробнее</button>
+                            <a href="#task-and-works" class="button project__button">Смотреть подробнее</a>
                         </div>
                         
                         <div class="project__column">
@@ -250,11 +250,11 @@
 
                     <h2 class="h2 h2_white project-description__point">Работы</h2>
                     <div class="project-description__tag-list">
-                        <div class="button button_secondary project-description__button_secondary">landig page</div>
+                        <a href="#" class="button button_secondary project-description__button_secondary project-description__link">landig page</a>
                         <div class="button button_secondary project-description__button_secondary">промо-сайт</div>
                         <div class="button button_secondary project-description__button_secondary">frontend-разработка</div>
                         <div class="button button_secondary project-description__button_secondary">backend-разработка</div>
-                        <div class="button button_secondary project-description__button_secondary">адаптивный сайт</div>
+                        <a href="#" class="button button_secondary project-description__button_secondary project-description__link">адаптивный сайт</a>
                         <div class="button button_secondary project-description__button_secondary">интеграция quick resto</div>
                         <div class="button button_secondary project-description__button_secondary">интеграция sms aero</div>
 
@@ -358,7 +358,7 @@
 
 <script src="../js/scripts.min.js"></script>
 <script>
-    changeColor('#D44ED6', '#8b188d');
+    changeColor('#D44ED6', '#8b188d', '#000000');
 </script>
 
 <script>

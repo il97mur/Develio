@@ -118,18 +118,18 @@
 
 		<div class="popup-menu__get-audit">
 			<div class="c-popup-menu__get-audit c-popup-menu__form">
-				<form action="" class="form audit-form popup-menu__audit-form">
+				<form action="php/audit.php" method="POST" class="form audit-form popup-menu__audit-form">
 					<h2 class="h2 h2_white audit-form__h2">
 						Выберите содержимое аудита
 					</h2>
 		
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит юзабилити сайта" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит соц.сетей" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="SEO-аудит" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит рекламных кампаний" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
 		
 					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text audit-form__input-text">
-					<button type="submit" class="button button_primary audit-form__submit disabled">Отправить</button> 
+					<button type="submit" class="button button_primary audit-form__submit disabled">Отправить</button>
 					<p class="personal-data-apply audit-form__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
 				</form>
 			</div>
@@ -141,7 +141,7 @@
 
 		<div class="popup-menu__get-callback">
 			<div class="c-popup-menu__get-callback c-popup-menu__form">
-				<form action="#" class="form callback-form popup-menu__callback-form">
+				<form action="php/callback.php" method="POST" class="form callback-form popup-menu__callback-form">
 					<h2 class="h2 h2_white get-callback__h2">
 						Обратный звонок
 					</h2>
@@ -210,7 +210,7 @@
                         <div class="technologies__item button">php</div>
                         <div class="technologies__item button">javascript</div>
                         <div class="technologies__item button">sass</div>
-                        <div class="technologies__item technologies__item_accent button">vue.js</div>
+                        <a href="#" class="technologies__item technologies__link button">vue.js</a>
                         <div class="technologies__item button">gulp</div>
                         <div class="technologies__item button">github</div>
                     </div>
@@ -219,7 +219,7 @@
                 <div class="row technologies__row">
                     <div class="h2 h2_normal technologies__category">Дизайн</div>
                     <div class="technologies__item-list">
-                        <div class="technologies__item technologies__item_accent button">figma</div>
+                        <a href="#" class="technologies__item technologies__link button">figma</a>
                         <div class="technologies__item button">adobe illustrator</div>
                         <div class="technologies__item button">adobe photoshop</div>
                     </div>

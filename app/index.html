@@ -145,15 +145,15 @@
 
 		<div class="popup-menu__get-audit">
 			<div class="c-popup-menu__get-audit c-popup-menu__form">
-				<form action="#" class="form audit-form popup-menu__audit-form">
+				<form action="php/audit.php" method="POST" class="form audit-form popup-menu__audit-form">
 					<h2 class="h2 h2_white audit-form__h2">
 						Выберите содержимое аудита
 					</h2>
 		
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит юзабилити сайта" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит соц.сетей" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="SEO-аудит" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит рекламных кампаний" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
 		
 					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text audit-form__input-text">
 					<button type="submit" class="button button_primary audit-form__submit disabled">Отправить</button>
@@ -168,7 +168,7 @@
 
 		<div class="popup-menu__get-callback">
 			<div class="c-popup-menu__get-callback c-popup-menu__form">
-				<form action="#" class="form callback-form popup-menu__callback-form">
+				<form action="php/callback.php" method="POST" class="form callback-form popup-menu__callback-form">
 					<h2 class="h2 h2_white get-callback__h2">
 						Обратный звонок
 					</h2>
@@ -216,6 +216,9 @@
 				</a>
 				<a href="#" class="portfolio__item portfolio__item_only-img portfolio-item">
 					<img class="portfolio__img" src="img/_src/santimether.png" alt="">
+					<div class="w-100 c-portfolio__h2 portfolio-item-only-img__name">
+						<h2 class="h2 portfolio__h2 h2_white">Body beauty bar</h2>
+					</div>
 					<object class="j-portfolio-item__wrap">
 						<a href="#" class="portfolio-item__wrap">
 							<div class="row portfolio-item__row">
@@ -251,6 +254,9 @@
 			<div class="portfolio__row">
 				<a href="#" class="portfolio__item portfolio__item_only-img portfolio-item">
 					<img class="portfolio__img" src="img/_src/golden_stroke.png" alt="">
+					<div class="w-100 c-portfolio__h2 portfolio-item-only-img__name">
+						<h2 class="h2 portfolio__h2 h2_white">Golden stroke</h2>
+					</div>
 					<object class="j-portfolio-item__wrap">
 						<a href="#" class="portfolio-item__wrap">
 							<div class="row portfolio-item__row">
@@ -559,15 +565,15 @@
 		</div>
 		<div class="get-audit__column">
 
-			<form action="#" class="form audit-form get-audit__audit-form">
+			<form action="php/audit.php" method="POST" class="form audit-form get-audit__audit-form">
 				<h2 class="h2 h2_white audit-form__h2">
 					Выберите содержимое аудита
 				</h2>
 	
-				<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
-				<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
-				<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
-				<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
+				<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит юзабилити сайта" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
+				<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит соц.сетей" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
+				<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="SEO-аудит" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
+				<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит рекламных кампаний" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
 	
 				<input type="tel" name="phone" placeholder="Телефон" required class="input input-text audit-form__input-text">
 				<button type="submit" class="button button_primary audit-form__submit disabled">Отправить</button>

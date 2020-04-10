@@ -100,7 +100,7 @@ a
     color: unset
     &:hover
         text-decoration: none
-        color: #ffffff
+        // color: #ffffff
 
 p
     padding: 0
@@ -275,6 +275,7 @@ h1,h2
             border-image-source: linear-gradient(90deg, #46FA5A 0%, #33AF33 100%)
             z-index: -10
             transition: opacity .3s ease
+
         &:hover
             &::before
                 opacity: 1
@@ -664,4 +665,10 @@ h1,h2
         background: #fff
         margin: 0px 15px
         opacity: 0.5
+
+@media ( pointer: coarse )
+    .button
+        &_secondary
+            &::before
+               display: none 
 

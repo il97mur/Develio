@@ -114,18 +114,18 @@
 
 		<div class="popup-menu__get-audit">
 			<div class="c-popup-menu__get-audit c-popup-menu__form">
-				<form action="" class="form audit-form popup-menu__audit-form">
+				<form action="php/audit.php" method="POST" class="form audit-form popup-menu__audit-form">
 					<h2 class="h2 h2_white audit-form__h2">
 						Выберите содержимое аудита
 					</h2>
 		
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит юзабилити сайта" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит соц.сетей" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="SEO-аудит" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит рекламных кампаний" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
 		
 					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text audit-form__input-text">
-					<button type="submit" class="button button_primary audit-form__submit disabled">Отправить</button> 
+					<button type="submit" class="button button_primary audit-form__submit disabled">Отправить</button>
 					<p class="personal-data-apply audit-form__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
 				</form>
 			</div>
@@ -137,7 +137,7 @@
 
 		<div class="popup-menu__get-callback">
 			<div class="c-popup-menu__get-callback c-popup-menu__form">
-				<form action="#" class="form callback-form popup-menu__callback-form">
+				<form action="php/callback.php" method="POST" class="form callback-form popup-menu__callback-form">
 					<h2 class="h2 h2_white get-callback__h2">
 						Обратный звонок
 					</h2>
@@ -182,25 +182,25 @@
                     </div>
             </div>
 
-                <form action="#" class="brief-form">
+                <form action="php/brief.php" method="POST" class="brief-form">
                     <div class="brief-form__type-of-project">
                         <div class="h2 h2_white brief-form__h2">Выберите тип вашего проекта</div>
                         <fieldset class="fieldset">
                             <div class="checkbox-container">
                                 <label for="" class="brief-form__label">
-                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <input hidden type="checkbox" name="type[]" value="Веб-разработка" class="input-checkbox brief-form__input-checkbox">
                                     <div class="label__button button button_secondary button_not-grad button_not-active">Веб-разработка</div>
                                 </label>
                                 <label for="" class="brief-form__label">
-                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <input hidden type="checkbox" name="type[]" value="Реклама и продвижение" class="input-checkbox brief-form__input-checkbox">
                                     <div class="label__button button button_secondary button_not-grad button_not-active">Реклама и продвижение</div>
                                 </label>
                                 <label for="" class="brief-form__label">
-                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <input hidden type="checkbox" name="type[]" value="Дизайн" class="input-checkbox brief-form__input-checkbox">
                                     <div class="label__button button button_secondary button_not-grad button_not-active">Дизайн</div>
                                 </label>
                                 <label for="" class="brief-form__label">
-                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <input hidden type="checkbox" name="type[]" value="Аналитика" class="input-checkbox brief-form__input-checkbox">
                                     <div class="label__button button button_secondary button_not-grad button_not-active">Аналитика</div>
                                 </label>
                             </div>
@@ -209,11 +209,11 @@
 
                     <div class="brief-form__about-project">
                         <div class="h2 h2_white brief-form__h2">Пару слов о Вашем проекте</div>
-                        <textarea type="textarea" class="textarea input-text input__textarea input__textarea_brief"></textarea>
+                        <textarea type="textarea" name="description" class="textarea input-text input__textarea input__textarea_brief"></textarea>
                         <div class="row about-project__row">
                             <div class="d-f ai-c">
-                                <p class="main-text main-text_white brief-form__price-heading">Бюджет:</p>
-                                <input required placeholder="1 000 000р" class="input input-text brief-form__price">
+                                <label for="price" class="main-text main-text_white brief-form__price-heading">Бюджет:</label>
+                                <input name="price" required placeholder="100 000р" class="input input-text brief-form__price">
                             </div>
                             <button class="button button_secondary">Прикрепить файл</button>
                         </div>
@@ -223,10 +223,10 @@
                         <div class="h2 h2_white brief-form__h2">Оставьте Ваши контакты</div>
                         <fieldset class="fieldset">
                             <div class="brief-form__contacts">
-                                <input required type="text" placeholder="Имя" class="input-text brief-form__contact-input">
-                                <input required type="text" placeholder="Компания" class="input-text brief-form__contact-input">
-                                <input required type="tel" placeholder="Телефон" class="input-text brief-form__contact-input">
-                                <input required type="email" placeholder="Почта" class="input-text brief-form__contact-input">
+                                <input required type="text" name="name" placeholder="Имя" class="input-text brief-form__contact-input">
+                                <input required type="text" name="company" placeholder="Компания" class="input-text brief-form__contact-input">
+                                <input required type="tel" name="phone" placeholder="Телефон" class="input-text brief-form__contact-input">
+                                <input required type="email" name="email" placeholder="Почта" class="input-text brief-form__contact-input">
                             </div>
                         </fieldset>
                     </div>
@@ -236,19 +236,19 @@
                         <fieldset class="fieldset">
                             <div class="checkbox-container">
                                 <label for="" class="brief-form__label">
-                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <input hidden type="checkbox" name="source[]" value="Рекомендации" class="input-checkbox brief-form__input-checkbox">
                                     <div class="label__button button button_secondary button_not-grad button_not-active">Рекомендации</div>
                                 </label>
                                 <label for="" class="brief-form__label">
-                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <input hidden type="checkbox" name="source[]" value="Работы" class="input-checkbox brief-form__input-checkbox">
                                     <div class="label__button button button_secondary button_not-grad button_not-active">Работы</div>
                                 </label>
                                 <label for="" class="brief-form__label">
-                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <input hidden type="checkbox" name="source[]" value="СМИ" class="input-checkbox brief-form__input-checkbox">
                                     <div class="label__button button button_secondary button_not-grad button_not-active">СМИ</div>
                                 </label>
                                 <label for="" class="brief-form__label">
-                                    <input hidden type="checkbox" class="input-checkbox brief-form__input-checkbox">
+                                    <input hidden type="checkbox" name="source[]" value="Реклама" class="input-checkbox brief-form__input-checkbox">
                                     <div class="label__button button button_secondary button_not-grad button_not-active">Реклама</div>
                                 </label>
                             </div>
@@ -291,6 +291,13 @@
         } else
             $(this).prev().attr('checked', '');
     });
+</script>
+
+<script>
+    $('input[name="price"]')[0].addEventListener('input', function(){
+        // Маска для ввода бюджета
+        this.value = this.value.replace(/[^\d]/g, '').replace(/\B(?=(?:\d{3})+(?!\d))/g, ' ');
+    }, false);
 </script>
 </body>
 </html>

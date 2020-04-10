@@ -119,18 +119,18 @@
 
 		<div class="popup-menu__get-audit">
 			<div class="c-popup-menu__get-audit c-popup-menu__form">
-				<form action="" class="form audit-form popup-menu__audit-form">
+				<form action="php/audit.php" method="POST" class="form audit-form popup-menu__audit-form">
 					<h2 class="h2 h2_white audit-form__h2">
 						Выберите содержимое аудита
 					</h2>
 		
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
-					<label class="label audit-form__label"><input type="checkbox" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит юзабилити сайта" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит юзабилити сайта</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит соц.сетей" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит соц.сетей</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="SEO-аудит" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">SEO-аудит</div> </label>
+					<label class="label audit-form__label"><input type="checkbox" name="audit-checkbox[]" value="аудит рекламных кампаний" hidden class="input input-checkbox audit-form__input-checkbox"> <div class="label__text">аудит рекламных кампаний</div> </label>
 		
 					<input type="tel" name="phone" placeholder="Телефон" required class="input input-text audit-form__input-text">
-					<button type="submit" class="button button_primary audit-form__submit disabled">Отправить</button> 
+					<button type="submit" class="button button_primary audit-form__submit disabled">Отправить</button>
 					<p class="personal-data-apply audit-form__personal-data-apply">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
 				</form>
 			</div>
@@ -142,7 +142,7 @@
 
 		<div class="popup-menu__get-callback">
 			<div class="c-popup-menu__get-callback c-popup-menu__form">
-				<form action="#" class="form callback-form popup-menu__callback-form">
+				<form action="php/callback.php" method="POST" class="form callback-form popup-menu__callback-form">
 					<h2 class="h2 h2_white get-callback__h2">
 						Обратный звонок
 					</h2>
@@ -182,20 +182,20 @@
 
                 <div class="c-services-preview-items">
                     <a href="#web-dev" class="services-preview__item">
-                        <div class="main-text main-text_bold main-text_black">Веб-разработка</div>
-                        <img src="img/_src/pixel-arrow_green.svg" alt="" class="services-preview__pixel-arrow">
+                        <div class="main-text main-text_bold main-text_black services-preview__main-text">Веб-разработка</div>
+                        <img src="img/_src/pixel-arrow_green.png" alt="" class="services-preview__pixel-arrow">
                     </a>
                     <a href="#design" class="services-preview__item">
-                         <div class="main-text main-text_bold main-text_black">Дизайн</div>
-                        <img src="img/_src/pixel-arrow_green.svg" alt="" class="services-preview__pixel-arrow">
+                         <div class="main-text main-text_bold main-text_black services-preview__main-text">Дизайн</div>
+                        <img src="img/_src/pixel-arrow_green.png" alt="" class="services-preview__pixel-arrow">
                     </a>
                     <a href="#adv" class="services-preview__item">
-                         <div class="main-text main-text_bold main-text_black">Реклама и продвижение</div>
-                        <img src="img/_src/pixel-arrow_green.svg" alt="" class="services-preview__pixel-arrow">
+                         <div class="main-text main-text_bold main-text_black services-preview__main-text">Реклама и продвижение</div>
+                        <img src="img/_src/pixel-arrow_green.png" alt="" class="services-preview__pixel-arrow">
                     </a>
-                    <a href="analytics" class="services-preview__item">
-                         <div class="main-text main-text_bold main-text_black">Аналитика</div>
-                        <img src="img/_src/pixel-arrow_green.svg" alt="" class="services-preview__pixel-arrow">
+                    <a href="#analytics" class="services-preview__item">
+                         <div class="main-text main-text_bold main-text_black services-preview__main-text">Аналитика</div>
+                        <img src="img/_src/pixel-arrow_green.png" alt="" class="services-preview__pixel-arrow">
                     </a>
                 </div>
             </div>
@@ -213,7 +213,7 @@
                     <h2 class="h2 h2_white service__h2">Что делаем?</h2>
                     <div class="what-we-do">
                         <div class="what-we-do__column">
-                            <p class="what-we-do__item main-text main-text_white">Landing Page</p>
+                            <a href="#" class="what-we-do__item what-we-do__link main-text main-text_white">Landing Page</a>
                             <p class="what-we-do__item main-text main-text_white">Корпоративный сайт</p>
                             <p class="what-we-do__item main-text main-text_white">Интернет-магазин</p>
                             <p class="what-we-do__item main-text main-text_white">Промо-сайт</p>
@@ -221,7 +221,7 @@
                         <div class="what-we-do__column">
                             <p class="what-we-do__item main-text main-text_white">Адаптивный сайт</p>
                             <p class="what-we-do__item main-text main-text_white">Верстка</p>
-                            <p class="what-we-do__item main-text main-text_white">Программирование</p>
+                            <a href="#" class="what-we-do__item what-we-do__link main-text main-text_white">Программирование</a>
                             <p class="what-we-do__item main-text main-text_white">Интеграция с сервисами</p>
                         </div>
                     </div>
@@ -259,14 +259,14 @@
                     <h2 class="h2 h2_white service__h2">Что делаем?</h2>
                     <div class="what-we-do">
                         <div class="what-we-do__column">
-                            <p class="what-we-do__item main-text main-text_white">Веб-дизайн</p>
+                            <a href="#" class="what-we-do__item what-we-do__link main-text main-text_white">Веб-дизайн</a>
                             <p class="what-we-do__item main-text main-text_white">Графический дизайн</p>
                             <p class="what-we-do__item main-text main-text_white">Логотип</p>
                             <p class="what-we-do__item main-text main-text_white">Фирменный стиль</p>
                         </div>
                         <div class="what-we-do__column">
                             <p class="what-we-do__item main-text main-text_white">Печатная продукция</p>
-                            <p class="what-we-do__item main-text main-text_white">Социальные сети</p>
+                            <a href="#" class="what-we-do__item what-we-do__link main-text main-text_white">Социальные сети</a>
                             <p class="what-we-do__item main-text main-text_white">Упаковка</p>
                         </div>
                     </div>
@@ -309,7 +309,7 @@
                             <p class="what-we-do__item main-text main-text_white">Стратегия продвижения</p>
                             <p class="what-we-do__item main-text main-text_white">Таргетированная реклама</p>
                             <p class="what-we-do__item main-text main-text_white">SMM</p>
-                            <p class="what-we-do__item main-text main-text_white">SEO-продвижение</p>
+                            <a href="#" class="what-we-do__item what-we-do__link main-text main-text_white">SEO-продвижение</a>
                         </div>
                         <div class="what-we-do__column">
                         </div>
@@ -351,11 +351,11 @@
                     <div class="what-we-do">
                         <div class="what-we-do__column">
                             <p class="what-we-do__item main-text main-text_white">Исследование рынка</p>
-                            <p class="what-we-do__item main-text main-text_white">Веб-аналитика</p>
+                            <a href="#" class="what-we-do__item what-we-do__link main-text main-text_white">Веб-аналитика</a>
                             <p class="what-we-do__item main-text main-text_white">Юзабилити-анализ</p>
                         </div>
                         <div class="what-we-do__column">
-                            <p class="what-we-do__item main-text main-text_white">SEO-аудит</p>
+                            <a href="#" class="what-we-do__item what-we-do__link main-text main-text_white">SEO-аудит</a>
                             <p class="what-we-do__item main-text main-text_white">Проектирование</p>
                         </div>
                         <div class="what-we-do__column">
@@ -412,7 +412,7 @@
         <footer class="footer">
             <div class="container footer__container">
                 <div class="logo footer__logo">
-                    <img src="../img/_src/logo_gray.svg" class="logo__img" alt="">
+                    <img src="img/_src/logo_gray.svg" class="logo__img" alt="">
                 </div>
                 <a href="#" class="main-text footer__link">
                     Политика конфиденциальности
