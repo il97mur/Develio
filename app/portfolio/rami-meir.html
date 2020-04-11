@@ -10,13 +10,28 @@
 </head>
 <body>
 
+<div class="project-wrapper">
+
     <header class="header">
 
 		<div class="row header__row">
 
 			<div class="container d-f jc-sb ai-c">
                 <a href="../index.html" class="header__logo logo">
-                    <img src="../img/_src/logo_yellow.svg" alt="" class="logo__img">
+                    <img src="../img/_src/develio-logo-text.svg" class="logo__text" alt="">
+                        <div class="project-custom-logo">
+                            <div class="project-custom-logo__column">
+                                <div class="project-custom-logo__item"></div>
+                                <div class="project-custom-logo__item"></div>
+                            </div>
+                            <div class="project-custom-logo__column">
+                                <div class="project-custom-logo__item"></div>
+                                <div class="project-custom-logo__item"></div>
+                            </div>
+                            <div class="project-custom-logo__column">
+                                <div class="project-custom-logo__item"></div>
+                            </div>
+                        </div>
 				</a>
 
 				<nav class="menu">
@@ -175,19 +190,19 @@
 
     <!-- BREADCRUMBS END -->
 
-    <main class="rami-mehr">
+
         <section class="project">
             <div class="container project__container">
                 <div class="row project__row">
                     <div class="pager">
                         <a href="#" class="prev-next">
-                            <img src="../img/_src/pixel_arrow_white.svg" class="pager__arrow pager__arrow_rotate" alt="">
+                            <div class="pager__arrow pager__arrow_rotate"></div>
                         </a>
 
                         <div class="pager__page-number h2 h2_white">4 / 20</div>
 
                         <a href="coffee-talk.html" class="prev-next">
-                            <img src="../img/_src/pixel_arrow_white.svg" class="pager__arrow" alt="">
+                            <div class="pager__arrow"></div>
                         </a>
                     </div>
                 </div>
@@ -202,13 +217,15 @@
                     </div>
                     
                     <div class="project__column">
-                        <img src="../img/_src/rami-mehr-project.png" class="project__img" alt="">
+                        <!-- <img src="../img/_src/rami-mehr-project.png" class="project__img" alt=""> -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="task-and-works" class="project-description">
+</div>
+
+        <section id="task-and-works" class="project-description j-anchor">
             <div class="container project-description__container">
                 <div class="project-description__column c-description">
 
@@ -258,7 +275,7 @@
             </div>
         </section>
 
-        <section id="realization" class="project-presentation">
+        <section id="realization" class="project-presentation j-anchor">
             <img class="project-presentation__img" src="../img/_src/Rami-Meir-project/1.png" alt="">
             <img class="project-presentation__img" src="../img/_src/Rami-Meir-project/2.png" alt="">
             <img class="project-presentation__img" src="../img/_src/Rami-Meir-project/3.png" alt="">
@@ -269,9 +286,6 @@
             <img class="project-presentation__img" src="../img/_src/Rami-Meir-project/8.png" alt="">
         </section>
 
-
-
-    </main>
 
 
 
@@ -327,46 +341,7 @@
 <script src="../js/scripts.min.js"></script>
 <script>
     changeColor('#E0AF40', '#CFC9C9', '#000000');
-</script>
-
-<script>
-    function scroll_active() {
-
-/* вычисляем значения прокрутки страницы по вертикали */
-
-var window_top = $(window).scrollTop();
-
-/* вычисляем положение якорей на странице от начала страницы  по вертикали*/
-
-var taskAndWorks = $('#task-and-works').offset().top -10;
-
-var realization = $('#realization').offset().top -10;
-
-
-/* Переключатель активного пункта меню в зависимости от положения на странице, условии написаны от последнего якоря на странице, до первого */
-
-/* если на экране отображаются раздел «Контакты»*/
-if (window_top > realization) {
-$(".menu__item").removeClass("menu__item_active");
-$('a[href="#realization"]').addClass("menu__item_active");
-    }
-
-/* если не отображается раздел «Контакты», но страницу прокрутили  ниже якоря третьего раздела*/
-else if (window_top > taskAndWorks) {
-$(".menu__item").removeClass("menu__item_active");
-$('a[href="#task-and-works"]').addClass("menu__item_active");
-    }
-
-else {
-    $(".menu__item").removeClass("menu__item_active");
-}
-
-}
-
-jQuery(function()
-{
-jQuery(window).scroll(scroll_active);
-});
+    changeBGImage('../img/_src/Rami-Meir-project/project-bg.jpg');
 </script>
     
 </body>

@@ -201,7 +201,7 @@
             </div>
         </section>
 
-        <section id="web-dev" class="service web-dev">
+        <section id="web-dev" class="service web-dev j-anchor">
             <div class="container service__container">
                 <div class="service__column">
                     <div class="h1 h1_white service__h1">веб-разработка</div>
@@ -247,7 +247,7 @@
             </div>
         </section>
 
-        <section id="design" class="service design">
+        <section id="design" class="service design j-anchor">
             <div class="container service__container">
                 <div class="service__column">
                     <div class="h1 h1_white service__h1">Дизайн</div>
@@ -294,7 +294,7 @@
 
         </section>
 
-        <section id="adv" class="service advertisment">
+        <section id="adv" class="service advertisment j-anchor">
             <div class="container service__container">
                 <div class="service__column">
                     <div class="h1 h1_white service__h1">Реклама и продвижение</div>
@@ -338,7 +338,7 @@
 
         </section>
 
-        <section id="analytics" class="service analytics">
+        <section id="analytics" class="service analytics j-anchor">
             <div class="container service__container">
                 <div class="service__column">
                     <div class="h1 h1_white service__h1">Аналитика</div>
@@ -426,60 +426,6 @@
 
 
     <script src="js/scripts.min.js"></script>
-
-    <script>
-        function scroll_active() {
-
-/* вычисляем значения прокрутки страницы по вертикали */
-
-var window_top = $(window).scrollTop();
-
-/* вычисляем положение якорей на странице от начала страницы  по вертикали*/
-
-var webDev = $('#web-dev').offset().top -10;
-
-var design = $('#design').offset().top -10;
-
-var adv = $('#adv').offset().top -10;
-
-var analytics = $('#analytics').offset().top -10;
-
-/* Переключатель активного пункта меню в зависимости от положения на странице, условии написаны от последнего якоря на странице, до первого */
-
-/* если на экране отображаются раздел «Контакты»*/
-if (window_top > analytics) {
-    $(".menu__item").removeClass("menu__item_active");
-    $('a[href="#analytics"]').addClass("menu__item_active");
-        }
-
-/* если не отображается раздел «Контакты», но страницу прокрутили  ниже якоря третьего раздела*/
-else if (window_top > adv) {
-    $(".menu__item").removeClass("menu__item_active");
-    $('a[href="#adv"]').addClass("menu__item_active");
-        }
-
-/* если выше третьего, но ниже якоря второго раздела*/
-else if (window_top > design) {
-    $(".menu__item").removeClass("menu__item_active");
-    $('a[href="#design"]').addClass("menu__item_active");
-        }
-
-/* если не подходят условия предыдущие активируем первый пункт меню*/
-else if (window_top > webDev) {
-    $(".menu__item").removeClass("menu__item_active");
-    $('a[href="#web-dev"]').addClass("menu__item_active");
-        }
-
-else {
-    $(".menu__item").removeClass("menu__item_active");
-}
-}
-
-jQuery(function()
-{
-jQuery(window).scroll(scroll_active);
-});
-    </script>
     
 </body>
 </html>

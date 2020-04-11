@@ -174,7 +174,7 @@
 
     <!-- Portfolio page main content start-->
 
-        <main id="works" class="portfolio-page-content">
+        <main id="works" class="portfolio-page-content j-anchor">
             <div class="container portfolio-page-content__container">
                 <h1 class="h1 h1_white portfolio-page-content__h1">Портфолио</h1>
                 <div class="portfolio-page-content__content-filter content-filter">
@@ -373,7 +373,7 @@
             </div>
             <!-- Portfolio block end -->
 
-            <section id="industries" class="industries">
+            <section id="industries" class="industries j-anchor">
 
                 <div class="container">
                     <div class="section-heading industries__section-heading">
@@ -507,50 +507,8 @@
                 © 2018-2020 Develio
             </p>
         </div>
-    </footer>
-    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-    
+    </footer>    
 <script src="js/scripts.min.js"></script>
-
-<script>
-    function scroll_active() {
-
-/* вычисляем значения прокрутки страницы по вертикали */
-
-var window_top = $(window).scrollTop();
-
-/* вычисляем положение якорей на странице от начала страницы  по вертикали*/
-
-var works = $('#works').offset().top -10;
-
-var industries = $('#industries').offset().top -10;
-
-
-/* Переключатель активного пункта меню в зависимости от положения на странице, условии написаны от последнего якоря на странице, до первого */
-
-/* если на экране отображаются раздел «Контакты»*/
-if (window_top > industries) {
-$(".menu__item").removeClass("menu__item_active");
-$('a[href="#industries"]').addClass("menu__item_active");
-    }
-
-/* если не отображается раздел «Контакты», но страницу прокрутили  ниже якоря третьего раздела*/
-else if (window_top > works) {
-$(".menu__item").removeClass("menu__item_active");
-$('a[href="#works"]').addClass("menu__item_active");
-    }
-
-else {
-    $(".menu__item").removeClass("menu__item_active");
-}
-
-}
-
-jQuery(function()
-{
-jQuery(window).scroll(scroll_active);
-});
-</script>
     
 </body>
 </html>

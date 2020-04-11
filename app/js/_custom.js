@@ -293,9 +293,26 @@ for (var i = 0; i < $('form').length; i++) {
 
 // Подключение макси ввода для поля "Бюджет"
 
-// $('.brief-form__price')[0].addEventListener('input', moneyMask, false);
-// $('.brief-form__price')[0].addEventListener('blur', moneyMask, false);
-// $('.brief-form__price')[0].addEventListener('focus', moneyMask, false);
+// Функция для выделения текущей активной ссылки на странице
+
+function scroll_active() {
+	
+	var window_top = $(window).scrollTop();
+	$('.menu__item').removeClass('menu__item_active');
+
+	for(var i = 0; i < $('.j-anchor').length; i++) {
+		if (i < $('.j-anchor').length - 1) {
+			if (window_top > $($('.j-anchor')[i]).offset().top -10 && window_top < $($('.j-anchor')[i+1]).offset().top -10) {
+				$($('.menu__item')[i]).addClass('menu__item_active');
+			} 
+		}
+		if (i == ($('.j-anchor').length - 1) && window_top > $($('.j-anchor')[i]).offset().top -10){
+			$($('.menu__item')[i]).addClass('menu__item_active');
+		}
+	}
+}
+
+$(window).scroll(scroll_active);
 
 });
 
@@ -307,6 +324,7 @@ function changeColor(mainColor, secondColor, linkColor) {
 	var bgc = 'background-color';
 	var c = 'color';
 
+	$('.project-custom-logo__item').css(bg, mainColor);
 
 	$('body').css(bgc, secondColor);
 	$('.menu__item').hover(function(){
@@ -327,6 +345,10 @@ function changeColor(mainColor, secondColor, linkColor) {
 	$('.project-description').css(bg, mainColor);
 	$('.project-description__link').css('border-color', linkColor);
 	$('.project-description__link').css(c, linkColor);
+};
+
+function changeBGImage(src){
+	$('.project-wrapper').css('background-image', 'url(' + src + ')');
 };
 
 

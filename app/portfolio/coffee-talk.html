@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<div class="wrapper">
+<div class="project-wrapper">
     
         <header class="header">
     
@@ -18,7 +18,20 @@
     
     			<div class="container d-f jc-sb ai-c">
                     <a href="../index.html" class="header__logo logo">
-                        <img src="../img/_src/logo_purple.svg" alt="" class="logo__img">
+                        <img src="../img/_src/develio-logo-text.svg" class="logo__text" alt="">
+                        <div class="project-custom-logo">
+                            <div class="project-custom-logo__column">
+                                <div class="project-custom-logo__item"></div>
+                                <div class="project-custom-logo__item"></div>
+                            </div>
+                            <div class="project-custom-logo__column">
+                                <div class="project-custom-logo__item"></div>
+                                <div class="project-custom-logo__item"></div>
+                            </div>
+                            <div class="project-custom-logo__column">
+                                <div class="project-custom-logo__item"></div>
+                            </div>
+                        </div>
     				</a>
     
     				<nav class="menu">
@@ -32,7 +45,6 @@
                     </a>
     
     				<div class="c-hamburger">
-    					<!-- <img src="img/_src/hamburger.svg" alt="" class="hamburger-img"> -->
     					Меню
     					<button class="hamburger hamburger--slider" type="button">
     						<span class="hamburger-box">
@@ -183,13 +195,13 @@
                     <div class="row project__row">
                         <div class="pager">
                             <a href="rami-meir.html" class="prev-next">
-                                <img src="../img/_src/pixel_arrow_white.svg" class="pager__arrow pager__arrow_rotate" alt="">
+                                <div class="pager__arrow pager__arrow_rotate"></div>
                             </a>
     
                             <div class="pager__page-number h2 h2_white">4 / 20</div>
     
                             <a href="#" class="prev-next">
-                                <img src="../img/_src/pixel_arrow_white.svg" class="pager__arrow " alt="">
+                                <div class="pager__arrow"></div>
                             </a>
                         </div>
                     </div>
@@ -199,7 +211,7 @@
                                 <p class="main-text main-text_white project__year">2020</p>
                                 <p class="main-text main-text_white project__category">Веб-разразработка</p>
                             </div>
-                            <h1 class="h1 h1_white h1_not-upper project__h1">Сайт кофейни Coffee & Talk</h1>
+                            <h1 class="h1 h1_white h1_not-upper project__h1">Сайт кофейни <br> Coffee & Talk</h1>
                             <a href="#task-and-works" class="button project__button">Смотреть подробнее</a>
                         </div>
                         
@@ -211,7 +223,7 @@
             </section>
 
 </div>
-        <section id="task-and-works" class="project-description">
+        <section id="task-and-works" class="project-description j-anchor">
             <div class="container project-description__container">
                 <div class="project-description__column c-description">
 
@@ -270,7 +282,7 @@
             </div>
         </section>
 
-        <section id="realization" class="project-presentation">
+        <section id="realization" class="project-presentation j-anchor">
             <img class="project-presentation__img" src="../img/_src/Coffee-talk-project/1.jpg" alt="">
             <img class="project-presentation__img" src="../img/_src/Coffee-talk-project/2.jpg" alt="">
             
@@ -329,76 +341,11 @@
         </div>
     </footer>
 
-    <style>
-      .wrapper {
-          /* background-color: #fff; */
-      }
-
-
-      @media screen and ( max-width: 1600px) {
-          .wrapper {
-            background-size: cover;
-            background-position: 10vw 0;
-          }
-      }
-
-      @media screen and ( max-width: 1350px) {
-          .project-description__tag-list {
-              margin-right: -45px;
-          }
-      }
-
-      @media screen and ( max-width: 1200px) {
-        .project-description__tag-list {
-              margin-right: 0px;
-          }
-      }
-    </style>
-
 
 <script src="../js/scripts.min.js"></script>
 <script>
     changeColor('#D44ED6', '#8b188d', '#000000');
-</script>
-
-<script>
-    function scroll_active() {
-
-/* вычисляем значения прокрутки страницы по вертикали */
-
-var window_top = $(window).scrollTop();
-
-/* вычисляем положение якорей на странице от начала страницы  по вертикали*/
-
-var taskAndWorks = $('#task-and-works').offset().top -10;
-
-var realization = $('#realization').offset().top -10;
-
-
-/* Переключатель активного пункта меню в зависимости от положения на странице, условии написаны от последнего якоря на странице, до первого */
-
-/* если на экране отображаются раздел «Контакты»*/
-if (window_top > realization) {
-$(".menu__item").removeClass("menu__item_active");
-$('a[href="#realization"]').addClass("menu__item_active");
-    }
-
-/* если не отображается раздел «Контакты», но страницу прокрутили  ниже якоря третьего раздела*/
-else if (window_top > taskAndWorks) {
-$(".menu__item").removeClass("menu__item_active");
-$('a[href="#task-and-works"]').addClass("menu__item_active");
-    }
-
-else {
-    $(".menu__item").removeClass("menu__item_active");
-}
-
-}
-
-jQuery(function()
-{
-jQuery(window).scroll(scroll_active);
-});
+    changeBGImage('../img/_src/Coffee-talk-project/project-bg.jpg');
 </script>
     
 </body>

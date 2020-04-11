@@ -189,7 +189,7 @@
 
 	</header>
 
-	<section class="portfolio" id="portfolio">
+	<section class="portfolio j-anchor" id="portfolio">
 
 		<div class="portfolio__container">
 			<div class="section-heading portfolio__section-heading">
@@ -209,7 +209,7 @@
 								<p class="main-text portfolio-item__main-text">2019</p>
 							</div>
 							<div class="row portfolio-item__row">
-								<img src="img/_src/pixel_arrow_white.svg" alt="" class="portfolio-item__pixel-arrow-img">
+								<div class="portfolio-item__pixel-arrow-img"></div>
 							</div>
 						</a>
 					</object>
@@ -227,7 +227,8 @@
 							</div>
 							<div class="row portfolio-item__row">
 								<p class="h2 h2_white portfolio-item__main-text">Body beauty bar</p>
-								<img src="img/_src/pixel_arrow_white.svg" alt="" class="portfolio-item__pixel-arrow-img portfolio-item__pixel-arrow-img_mb-0">
+								<!-- <img src="img/_src/pixel_arrow_white.svg" alt="" class="portfolio-item__pixel-arrow-img portfolio-item__pixel-arrow-img_mb-0"> -->
+								<div class="portfolio-item__pixel-arrow-img portfolio-item__pixel-arrow-img_mb-0"></div>
 							</div>
 						</a>
 					</object>
@@ -244,7 +245,7 @@
 								<p class="main-text portfolio-item__main-text">2019</p>
 							</div>
 							<div class="row portfolio-item__row">
-								<img src="img/_src/pixel_arrow_white.svg" alt="" class="portfolio-item__pixel-arrow-img">
+								<div class="portfolio-item__pixel-arrow-img"></div>
 							</div>
 						</a>
 					</object>
@@ -265,7 +266,7 @@
 							</div>
 							<div class="row portfolio-item__row">
 								<p class="h2 h2_white portfolio-item__main-text">Golden stroke</p>
-								<img src="img/_src/pixel_arrow_white.svg" alt="" class="portfolio-item__pixel-arrow-img portfolio-item__pixel-arrow-img_mb-0">
+								<div class="portfolio-item__pixel-arrow-img portfolio-item__pixel-arrow-img_mb-0"></div>
 							</div>
 						</a>
 					</object>
@@ -283,7 +284,7 @@
 								<p class="main-text portfolio-item__main-text">2019</p>
 							</div>
 							<div class="row portfolio-item__row">
-								<img src="img/_src/pixel_arrow_white.svg" alt="" class="portfolio-item__pixel-arrow-img">
+								<div class="portfolio-item__pixel-arrow-img"></div>
 							</div>
 						</a>
 					</object>
@@ -301,7 +302,7 @@
 
 	</section>
 
-	<section class="services" id="services">
+	<section class="services j-anchor" id="services">
 
 		<div class="section-heading services__section-heading">
 			услуги
@@ -465,7 +466,7 @@
 		</div>
 	</section>
 
-	<section class="industries" id="industries">
+	<section class="industries j-anchor" id="industries">
 
 		<div class="container">
 			<div class="section-heading industries__section-heading">
@@ -550,7 +551,7 @@
 		</div>
 	</section>
 
-<section class="get-audit" id="company">
+<section class="get-audit j-anchor" id="company">
 	<div class="container get-audit__container">
 		<div class="get-audit__column get-audit-content">
 
@@ -691,59 +692,6 @@
 
 	<script src="js/scripts.min.js"></script>
 
-	<script>
-		function scroll_active() {
-
-/* вычисляем значения прокрутки страницы по вертикали */
-
-var window_top = $(window).scrollTop();
-
-/* вычисляем положение якорей на странице от начала страницы  по вертикали*/
-
-var portfolio = $('#portfolio').offset().top -10;
-
-var services = $('#services').offset().top -10;
-
-var industries = $('#industries').offset().top -100;
-
-var company = $('#company').offset().top -10;
-
-/* Переключатель активного пункта меню в зависимости от положения на странице, условии написаны от последнего якоря на странице, до первого */
-
-/* если на экране отображаются раздел «Контакты»*/
-if (window_top > company) {
-	$(".menu__item").removeClass("menu__item_active");
-	$('a[href="#company"]').addClass("menu__item_active");
-		}
-
-/* если не отображается раздел «Контакты», но страницу прокрутили  ниже якоря третьего раздела*/
-else if (window_top > industries) {
-	$(".menu__item").removeClass("menu__item_active");
-	$('a[href="#industries"]').addClass("menu__item_active");
-		}
-
-/* если выше третьего, но ниже якоря второго раздела*/
-else if (window_top > services) {
-	$(".menu__item").removeClass("menu__item_active");
-	$('a[href="#services"]').addClass("menu__item_active");
-		}
-
-/* если не подходят условия предыдущие активируем первый пункт меню*/
-else if (window_top > portfolio) {
-	$(".menu__item").removeClass("menu__item_active");
-	$('a[href="#portfolio"]').addClass("menu__item_active");
-		}
-
-else {
-	$(".menu__item").removeClass("menu__item_active");
-}
-}
-
-jQuery(function()
-{
-jQuery(window).scroll(scroll_active);
-});
-	</script>
 
 </body>
 

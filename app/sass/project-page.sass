@@ -1,50 +1,42 @@
 @import common
 
 
-body
-    background-color: #CFC9C9
-
-.header
-    &__row
-        background-color: #cfc9c9
-    &__logo
-
-.breadcrumps
+.project-custom-logo
+    margin-left: 9px
+    width: 15px
+    height: 25px
+    display: flex
+    transform: scale(0.95) translate(0px, -1px)
+    &__column
+        display: flex
+        flex-direction: column
+        flex: 0 0 33.3333%
+        &:first-child
+            justify-content: space-between
+        &:nth-child(2)
+            justify-content: space-evenly
+        &:last-child
+            justify-content: center
     &__item
-        &:hover
-            color: $yellow
+        background: #ffffff
+        width: 100%
+        height: 20%
+
+.logo__text
+    width: 88px
 
 .project__button_primary
-    background: $yellow
     transition: all .3s ease
     &:hover
         filter: brightness(90%)
     &::before
         display: none
 
-// .button
-//     &_primary
-//         &_yellow
-//             background: $yellow
-//             transition: all .3s ease
-//             &:hover
-//                 filter: brightness(90%)
-//             &::before
-//                 display: none
-
-.project-description
-    background: $yellow
-
-main
+.project-wrapper
     width: 100%
-
-.wrapper
-    width: 100%
-    background-image: url('../img/_src/Coffee-talk-project/project-bg.jpg')
     background-repeat: no-repeat
-    background-position: bottom right
-    // background-size: cover
-    // background-position: 100px 0px
+    background-position: bottom 0
+    background-size: cover
 
 .popup-menu__row
     background-color: transparent
@@ -97,7 +89,12 @@ main
     &__page-number
         margin: 0px 15px
     &__arrow
-        height: 100%
+        height: 25px
+        width: 15px
+        background-image: url('../img/_src/pixel_arrow_white.svg')
+        background-size: contain
+        background-position: 0 0
+        background-repeat: no-repeat
         &_rotate
             transform: rotate(180deg)
 
@@ -186,6 +183,7 @@ main
         // align-self: start
 
 @import media
+   
 
 @media screen and ( max-width: 1400px )
     .project-description
@@ -202,7 +200,13 @@ main
         &__tag-list
             margin-right: 0
         
-@media screen and ( max-width: 996px )
+@media screen and ( max-width: 992px )
+    .logo__text
+        width: 66px
+    .project-custom-logo
+        transform: scale(0.75) translate(2px, -1px)
+        margin-left: 0
+
     .project
         &__main
             padding-bottom: 100px
@@ -217,8 +221,6 @@ main
             align-items: center
     .prev-next
         height: 20px
-
-
 
 @media screen and ( max-width: 768px )
     .h1
@@ -240,6 +242,11 @@ main
             &:first-child
                 margin-right: 50px
 @media screen and ( max-width: 576px )
+        .logo__text
+            width: 50px
+        .project-custom-logo
+            transform: scale(0.58) translate(4px, -1px)
+            margin-left: 0
         .breadcrumps
             &__container
                 height: 120%
