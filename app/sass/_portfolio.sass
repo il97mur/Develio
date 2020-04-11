@@ -1,15 +1,13 @@
-@import common
+
 
 .percent-size
     width: 25%
 
-.button
-    &_secondary
-
 .menu
-    flex-basis: 37%
-    display: flex
-    justify-content: center
+    &_short
+        flex-basis: 37%
+        display: flex
+        justify-content: center
 
 .portfolio-page-content
     width: 100%
@@ -91,62 +89,15 @@
     &__pixel-arrow-img
         margin-left: auto
 
-
 .industries
-    width: 100%
-    display: flex
-    justify-content: center
-    padding-bottom: 120px
-    background: #ffffff
-    &__section-heading
-        margin-top: -143px
-        color: $gray
-        position: relative
-        z-index: 1
-    &__container
-        display: flex
-        justify-content: space-between
-    &__column
-        width: 45%
-    &__h1
-        text-transform: none
-        width: 45%
-    &__h2
-        margin-bottom: 20px
+    &_white-bg
+        background: #ffffff
     &__main-text
-        margin-bottom: 30px
-        color: $black
+        &_black
+            color: $black
     &__online-store
-        color: $black
-        line-height: 25px
-        margin-bottom: 5px
-    &__text
-        margin-left: 50px
-        margin-right: 50px
-    &__sphere
-
-.e-commerce__img
-    margin-top: 70px
-    margin-bottom: 70px
-
-.e-commerce-text
-    margin-left: 50px
-    margin-right: 50px
-
-.sphere__img
-    margin-bottom: 70px
-
-.tag-container
-    display: flex
-    justify-content: center
-    &__column
-        width: 50%
-
-@import media
-
-@media screen and ( max-width: 1200px )
-    .portfolio-item__pixel-arrow-img
-        margin-bottom: 0
+        &_black
+            color: $black
 
 @media screen and ( max-width: 996px )
     .percent-size

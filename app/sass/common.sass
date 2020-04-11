@@ -199,6 +199,9 @@ h1,h2
         background: $black
         position: fixed
         z-index: 4
+    &__button
+        &_hidden
+            visibility: hidden
     
 .menu
     &__item
@@ -231,6 +234,7 @@ h1,h2
     padding: 12px 28px
     font-weight: bold
     font-family: 'Montserrat', sans-serif
+    white-space: nowrap
     &_primary
         color: #fff
         position: relative
@@ -276,11 +280,9 @@ h1,h2
             border-image-source: linear-gradient(90deg, #46FA5A 0%, #33AF33 100%)
             z-index: -10
             transition: opacity .3s ease
-
         &:hover
             &::before
                 opacity: 1
-
         &:active
             background: $green_3
             color: #ffffff
@@ -297,6 +299,12 @@ h1,h2
            visibility: hidden
         &:active
             color: $dark-gray !important
+    &_checkbox
+        transition: all .3s ease
+        cursor: pointer
+        &:active
+            background: none
+            color: $green_3
 
 .c-hamburger
     color: #fff
@@ -671,9 +679,66 @@ h1,h2
         margin: 0px 15px
         opacity: 0.5
 
+
+
+// MAIN PAGE START -------------------------
+
+@import main
+
+// MAIN PAGE END -------------------------
+
+// PORTFOLIO PAGE START -------------------------
+
+@import portfolio
+
+// PORTFOLIO PAGE END -------------------------
+
+// SERVICES PAGE START -------------------------
+
+@import services-page
+
+// SERVICES PAGE END -------------------------
+
+// COMPANY PAGE START -------------------------
+
+@import company-page
+
+// COMPANY PAGE END -------------------------
+
+// CONTACTS PAGE START -------------------------
+
+@import contacts-page
+
+// CONTACTS PAGE END -------------------------
+
+// BRIEF PAGE START
+
+@import brief-page
+
+// BRIEF PAGE END -------------------------
+
+// PROJECT PAGE START
+
+@import project-page
+
+// PROJECT PAGE END -------------------------
+
+// PAGE 404 START -------------------------
+
+@import page-not-found
+
+// PAGE 404 END -------------------------
+
+// THANKS PAGE START -------------------------
+
+@import thanks-page
+
+// THANKS PAGE END -------------------------
+
+@import media
+
 @media ( pointer: coarse )
     .button
         &_secondary
             &::before
                display: none 
-

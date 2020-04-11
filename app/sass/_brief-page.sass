@@ -1,17 +1,5 @@
-@import common
-
-.button
-    white-space: nowrap
-    cursor: pointer
-    &_secondary
-        transition: all .3s ease
-        &:active
-            background: none
-            color: $green_3
-
-.fieldsset
+.fieldset
     width: 100%
-
 
 .brief
     width: 100%
@@ -32,7 +20,6 @@
         flex: 0 0 40%
     &__h2
         margin-bottom: 30px
-
 
 .brief-form
     width: 52%
@@ -101,10 +88,6 @@
         margin: 0 20px 25px 0
 
 
-
-
-@import media
-
 @media screen and ( max-width: 1200px )
     .brief-form
         width: 63%
@@ -113,10 +96,7 @@
 
 @media screen and ( max-width: 992px )
     .brief
-        &__row
-
-
-            
+        &__row 
     .call-to-us
         flex: 0 0 35%
 
