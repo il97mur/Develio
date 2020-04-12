@@ -325,6 +325,7 @@ function changeColor(mainColor, secondColor, linkColor) {
 	var c = 'color';
 
 	$('.project-custom-logo__item').css(bg, mainColor);
+	$('.project-wrapper__gradient').css(bg, 'linear-gradient(180deg,' + secondColor + ', transparent)');
 
 	$('body').css(bgc, secondColor);
 	$('.menu__item').hover(function(){

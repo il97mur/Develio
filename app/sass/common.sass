@@ -2024,7 +2024,39 @@ object
             &:first-child
                 margin-right: 0px
                 margin-bottom: 50px
-                
+
+    .project-wrapper
+        padding-bottom: 330px
+        background-size: 576px
+        background-position-x: 96%
+        background-position-y: bottom
+        position: relative
+        &__gradient
+            content: ''
+            display: block
+            width: 100%
+            height: 81px
+            position: absolute
+            left: 0
+            bottom: 261px
+            background: linear-gradient(180deg,#8b188d, transparent)
+
+@media screen and ( max-width: 550px )
+    .project-wrapper
+        padding-bottom: 330px
+        background-size: 550px
+        background-position-x: 96%
+        background-position-y: bottom
+        position: relative
+        &__gradient
+            content: ''
+            display: block
+            width: 100%
+            height: 81px
+            position: absolute
+            left: 0
+            bottom: 246px
+            background: linear-gradient(180deg,#8b188d, transparent)
 
 
 // PROJECT PAGE END -------------------------
