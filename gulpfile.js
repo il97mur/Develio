@@ -28,7 +28,7 @@ function bsReload(done) { browserSync.reload(); done(); };
 gulp.task('styles', function() {
 	return gulp.src('app/sass/**/*.sass')
 	.pipe(sass({ outputStyle: 'expanded' }))
-	// .pipe(concat('styles.min.css'))
+	.pipe(concat('common.min.css'))
 	.pipe(autoprefixer({
 		grid: true,
 		overrideBrowserslist: ['last 10 versions']
