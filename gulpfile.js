@@ -41,10 +41,10 @@ gulp.task('styles', function() {
 // Scripts & JS Libraries
 gulp.task('scripts', function() {
 	return gulp.src([
-		'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
-		'app/js/_lazy.js', // JS library plug-in example
-		'app/js/imageLoaded_plugin.js', // JS library plug-in example
-		'app/js/masonry.pkgd.js', // JS library plug-in example
+		'app/plugins/js/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
+		'app/plugins/js/_lazy.js', // JS library plug-in example
+		'app/plugins/js/imageLoaded_plugin.js', // JS library plug-in example
+		'app/plugins/js/masonry.pkgd.js', // JS library plug-in example
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
