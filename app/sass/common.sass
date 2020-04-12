@@ -2,40 +2,21 @@
 @import fonts
 @import libs
 
-// ::placeholder
-// 	color: #666
-
-// ::selection
-// 	background-color: $accent
-// 	color: #fff
-
-// input, textarea
-// 	outline: none
-// 	&:focus:required:invalid
-// 		border-color: red
-// 	&:required:valid
-// 		border-color: green
-
 // Убрать стрелки у input[type="number"]
 
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button 
-    /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none
     margin: 0
 
 input[type="number"] 
     -moz-appearance: textfield
 
-
-
-
-
 // Standart classes
 
 body, html
-	scroll-behavior: smooth
+    scroll-behavior: smooth
 
 .d-f
     display: flex
@@ -65,8 +46,6 @@ body, html
     width: 50%
 
 // End standart classes
-
-
 
 .container
     width: 1110px !important
@@ -100,8 +79,6 @@ a
     color: unset
     &:hover
         text-decoration: none
-        // color: #ffffff
-
 p
     padding: 0
     margin: 0
@@ -289,14 +266,14 @@ h1,h2
     &_not-grad
         border: 2px solid $green_3
         &::before
-           display: none 
+            display: none
     &_not-active
         border-image: none
         border-width: 2px
         border-color: $dark-gray
         color: $dark-gray
         &::before
-           visibility: hidden
+            visibility: hidden
         &:active
             color: $dark-gray !important
     &_checkbox
@@ -683,55 +660,1506 @@ h1,h2
 
 // MAIN PAGE START -------------------------
 
-@import main
+
+.header
+    &-content
+        display: flex
+        justify-content: space-between
+        margin-top: 200px
+        height: 250px
+        &__h1
+            width: 70%
+            margin-top: 17px
+
+.sign-items
+    transform: rotate(180deg)
+    writing-mode: tb-rl
+    &__item
+        text-transform: uppercase
+        color: #fff
+        line-height: 20px
+
+.portfolio
+    width: 100%
+    display: flex
+    justify-content: center
+    &__container
+        width: 1440px
+        padding: 0px 50px
+        margin-top: 30px
+    &__section-heading
+        z-index: -1
+        position: relative
+    &__row
+        display: flex
+        justify-content: space-between
+        width: 100%
+        margin-top: 120px
+        &_first
+            margin-top: 0px !important
+    &__item
+        width: 31%
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-content: flex-start
+        align-self: flex-start
+        &:nth-child(3n+1)
+            margin-top: -100px
+        &:nth-child(3n+2)
+            margin-top: -50px
+        &_with-text
+    &__h2
+        margin-top: 30px
+        margin-left: 30px
+        margin-bottom: 60px
+        width: 70%
+    &__img
+        max-height: 100%
+        align-self: self-start
+
+.portfolio-item-only-img
+    &__name
+        display: none
+
+.c-portfolio__h2
+    z-index: 3
+
+object
+    opacity: 0
+
+.portfolio-item
+    position: relative
+    &__wrap
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(62, 221, 70, 0.9)
+        padding: 40px 40px 40px 40px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        z-index: 2
+        &_pb-60
+            padding-bottom: 60px
+        &_op-0
+            transition: all .3s ease
+            opacity: 0
+            &:hover
+                opacity: 1
+    &__img
+        visibility: hidden
+    &__row
+        display: flex
+        justify-content: space-between
+    &__main-text
+        color: #ffffff
+    &__pixel-arrow-img
+        margin-left: auto
+        background-image: url('../img/_src/pixel_arrow_white.svg');
+        background-repeat: no-repeat
+        background-size: contain
+        width: 15px
+        height: 25px
+        &_mb-0
+            margin-bottom: 0
+
+.j-portfolio-item__wrap
+    opacity: 0
+    transition: all .3s ease
+
+.c-more-works
+    align-self: unset
+    padding-bottom: 60px
+
+.more-works
+    background: $green_3
+    max-height: 100%
+    height: 100%
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    max-width: 414px
+    transition: opacity .3s ease
+    &__button
+        border: 2px solid #fff
+        color: #fff
+        &::before
+            display: none
+    &:hover
+        opacity: 0.7
+
+
+// SERVICES
+
+.services
+    width: 100%
+    &__row
+        display: flex
+        justify-content: center
+    &__item
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        padding-bottom: 10px
+        &:nth-child(2n+1)
+            background-color: #fff
+        &:nth-child(2n+2)
+            background-color: $light-gray
+    &__h1
+        padding-bottom: 15px
+        transition: all .5s ease
+        cursor: pointer
+        padding: 75px 0px 50px 0px
+        display: flex
+        align-items: center
+    &__pixel-arrow-img
+        margin-left: 45px
+        transition: all .2s ease
+        &::before 
+            content: ''
+            display: block
+            background-image: url('../img/_src/pixel_arrow.svg')
+            background-repeat: no-repeat
+            background-size: contain
+            width: 49px
+            height: 31px
+            @media screen and ( max-width: 992px )
+                width: 35px
+                height: 22px
+            @media screen and ( max-width: 768px )
+                width: 25px
+                height: 15.8px
+                
+    &__button
+        align-self: flex-end
+
+.service-content
+    display: flex
+    flex-direction: column
+    width: 100%
+    &__inner
+        display: flex
+        width: 50%
+        justify-content: space-between
+        padding-bottom: 40px
+        &_opened
+            display: flex
+
+.c-service-content
+    display: none
+
+.service-list
+    &__item
+        line-height: 25px
+        font-weight: normal
+        font-size: 16px
+    &__link
+        text-decoration: underline
+        transition: all .3s ease
+        &:hover
+            color: $green_3
+            text-decoration: underline
+
+.services__c-services-items
+    margin-top: -60px
+    background-color: #fff
+    padding-bottom: 180px
+
+// Industries
+
+.industries
+    width: 100%
+    padding-bottom: 120px
+    display: flex
+    justify-content: center
+    &__section-heading
+        margin-top: -143px
+        color: $gray
+        position: relative
+        z-index: 1
+    &__container
+        display: flex
+        justify-content: space-between
+    &__column
+        width: 45%
+    &__h1
+        text-transform: none
+        width: 45%
+    &__h2
+        margin-bottom: 20px
+    &__main-text
+        margin-bottom: 30px
+    &__online-store
+        color: #ffffff
+        line-height: 25px
+        margin-bottom: 5px
+    &__text
+        margin-left: 50px
+        margin-right: 50px
+    &__sphere
+
+.e-commerce__img
+    margin-top: 70px
+    margin-bottom: 70px
+
+.e-commerce-text
+    margin-left: 50px
+    margin-right: 50px
+
+.sphere__img
+    margin-bottom: 70px
+
+.tag-container
+    display: flex
+    justify-content: center
+    &__column
+        width: 50%
+
+// GET audit
+
+.get-audit
+    padding: 120px 0px
+    background: linear-gradient(251.77deg, #43ED4F 26.04%, #33AF33 91.88%)
+    width: 100%
+    display: flex
+    justify-content: center
+    &__container
+        display: flex
+        justify-content: space-between
+    &__column
+        width: 50%
+    &__audit-form
+        box-shadow: -15px 20px 50px #1FB61F
+    &__h1
+    &__main-text
+        color: #ffffff
+        padding-top: 40px
+        width: 80%
+
+.get-audit-content
+    padding-top: 125px
+    &__inner
+        width: 70%
+
+// WORK STAGES
+
+.steps
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    justify-content: center
+    background: #ffffff
+    padding: 105px 0px 120px 0px
+    &__container
+    &__row
+        display: flex
+        justify-content: space-between
+    &__column
+        flex-basis: 45%
+    &__main-text
+        padding-top: 50px
+    &__plus
+        font-size: 16px
+        line-height: 25px
+        display: block
+        font-weight: bold
+        margin-top: 10px
+        &:first-child
+            margin-top: 0
+        &_normal
+            font-weight: normal
+    &__subpoint
+        font-size: 16px
+        line-height: 25px
+        display: block
+    &__button
+        margin-top: 50px
+    &__main-content
+        margin-bottom: 160px
+    &__stages
+        justify-content: center
+        position: relative
+        &::before
+            content: ''
+            display: block
+            height: 1px
+            background: $green_3
+            width: 100%
+            position: absolute
+            top: 0
+            left: 0
+    &__h2
+        margin-top: 10px
+        padding-bottom: 10px
+    &__stage-item
+        &::before
+            content: ''
+            display: block
+            transform: translateY(-5px)
+            height: 10px
+            width: 10px
+            background: $green_3
+    &__number
+        color: $stage-numbers
+        position: absolute
+        top: -40px
+
+.c-steps__pluses
+
+.c-steps__stages
+    display: flex
+    justify-content: space-between
 
 // MAIN PAGE END -------------------------
 
 // PORTFOLIO PAGE START -------------------------
 
-@import portfolio
+
+
+.percent-size
+    width: 25%
+
+.menu
+    &_short
+        flex-basis: 37%
+        display: flex
+        justify-content: center
+
+.portfolio-page-content
+    width: 100%
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    &__content-filter
+        padding-top: 50px
+        padding-bottom: 40px
+    &__filter
+        &:active
+            background: none !important
+            color: $green_3 
+    &__filter
+        margin: 10px 10px
+        transition: all .3s ease
+
+.portfolio-list
+    line-height: 0 !important
+    width: 100%
+    display: flex
+    justify-content: center
+    // flex-direction: column
+    // align-items: center
+    flex-wrap: wrap
+    &__item
+        width: 25%
+        &_width2x
+            width: 50%
+        &_height2x
+    &__img
+        width: 100%
+        max-height: 100%
+        // height: 100%
+    &__container
+        width: 1440px !important
+    &__row
+        display: flex
+        flex-direction: row
+    &__column
+        width: 50%
+    &__load-more
+        margin-top: 60px
+        margin-bottom: 220px
+        width: 100%
+        display: flex
+        justify-content: center
+    
+
+.c-portfolio-list__item
+
+
+.portfolio-item
+    &__inner
+        width: 100%
+        height: 100%
+        position: relative
+    &__wrapper
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: rgba(62, 221, 70, 0.9)
+        padding: 40px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        z-index: 2
+        opacity: 0
+        transition: opacity .3s ease
+        &:hover
+            opacity: 1
+    &__row
+        display: flex
+        justify-content: space-between
+    &__main-text
+        color: #ffffff
+    &__pixel-arrow-img
+        margin-left: auto
+
+.industries
+    &_white-bg
+        background: #ffffff
+    &__main-text
+        &_black
+            color: $black
+    &__online-store
+        &_black
+            color: $black
+
+@media screen and ( max-width: 996px )
+    .percent-size
+        width: 50%
+    .portfolio-list
+        &__item
+            &_width2x
+                width: 100%
+
+@media screen and ( max-width: 576px )
+    .percent-size
+        width: 100%
+    .portfolio-list
+        &__item
+            &_width2x
+                width: 100%
+
 
 // PORTFOLIO PAGE END -------------------------
 
 // SERVICES PAGE START -------------------------
 
-@import services-page
+.services-page
+    width: 100%
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    &__h1
+        margin-bottom: 80px
+
+.services-preview
+    display: flex
+    justify-content: center
+    width: 100%
+    &__item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex: 1 1 25%
+        margin: 0px 15px
+        // width: 200px
+        background-color: #ffffff
+        padding: 30px 30px 210px 30px
+        background-position: 0 bottom
+        background-repeat: no-repeat
+        cursor: pointer
+        transition: outline .2s ease
+        &:first-child
+            margin-left: 0
+            background-image: url('../img/_src/web-dev_bg.png')
+        &:nth-child(2)
+            background-image: url('../img/_src/design-service_bg.png')
+        &:nth-child(3)
+            background-image: url('../img/_src/adv_bg2.png')
+        &:last-child
+            margin-right: 0
+            background-image: url('../img/_src/analityc-service_bg.png')
+        &:hover
+            outline-offset: 10px
+            outline: 2px $green_3 solid
+    &__pixel-arrow
+        background-image: url("../img/_src/pixel-arrow_green.png")
+        background-repeat: no-repeat
+        background-size: contain
+        flex: 0 0 10%
+        width: 15px
+        height: 25px
+
+.c-services-preview-items
+    padding-bottom: 15px
+    width: 100%
+    display: flex
+    justify-content: space-between
+
+.service
+    width: 100%
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin: 180px 0px 0px 0px
+    &__container
+        display: flex
+        margin-bottom: 40px
+        justify-content: space-between
+    &__column
+        flex: 0 0 45%
+    &__h1
+        margin-bottom: 50px
+    &__main-text
+        margin-bottom: 40px
+        width: 70%
+    &__h2
+        margin-top: 20px
+        margin-bottom: 30px
+    &__button
+    &__img
+        height: 100%
+
+.service-image
+    position: relative
+    width: 1440px
+    line-height: 0
+
+.service-hover-link
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    background: rgba($green_3, .9 )
+    opacity: 0
+    transition: opacity .3s ease
+    &:hover
+        opacity: 1
+    &__container
+        display: flex
+    &__row
+        display: flex
+    &__column
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__h1
+        font-size: 88px
+        line-height: 107px
+        margin-top: 10px
+        margin-bottom: 40px
+    &__h2
+        &:first-child
+            margin-right: 50px
+    &__pixel-arrow-img
+        height: 100% 
+        align-self: center
+        margin-left: 80px
+
+
+
+.what-we-do
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &__column
+        &:last-child
+            margin-left: 30px
+    &__item
+        // text-decoration: underline
+        line-height: 25px
+        display: flex
+        align-items: center
+        &::before
+            content: ''
+            display: block
+            width: 5px
+            height: 5px
+            background: $green_3
+            margin-right: 10px
+    &__link
+        text-decoration: underline
+        transition: all .3s ease
+        &:hover
+            color: $green_3
+            text-decoration: underline
+
+
+@media screen and ( max-width: 1440px )
+    .service
+        &__img
+            height: auto
+
+@media screen and ( max-width: 1200px )
+    .service
+        &__column
+            flex: 0 0 50%
+            &:first-child
+                flex: 0 0 48%
+
+@media screen and ( max-width: 992px )
+    .c-services-preview-items
+        flex-wrap: wrap
+    .services-preview
+        &__item
+            flex: 0 0 48%
+            margin-left: 0px
+            margin-right: 0
+            background-size: contain
+            background-position: center 100px
+            &:nth-child(3)
+                margin-top: 30px
+            &:last-child
+                margin-top: 30px
+    .service
+        margin-top: 130px
+    .what-we-do
+        &__column
+            flex: 0 0 100%
+            &:last-child
+                margin-left: 0
+    .service-hover-link
+        &__h1
+            margin-bottom: 20px
+        &__pixel-arrow-img
+            height: 80% 
+
+@media screen and ( max-width: 768px )
+    .service
+        margin-top: 90px
+        &__main-text
+            width: 100%
+        &__h1
+            margin-bottom: 30px
+
+@media screen and ( max-width: 576px )
+    .services-page
+        &__h1
+            margin-bottom: 30px
+    .services-preview
+        &__item
+            flex: 0 0 48%
+            margin: 15px 0px
+            padding: 20px 7px 120px 7px
+            background-position: center 70px
+            &:first-child
+                // margin-top: 0
+            &:last-child
+                // margin-bottom: 0
+            &:hover
+                outline-offset: 5px
+        &__main-text
+            font-size: 12px
+    .service
+        margin-top: 60px
+        &__container
+            flex-wrap: wrap
+        &__column
+            flex: 0 0 100%
+            &:first-child
+                flex: 0 0 100%
+                padding-bottom: 20px
+
+    .service-hover-link
+        opacity: 0 !important
+        &__pixel-arrow-img
+            height: 20%
+
+@media screen and ( max-width: 380px )
+    .services-preview
+        &__item
+            background-position: center 85px
+
 
 // SERVICES PAGE END -------------------------
 
 // COMPANY PAGE START -------------------------
 
-@import company-page
+
+.company
+    width: 100%
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    &__container
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &__column
+        flex: 0 0 40%
+    &__pluses
+        flex: 0 0 45%
+        margin-top: 80px
+        background-image: url('../img/_src/medal.png')
+        background-repeat: no-repeat
+        background-position: bottom right
+        margin-bottom: 100px
+    &__h1
+        margin-bottom: 50px
+    &__arrow-img
+        margin-left: 10px
+        background-image: url('../img/_src/arrow-to-right.png')
+        background-repeat: no-repeat
+        height: 100%
+        background-size: contain
+        width: 42px
+        height: 25px
+    &__link
+        transition: all .3s ease
+        margin-bottom: 60px
+        width: fit-content
+        &:hover
+            color: $green_3
+            opacity: 0.6
+    &__tag-row
+        margin-bottom: 35px
+        &:last-child
+            margin-bottom: 0
+
+.technologies
+    width: 100%
+    display: flex
+    justify-content: center
+    background-color: #ffffff
+    padding: 50px 0px
+    &__container
+    &__heading
+        margin-bottom: 55px
+    &__row
+        display: flex
+        justify-content: space-between
+        margin-bottom: 30px
+        &:last-child
+            margin-bottom: 0
+    &__category
+        flex: 0 0 25%
+    &__item-list
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+    &__item
+        color: $black
+        border: 2px solid $black
+        margin-right: 20px
+        margin-bottom: 25px
+    &__link
+        border-color: $green_3
+        color: $green_3
+
+@media screen and ( max-width: 768px )
+    .company
+        &__pluses
+            margin-top: 50px
+            background-size: 50%
+            background-position: top right
+    .technologies
+        &__category
+            flex: 0 0 30%
+        &__item
+            margin-right: 10px
+            margin-bottom: 15px
+
+@media screen and ( max-width: 576px )
+    .company
+        &__h1
+            margin-bottom: 20px
+        &__link
+            margin-bottom: 30px
+        &__column
+            flex: 0 0 100%
+        &__pluses
+            flex: 0 0 100%
+            background-size: 30%
+
+    .technologies
+        &__row
+            flex-wrap: wrap
+        &__heading
+            margin-bottom: 35px
+        &__category
+            flex: 0 0 100%
+            margin-bottom: 20px
+
+
 
 // COMPANY PAGE END -------------------------
 
 // CONTACTS PAGE START -------------------------
 
-@import contacts-page
+.contacts-page
+    display: flex
+    justify-content: center
+    width: 100%
+    margin-bottom: 100px
+    &__container
+        display: flex
+        justify-content: space-between
+    &__column
+        flex: 0 0 40%
+        &:last-child
+            flex: 0 0 50%
+            display: flex
+            justify-content: center
+    &__h1
+        margin-bottom: 50px
+    &__contacts-page-text
+        margin-bottom: 50px
+    &__contact
+        margin-top: 15px
+        margin-bottom: 30px
+    &__link
+        color: $green_3
+        transition: all .3s ease
+        &:hover
+            color: $green_3
+            opacity: 0.6
+    &__social
+        width: 100%
+        display: flex
+        justify-content: space-between
+        margin-top: 75px
+
+.c-contacts-page
+    &__contacts
+        display: flex
+        justify-content: space-between    
+
+.contacts-page-text
+    font-size: 24px
+    line-height: 29px
+    color: $dark-gray
+    font-weight: normal
+
+.feedback-form
+    padding: 50px
+    border: 2px solid $green_3
+    margin-top: 54px
+    width: 70%
+    &__h2
+        margin-bottom: 10px
+    &__textarea
+        resize: none
+        height: 130px
+        margin-bottom: 25px
+
+
+@media screen and ( max-width: 1200px )
+    .contacts-page
+        &__column
+            flex: 0 0 45%
+
+@media screen and ( max-width: 996px )
+    .work-time
+        order: 1
+        flex: 0 0 60%
+    .contacts-content
+        order: 2
+        flex: 0 0 60%
+    .c-contacts-page
+        &__contacts
+            flex-wrap: wrap
+    .feedback-form
+        width: 100%
+
+@media screen and ( max-width: 768px )
+    .contacts-page
+        &__container
+            flex-wrap: wrap
+        &__column
+            flex: 0 0 100%
+            &:last-child
+                flex: 0 0 100%
+    .feedback-form
+        width: 70%
+    .work-time
+        order: 2
+        flex: 0 0 40%
+    .contacts-content
+        order: 1
+        flex: 0 0 40%
+
+@media screen and ( max-width: 576px )
+    .c-contacts-page
+        &__contacts
+            position: relative
+    .contacts-page
+        &__social
+            position: absolute
+            margin-top: 45px
+            bottom: -50px
+            padding: 0px 20%
+    .feedback-form
+        width: 100%
+        margin-top: 110px
+        padding: 30px
+    .work-time
+        order: 1
+        flex: 0 0 60%
+    .contacts-content
+        order: 2
+        flex: 0 0 80%
 
 // CONTACTS PAGE END -------------------------
 
 // BRIEF PAGE START
 
-@import brief-page
+.fieldset
+    width: 100%
+
+.brief
+    width: 100%
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    &__row
+        display: flex
+        justify-content: space-between
+        margin-bottom: 80px
+    &__container
+        display: flex
+        flex-wrap: wrap
+    &__column
+    &__h1
+        margin-bottom: 30px
+    &__main-text
+        flex: 0 0 40%
+    &__h2
+        margin-bottom: 30px
+
+.brief-form
+    width: 52%
+    &__label
+    &__input-checkbox
+    &__type-of-project
+        margin-bottom: 65px
+    &__price
+        width: 45%
+    &__price-heading
+        margin-right: 20px
+    &__h2
+        margin-bottom: 30px
+    &__about-project
+        margin-bottom: 90px
+    &__contacts
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 80px
+        margin-right: -50px
+    &__contact-input
+        margin-right: 30px
+        margin-bottom: 25px
+    &__row
+        display: flex
+        align-items: center
+        &_submit
+            margin-bottom: 80px
+    &__submit
+        margin-right: 30px
+    &__personal-data-apply
+        padding: 0
+        margin-right: -120px
+
+
+.c-brief-form
+    &__hear-about-us
+        margin-right: -100px
+        margin-bottom: 90px
+
+
+
+.checkbox-container
+    width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+
+.about-project
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+.input
+    &__textarea
+        height: 200px
+        margin-bottom: 25px
+        resize: none
+        width: 100%
+        &:focus
+            border-color: $green_3
+
+.label
+    &__button
+        margin: 0 20px 25px 0
+
+
+@media screen and ( max-width: 1200px )
+    .brief-form
+        width: 63%
+        &__price
+            width: 50%
+
+@media screen and ( max-width: 992px )
+    .brief
+        &__row 
+    .call-to-us
+        flex: 0 0 35%
+
+@media screen and ( max-width: 768px )
+    .brief
+        &__row
+            width: 80%
+            flex-direction: column
+            flex-wrap: nowrap
+    .c-brief-form
+        &__hear-about-us
+            margin-right: 0
+    .brief-form
+        &__contacts
+            margin-right: 0
+    .call-to-us
+        margin-top: 30px
+    .brief-form
+        width: 100%
+        &__personal-data-apply
+            margin-right: 0
+
+@media screen and ( max-width: 576px )
+    .c-brief-form
+        &__hear-about-us
+            margin-right: 0
+            margin-bottom: 50px
+    .brief-form
+        &__contacts
+            margin-right: 0
+        &__h2
+            margin-bottom: 20px
+        &__row
+            &_submit
+                flex-wrap: wrap
+                justify-content: center
+        &__submit
+            margin-bottom: 15px
+            margin-right: 0
+        &__personal-data-apply
+            text-align: center
+        &__contact-input
+            margin-right: 0
+            width: 100%
+    .label__button
+        margin: 0px 15px 20px 0
+    .about-project
+        &__row
+            flex-wrap: wrap
 
 // BRIEF PAGE END -------------------------
 
 // PROJECT PAGE START
 
-@import project-page
+
+.project-custom-logo
+    margin-left: 9px
+    width: 15px
+    height: 25px
+    display: flex
+    transform: scale(0.95) translate(0px, -1px)
+    &__column
+        display: flex
+        flex-direction: column
+        flex: 0 0 33.3333%
+        &:first-child
+            justify-content: space-between
+        &:nth-child(2)
+            justify-content: space-evenly
+        &:last-child
+            justify-content: center
+    &__item
+        background: #ffffff
+        width: 100%
+        height: 20%
+
+.logo__text
+    width: 88px
+
+.project__button_primary
+    transition: all .3s ease
+    &:hover
+        filter: brightness(90%)
+    &::before
+        display: none
+
+.project-wrapper
+    width: 100%
+    background-repeat: no-repeat
+    background-position: bottom 0
+    background-size: cover
+
+.popup-menu__row
+    background-color: transparent
+
+.project
+    width: 100%
+    padding-top: 20px
+    display: flex
+    justify-content: center
+    &__container
+        display: flex
+        flex-direction: column
+    &__row
+        display: flex
+        justify-content: space-between
+    &__column
+        width: 50%
+    &__main
+        padding: 25px 0px 300px
+    &__img
+        height: 100%
+    &__year
+        margin-right: 45px
+    &__h1
+        margin-bottom: 35px
+    &__button
+        background: #fff
+        display: flex
+        align-items: center
+        width: fit-content
+        &::after
+            content: ''
+            display: inline-block
+            background-image: url('../img/_src/pixel_arrow.svg')
+            background-size: 100% 100%
+            height: 6px
+            width: 10px
+            margin-left: 10px
+
+
+.tag-row
+    display: flex
+    margin-bottom: 15px
+
+
+.pager
+    display: flex
+    align-items: center
+    margin-bottom: 100px
+    &__page-number
+        margin: 0px 15px
+    &__arrow
+        height: 25px
+        width: 15px
+        background-image: url('../img/_src/pixel_arrow_white.svg')
+        background-size: contain
+        background-position: 0 0
+        background-repeat: no-repeat
+        &_rotate
+            transform: rotate(180deg)
+
+.prev-next
+    display: flex
+    align-items: center
+
+.project-info
+    margin-bottom: 50px
+
+.project-description
+    height: 600px
+    width: 100%
+    display: flex
+    justify-content: center
+    &__container
+        // width: 1200px !important
+        display: flex
+        height: 100%
+        align-items: center
+        justify-content: flex-start
+    &__column
+        width: 50%
+        &:first-child
+            margin-right: 120px
+    // padding: 130px 0 150px
+    &__tag
+        margin-bottom: 15px
+    &__item
+        line-height: 25px
+        display: flex
+        align-items: flex-start
+        &::before
+            content: ''
+            display: inline-block
+            width: 5px 
+            height: 5px
+            background: $black
+            margin-right: 10px
+            margin-top: 10px
+            flex: none
+    &__button
+        &_secondary
+            border: 2px #fff solid
+            color: #fff
+            margin: 10px 20px 10px 0
+            white-space: nowrap
+            &::before
+                display: none
+            &:hover
+                border: 2px #fff solid
+                color: #fff
+            &:active
+                background: none
+    &__tag-list
+        display: flex
+        flex-wrap: wrap
+        margin-top: 10px
+        margin-right: -100px
+    &__technologies-heading
+        margin-top: 40px
+    &__link
+        cursor: pointer
+            
+
+
+.c-description
+    &__row
+        display: flex
+        justify-content: space-between
+    &__h2
+        margin-bottom: 10px
+
+.project-task
+    &__list
+        margin-bottom: 30px
+
+.project-presentation
+    width: 100%
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    align-items: center
+    &__img
+        // width: 100%
+        // align-self: start
+
+@media screen and ( max-width: 1400px )
+    .project-description
+        height: fit-content
+        padding: 50px 0px
+
+@media screen and ( max-width: 1350px )
+    .project-description
+        &__tag-list
+            margin-right: 0
+
+@media screen and ( max-width: 1200px )
+    .project-description
+        &__tag-list
+            margin-right: 0
+        
+@media screen and ( max-width: 992px )
+    .logo__text
+        width: 66px
+    .project-custom-logo
+        transform: scale(0.75) translate(2px, -1px)
+        margin-left: 0
+
+    .project
+        &__main
+            padding-bottom: 100px
+        &__img
+            height: auto
+        &__column
+            &:last-child
+                display: flex
+    .pager
+        &__page-number
+            display: flex
+            align-items: center
+    .prev-next
+        height: 20px
+
+@media screen and ( max-width: 768px )
+    .h1
+        font-size: 23px
+        line-height: 35px
+    .project
+        &__main
+            padding-bottom: 50px
+        &__img
+            height: auto
+            align-self: flex-end
+        &__column
+            &:last-child
+                display: flex
+    .pager
+        margin-bottom: 50px
+    .project-description
+        &__column
+            &:first-child
+                margin-right: 50px
+@media screen and ( max-width: 576px )
+    .logo__text
+        width: 50px
+        .project-custom-logo
+            transform: scale(0.58) translate(4px, -1px)
+            margin-left: 0
+        .breadcrumps
+            &__container
+                height: 120%
+                display: flex
+                flex-wrap: wrap
+        .project
+            flex-wrap: wrap
+            &__row
+                flex-wrap: wrap
+            &__column
+                width: 100%
+
+        .project-description
+            height: fit-content
+            &__container
+                flex-wrap: wrap
+                // margin: 30px 0px
+            &__column
+                width: 100%
+                &:first-child
+                    margin-right: 0px
+                    margin-bottom: 50px
+                
+
 
 // PROJECT PAGE END -------------------------
 
 // PAGE 404 START -------------------------
 
-@import page-not-found
+
+
+.not-found
+    height: 90vh
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 550px
+    &__h1
+        text-align: center
+        // width: 25%
+        position: relative
+        &::before
+            content: '404'
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            font-size: 600px
+            line-height: 713px
+            opacity: 0.1
+            transform: translate(-50%, -50%)
+
+@media screen and ( max-width: 1440px )
+    .not-found
+        &__h1
+            &::before
+                font-size: 450px
+
+@media screen and ( max-width: 992px )
+    .not-found
+        &__h1
+            &::before
+                font-size: 300px
+
+@media screen and ( max-width: 768px )
+    .not-found
+        &__h1
+            &::before
+                font-size: 200px
+
+@media screen and ( max-width: 576px )
+    .not-found
+        &__h1
+            &::before
+                font-size: 150px
 
 // PAGE 404 END -------------------------
 
 // THANKS PAGE START -------------------------
 
-@import thanks-page
+
+.wrapper
+    background-image: url('../img/_src/like.png')
+    background-position: left 130%
+    background-repeat: no-repeat
+    width: 100%
+    display: flex
+    justify-content: center
+
+
+.thanks
+    display: flex
+    width: 100%
+    justify-content: center
+    margin-top: 155px
+    &__container
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom: 500px
+    &__column
+        flex: 0 0 45%
+        &:first-child
+            // margin-right: 80px
+        &:last-child
+            flex: 0 0 32%
+            margin-top: 150px
+    &__h1
+        margin-bottom: 50px
+    &__h2
+        margin-bottom: 30px
+    &__link
+        text-decoration: underline
+        line-height: 25px
+        display: flex
+        align-items: center
+        color: #ffffff
+        transition: all .3 ease
+        cursor: pointer
+        &::before
+            content: ''
+            display: block
+            width: 5px
+            height: 5px
+            background: $green_3
+            margin-right: 10px
+        &:hover
+            text-decoration: underline
+            color: $green_3
+
+
+@media screen and ( max-width: 996px )
+    .wrapper
+        background-position-y: -200%
+    .thanks
+        &__container
+            margin-bottom: 150px
+        &__column
+            flex: 0 0 50%
+            &:last-child
+                flex: 0 0 40%
+                margin-top: 80px
+        &__h1
+            margin-bottom: 25px
+
+@media screen and ( max-width: 576px )
+    .wrapper
+        background-size: 60%
+        background-position: 0 bottom
+    .thanks
+        margin-top: 120px
+        &__container
+            flex-wrap: wrap
+        &__column
+            flex: 0 0 100% !important
+            &:last-child
+                margin-top: 40px
+
 
 // THANKS PAGE END -------------------------
 
@@ -741,4 +2169,4 @@ h1,h2
     .button
         &_secondary
             &::before
-               display: none 
+                display: none
